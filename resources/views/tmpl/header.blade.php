@@ -52,12 +52,12 @@
         <div class="wrapper">
             <div class="navi">
                 <div class="navi_item">
-                        <a href="#">
+                        <a href="{{route('home')}}">
                             ホーム<br><small>HOME</small>
                         </a>
                     </div>
                     <div class="navi_item">
-                        <a href="#">
+                        <a href="{{route('store')}}">
                             店舗一覧<br><small>STORE</small>
                         </a>
                     </div>

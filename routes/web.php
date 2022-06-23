@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\StoreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('index');
+Route::controller(HomeController::class)->group(function () {
+    Route::get('/', 'home')->name('home');
+});
+Route::controller(StoreController::class)->group(function () {
+    Route::get('/store', 'index')->name('store');
 });
