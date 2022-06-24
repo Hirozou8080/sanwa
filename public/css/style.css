@@ -137,8 +137,8 @@
 /*  780px以上の場合 */
 @media screen and (min-width: 780px) {
 }
-/*  1026px以上の場合 */
-@media screen and (min-width: 1026px) {
+/*  1024px以上の場合 */
+@media screen and (min-width: 1024px) {
     .main{
         /* padding-top: 200px; */
         width: 100%;
@@ -247,8 +247,8 @@
     background-color: #bbbbbb;
 }
 
-/* 1026px以上の場合 */
-@media screen and (min-width:1026px){
+/* 1024px以上の場合 */
+@media screen and (min-width:1024px){
     .notice .notice-inner{
         display: table;
     }

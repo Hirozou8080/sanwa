@@ -125,8 +125,8 @@ header .header-top .hamburger {
   transform: translateY(-7px) rotate(315deg);
 }
 
-/* 1026以上の場合 */
-@media screen and  (min-width: 1026px){
+/* 1024以上の場合 */
+@media screen and  (min-width: 1024px){
   header .header-top .hamburger {
     height: 80px;
     width: 80px;
@@ -276,8 +276,8 @@ header .navi .navi_item:hover::before{
   font-size: 1.5rem;
 }
 
-/* 1026以上の場合 */
-@media screen and (min-width:1026px){
+/* 1024以上の場合 */
+@media screen and (min-width:1024px){
   .header .menu-content .menu-content-inner .menu-footer{
     padding: 1rem 3rem;
   }
@@ -297,6 +297,38 @@ header .navi .navi_item:hover::before{
     font-size: 2rem;
   }
 } 
+
+/* ----- main ----- */
+.main .page-title {
+  width: 100%;
+  background-color: #4e83f2;
+  position: relative;
+  height: 115px;
+}
+.main .page-title .title {
+  position: absolute;
+  color:#fff;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: 'Noto Sans JP' , 'serif';;
+  line-height: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+}
+
+/* 1026pxの場合 */
+@media screen and (min-width: 1024px) {
+    .main .page-title {
+    height: 140px;
+    }
+    .main .page-title .title {
+      font-size: 1.5rem;
+    }
+}
+
 
 /* ----- footer ----- */
 footer{
@@ -329,8 +361,8 @@ footer .wrapper .author{
       margin: auto;
   }
 }
-/*  1026px以上の場合 */
-@media screen and (min-width: 1026px) {
+/*  1024px以上の場合 */
+@media screen and (min-width: 1024px) {
   .wrapper{
     width: 1000px;
   }
