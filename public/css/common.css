@@ -6,6 +6,7 @@ a{
 
 body {
   font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+  font-size: 10px;
 }
 .wrapper{
   position: relative;
@@ -310,13 +311,38 @@ header .navi .navi_item:hover::before{
   color:#fff;
   text-align: center;
   font-size: 1.3rem;
-  font-family: 'Noto Sans JP' , 'serif';;
+  font-family: 'Noto Sans JP' , 'serif';
   line-height: 1;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   -moz-transform: translate(-50%,-50%);
+}
+
+.main .breadcrumbs ul {
+  display: flex;
+  list-style-type: none;
+}
+.main .breadcrumbs li{
+  font-size: .7rem;
+  font-family: 'Noto Sans JP' , 'serif';
+}
+.main .breadcrumbs li:after {
+  content: '\003e'; /* 「>」を要素間の区切り文字として表示 */
+  margin-left: 10px; 
+  margin-right: 10px; 
+  color: #888888; /* 区切り文字の文字色 */
+}
+.main .breadcrumbs li:last-child:after {
+  content: ""; 
+}
+.main .breadcrumbs li a{
+  display: inline-block;
+  width: auto;
+}
+.main .breadcrumbs li a:hover {
+  background-color: #EEEEEE;
 }
 
 /* 1026pxの場合 */
@@ -326,6 +352,9 @@ header .navi .navi_item:hover::before{
     }
     .main .page-title .title {
       font-size: 1.5rem;
+    }
+    .main .breadcrumbs li{
+      font-size: 1rem;
     }
 }
 

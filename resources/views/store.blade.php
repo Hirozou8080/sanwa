@@ -7,7 +7,7 @@
         <div class="title">店舗一覧<br><small>STORE</small></div>
       </div>
   </section>
-  {{ Breadcrumbs::render('store') }}
+  {{ Breadcrumbs::render('store')}}
 
 
 </main>
