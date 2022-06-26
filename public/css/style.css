@@ -201,6 +201,7 @@
     display: block;
     position: relative;
     width: 100%;
+    font-size: .7rem;
     padding: .5rem;
 }
 .notice .notice-inner .notice-body .notice-item:nth-child(2),
@@ -271,6 +272,7 @@
     .notice .notice-inner .notice-body .notice-item{
         display: table;
         width: 100%;
+        font-size: 1rem;
         text-align: center;
     }
     .notice .notice-inner .notice-body .notice-item .notice-date{

@@ -251,6 +251,7 @@ header .navi .navi_item:hover::before{
 }
 .header .menu-content .menu-content-inner .menu-block{
   padding: 2rem;
+  font-size: 1rem;
   border-bottom: 1px dotted #ffffff;
   color:#fff;
 }
@@ -374,8 +375,15 @@ footer .wrapper .content{
   padding: 5%;
 }
 footer .wrapper .author{
-  font-size: 0.5rem;
+  font-size: .7rem;
 }
+/*  1024px以上の場合 */
+@media screen and (min-width: 1024px) {
+  footer .wrapper .author{
+    font-size: 1rem;
+  }
+}
+
 .pc{
   display: none;
 }
