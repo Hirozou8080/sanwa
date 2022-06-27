@@ -296,3 +296,39 @@
         font-size: .9rem;
     }
 }
+
+.store .container {
+    width: 100%;
+    padding: 3rem 0;
+    text-align: center;
+}
+.store .container .head{
+    padding: 1rem 0;
+    width: 100%;
+    font-size: 2rem;
+    text-align: left;
+    font-family: 'Noto Sans JP' , 'serif';
+}
+.store .container table{
+    width: 100%;
+}
+.store .container table th{
+    background-color: #4f82f050;
+}
+.store .container table th ,
+.store .container table td {
+    border: 1px solid #f9f8f8;
+    border-collapse: collapse;
+}
+.store .container table{
+    width: 100%;
+    border: 1px solid #f9f8f8;
+    border-collapse: collapse;
+}
+/* 1024px以上の場合 */
+@media screen and (min-width:1024px){
+    .store .container .head{
+        padding: 2rem 0;
+        font-size: 2rem;
+    }
+}

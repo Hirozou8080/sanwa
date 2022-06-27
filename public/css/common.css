@@ -321,8 +321,14 @@ header .navi .navi_item:hover::before{
   -moz-transform: translate(-50%,-50%);
 }
 
+.main .breadcrumbs {
+  padding: .5rem 0;
+  background-color: #f9f8f8;
+}
 .main .breadcrumbs ul {
   display: flex;
+  padding: 0;
+  margin: 0;
   list-style-type: none;
 }
 .main .breadcrumbs li{
