@@ -313,8 +313,8 @@
     width: 100%;
     border: 2px solid #ccc;
 }
-.store .container table a{
-    display: block;
+.store .container table .store-block:hover{
+    opacity: .5;
 }
 
 .store .container table tr{
