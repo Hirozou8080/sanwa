@@ -58,7 +58,7 @@
               <table>
                 <tr>
                   <th>店名</th>
-                  <td>{{ $store['name'] }} </td>
+                  <td><a href="#">{{ $store['name'] }}</a></td>
                 </tr>
                 <th>住所</th>
                   <td>
