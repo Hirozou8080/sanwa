@@ -310,6 +310,7 @@
     font-family: 'Noto Sans JP' , 'serif';
 }
 .store .container table{
+    margin: 1rem 0;
     width: 100%;
     border: 2px solid #ccc;
 }
@@ -342,7 +343,12 @@
     padding: 1rem;
     font-weight: 400;
 }
-
+.non-store {
+    padding: 1rem;
+    text-align: center;
+    color: #827d7f;
+    border: 1px solid #ccc;
+}
 /* 1024px以上の場合 */
 @media screen and (min-width:1024px){
     .store .container .head{
@@ -356,4 +362,10 @@
     .store .container table td {
         padding: 1.5rem 1rem;
     }
+    .store .container table td.non-store {
+        padding: 1rem;
+        text-align: center;
+        color: #827d7f;
+    }
+
 }

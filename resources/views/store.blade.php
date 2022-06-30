@@ -12,60 +12,66 @@
   <section class="container">
     <div class="wrapper">
       <div class="head">
-        <div class="head-title">店舗一覧</div>
+        <div class="head-title">店舗一覧（{{count($stores)}}件）</div>
       </div>
       <div class="content">
         {{-- pc用 --}}
         <div class="pc">
           <table>
-            <div class="store-block">
-              <tr data-location-href="store">
-                <th>店名</th>
-                <th>住所</th>
-                <th>サービス案内</th>
-                <th>求人案内</th>
-              </tr>
-              <tr data-location-href="store">
+            <tr data-location-href="store">
+              <th>店名</th>
+              <th>住所</th>
+              <th>サービス案内</th>
+              <th>求人案内</th>
+            </tr>
+            @if(!empty($stores))
               @foreach ($stores as $store)
+              <tr>
                 <td>{{ $store['name'] }} </td>
                 <td>
                   〒{{ $store['post_code'] }}<br>
                   {{ $store['prefectures'] . $store['address'] }} 
                 </td>
                 <td>
-                @foreach ($store['service'] as $service)
-                {{ $service }} ,  
-                @endforeach
+                  @foreach ($store['service'] as $service)
+                  {{ $service }} ,  
+                  @endforeach
                 </td>
                 <td>{{ $store['job_offer'] ? '募集中': ''  }}</td>
-                @endforeach
               </tr>
-            </div>
+              @endforeach
+            @else
+            <tr>
+              <td class="non-store" colspan="4">
+                店舗がありません
+              </td>
+            </tr>
+            @endif
           </table>
         </div>
         {{-- ./pc --}}
 
         {{-- sp用 --}}
         <div class="sp">
-          <table>
+          @if (!empty($stores))
             @foreach ($stores as $store)
-              <div class="table-link" data-location-href="store">
+              <table>
                 <tr>
                   <th>店名</th>
                   <td>{{ $store['name'] }} </td>
                 </tr>
                 <th>住所</th>
-                <td>
-                  〒{{ $store['post_code'] }}<br>
-                  {{ $store['prefectures'] . $store['address'] }} 
-                </td>
+                  <td>
+                    〒{{ $store['post_code'] }}<br>
+                    {{ $store['prefectures'] . $store['address'] }} 
+                  </td>
                 <tr>
                 </tr>
                 <tr>
                   <th>サービス案内</th>
                   <td>
                     @foreach ($store['service'] as $service)
-                    {{ $service }} ,  
+                      {{ $service }} ,  
                     @endforeach
                   </td>
                 </tr>
@@ -73,15 +79,20 @@
                   <th>求人案内</th>
                   <td>{{ $store['job_offer'] ? '募集中': ''  }}</td>
                 </tr>
-              </div>
-              @endforeach
-          </table>
+              </table>
+            @endforeach
+          @else
+             <div class="non-store">
+              店舗がありません
+             </div>
+          @endif
+
         </div>
-        {{--./ pc --}}
+          {{--./ pc --}}
+        </div>
+        {{-- ./content --}}
       </div>
-      {{-- ./content --}}
-    </div>
-    {{-- ./wrapper --}}
+      {{-- ./wrapper --}}
   </section>
 
 </main>
