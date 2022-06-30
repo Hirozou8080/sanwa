@@ -343,6 +343,16 @@
     padding: 1rem;
     font-weight: 400;
 }
+.store .container table td a {
+    display: block;
+    font-family: 'Noto Sans JP' , 'serif';
+    color: #5a5758;
+    line-height: 1.2;
+}
+.store .container table td a:hover{
+    color: #313030;
+    text-decoration: underline;
+}
 .non-store {
     padding: 1rem;
     text-align: center;

@@ -27,7 +27,7 @@
             @if(!empty($stores))
               @foreach ($stores as $store)
               <tr>
-                <td>{{ $store['name'] }} </td>
+                <td><a href="#">{{ $store['name'] }}</a> </td>
                 <td>
                   〒{{ $store['post_code'] }}<br>
                   {{ $store['prefectures'] . $store['address'] }} 
