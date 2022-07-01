@@ -1,7 +1,7 @@
 @extends('tmpl.layouts')
 
 @section('content')
-<main class="main">
+<main class="main home">
   <div class="top">
     <div class="img-area">
       <div class="slider-top">

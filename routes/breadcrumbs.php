@@ -10,3 +10,8 @@ Breadcrumbs::for('store', function ($trail) {
     $trail->parent('home');
     $trail->push('店舗一覧', route('store'));
 });
+// Home > Store
+Breadcrumbs::for('price', function ($trail) {
+    $trail->parent('home');
+    $trail->push('料金一覧', route('price'));
+});

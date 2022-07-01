@@ -62,7 +62,7 @@
                         </a>
                     </div>
                     <div class="navi_item">
-                        <a href="#">
+                        <a href="{{route('price')}}">
                             料金案内<br><small>PRICE</small>
                         </a>
                     </div>
