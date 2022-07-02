@@ -309,6 +309,7 @@
     font-size: 1.4rem;
     text-align: left;
     font-family: 'Noto Sans JP' , 'serif';
+    color: #5a5758;
 }
 .store .container table{
     margin: 1rem 0;
@@ -318,12 +319,10 @@
 .store .container table .store-block:hover{
     opacity: .5;
 }
-
 .store .container table tr{
     padding: 1rem 0;
     width: 100%;
 }
-
 .store .container table th ,
 .store .container table td {
     border: 1px dotted #ccc;
@@ -361,7 +360,7 @@
     border: 1px solid #ccc;
 }
 /* 1024px以上の場合 */
-@media screen and (min-width:1024px){
+@media screen and (min-width:768px){
     .store .container .head{
         padding: 2rem 0;
         font-size: 2rem;
@@ -398,10 +397,82 @@
 .price .container .head{
     padding: 1rem 0;
     width: 100%;
-    font-size: 1.4rem;
     text-align: left;
+    color: #5a5758;
+}
+.price .container .head .head-title{
+    font-family: 'Noto Sans JP' , 'serif';
+    font-size: 1.4rem;
+}
+.price .container .head .txt{
+    padding-top: 1rem;
+    font-family: 'Noto Sans JP' , 'serif';
+    font-size: 1rem;
+}
+.price .container .content{
+    padding: 1rem 0;
+}
+.price .container .content .block{
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 3.96px 0.04px rgb(2 6 52 / 10%);
+}
+
+.price .container .content .block .block-head{
+    width: 100%;
+    position: relative;
+    padding: 1rem 0;
+    border-radius: 5px 5px 0 0;
+    background-color: #93cd39;
+    font-size: 1.1rem;
+    color: #fff;
     font-family: 'Noto Sans JP' , 'serif';
 }
+.price .container .content .block .block-head::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border: 10px solid transparent;
+    border-top: 10px solid #93cd39;
+}
+.price .container .content .block .block-body{
+    width: 100%;
+    padding: 1rem 0;
+
+}
+.price .container .content .block .block-body .price-link{
+    display: table;
+    width: 250px;
+    height: 60px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: #5a5758;
+}
+.price .container .content .block .block-body .price-link a{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: 'Noto Sans JP' , 'serif';
+}
+.price .container .content .block .block-body .price-link a:hover{
+    opacity: .5;
+}
+
+.price .container .content .block .block-body .price-link a::before{
+    font-family: 'Font Awesome 5 Free';
+    color: #ffffff;
+    content : "\f15c";
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-right:.5rem ;
+    margin-top: 0;
+}
+
 /* 1024px以上の場合 */
 @media screen and (min-width:1024px){
     .price .container .wrapper{
@@ -409,6 +480,15 @@
     }
     .price .container .head{
         padding: 2rem 0;
+    }
+    .price .container .head .head-title{
         font-size: 2rem;
+    }
+    .price .container .head .txt{
+        padding-top: 1.5rem;
+        font-size: 1rem;
+    }
+    .price .container .content{
+        padding: 2rem 0;
     }
 }
