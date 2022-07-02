@@ -188,7 +188,7 @@ header .header-top .contact-area a{
 header .navi{
   display: table;
   height: 60px;
-  width: 80%;
+  width: 90%;
   margin: 1rem auto;
 }
 header .navi .navi_item{
@@ -403,6 +403,12 @@ footer .wrapper .author{
       width: 86.666%;
       margin: auto;
   }
+  .pc{
+    display: block;
+  }
+  .sp{
+    display: none;
+  }
 }
 /*  1024px以上の場合 */
 @media screen and (min-width: 1024px) {
@@ -411,12 +417,6 @@ footer .wrapper .author{
   }
   .header .header-top{
       height: 120px;
-  }
-  .pc{
-    display: block;
-  }
-  .sp{
-    display: none;
   }
 }
 /*  1200px以上の場合 */
