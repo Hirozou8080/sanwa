@@ -385,6 +385,15 @@
     width: 100%;
     padding: 2rem 0;
     text-align: center;
+    background-color: #ffffff;
+    background-image: radial-gradient(#f6f9fa 2px, #ffffff 2px);
+    background-size: 20px 20px;
+}
+.price .container .wrapper{
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 3.96px 0.04px rgb(2 6 52 / 10%);
+    padding: 0 1rem;
 }
 .price .container .head{
     padding: 1rem 0;
@@ -395,6 +404,9 @@
 }
 /* 1024px以上の場合 */
 @media screen and (min-width:1024px){
+    .price .container .wrapper{
+        padding: 0 2rem;
+    }
     .price .container .head{
         padding: 2rem 0;
         font-size: 2rem;
