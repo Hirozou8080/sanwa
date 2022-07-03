@@ -21,9 +21,9 @@ return new class extends Migration
             $table->date('register_date')->comment('登録日');
             $table->timestamps();
             $table->softDeletes();
-            // ALTER 文を実行しテーブルにコメントを設定
-            DB::statement("ALTER TABLE admin_users COMMENT '管理者ユーザテーブル'");
         });
+        // ALTER 文を実行しテーブルにコメントを設定
+        DB::statement("ALTER TABLE admin_users COMMENT '管理者ユーザテーブル'");
     }
 
     /**

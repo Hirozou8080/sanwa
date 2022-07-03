@@ -21,9 +21,9 @@ return new class extends Migration
             $table->date('posted_date')->comment('投稿日');
             $table->timestamps();
             $table->softDeletes();
-            // ALTER 文を実行しテーブルにコメントを設定
-            DB::statement("ALTER TABLE flights COMMENT 'お知らせテーブル'");
         });
+        // ALTER 文を実行しテーブルにコメントを設定
+        DB::statement("ALTER TABLE notices COMMENT 'お知らせテーブル'");
     }
 
     /**

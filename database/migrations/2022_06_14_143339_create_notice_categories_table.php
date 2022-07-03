@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('name')->nullable(false)->comment('カテゴリ名');
             $table->timestamps();
             $table->softDeletes();
-            // ALTER 文を実行しテーブルにコメントを設定
-            DB::statement("ALTER TABLE flights COMMENT 'お知らせカテゴリーテーブル'");
         });
+        // ALTER 文を実行しテーブルにコメントを設定
+        DB::statement("ALTER TABLE notice_categories COMMENT 'お知らせカテゴリーテーブル'");
     }
 
     /**
