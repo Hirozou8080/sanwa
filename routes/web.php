@@ -15,3 +15,6 @@ Route::controller(PriceController::class)->group(function () {
     Route::get('/price', 'index')->name('price');
     Route::get('/price/{{price_id}}', 'detail')->name('price/detail');
 });
+Route::controller(LoginController::class)->group(function () {
+    Route::get('/login', 'index')->name('login');
+});
