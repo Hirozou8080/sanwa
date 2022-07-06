@@ -1,0 +1,71 @@
+a{
+  text-decoration: none;
+  display: block;
+  color: #000000;
+}
+
+body {
+  font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+  font-size: 10px;
+}
+.wrapper{
+  position: relative;
+  width: 95%;
+  margin: auto;
+  height: 100%;
+}
+.pc{
+  display: none;
+}
+.sp{
+  display: block;
+}
+/*  780px以上の場合 */
+@media screen and (min-width: 780px) {
+  .wrapper{
+    width: 86.666%;
+    margin: auto;
+  }
+  .pc{
+    display: block;
+  }
+  .sp{
+    display: none;
+  }
+}
+/*  1024px以上の場合 */
+@media screen and (min-width: 1024px) {
+.wrapper{
+  width: 1000px;
+}
+}
+/*  1200px以上の場合 */
+@media screen and (min-width: 1200px) {
+.wrapper{
+  width: 1200px;
+}
+}
+
+/* ----- footer ----- */
+footer{
+  width: 100%;
+  background-color: #ccc;
+  position: relative;
+  text-align: center;
+}
+footer .wrapper{
+  text-align: center;
+  padding: 10px;
+}
+footer .wrapper .content{
+  padding: 5%;
+}
+footer .wrapper .author{
+  font-size: .7rem;
+}
+/*  1024px以上の場合 */
+@media screen and (min-width: 1024px) {
+  footer .wrapper .author{
+    font-size: 1rem;
+  }
+}

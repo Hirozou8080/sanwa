@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\PriceController;
+use App\Http\Controllers\LoginController;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'home')->name('home');
