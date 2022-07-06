@@ -35,15 +35,49 @@ body {
 }
 /*  1024px以上の場合 */
 @media screen and (min-width: 1024px) {
-.wrapper{
-  width: 1000px;
-}
+  .wrapper{
+    width: 1000px;
+  }
 }
 /*  1200px以上の場合 */
 @media screen and (min-width: 1200px) {
-.wrapper{
-  width: 1200px;
+  .wrapper{
+    width: 1200px;
+  }
 }
+
+/* ----- header ----- */
+.header {
+  width: 100%;
+  background-color: #042569;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  color: #fff;
+}
+
+.header .h-inner{
+  width: 100%;
+  margin: auto;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 35px 35px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  position: relative;
+}
+.header .h-inner .ttl{
+  font-family:'Noto Sans JP' , 'serif';
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+/*  780px以上の場合 */
+@media screen and (min-width: 780px) {
+  .header .h-inner{
+    width: 90%;
+  }
 }
 
 /* ----- footer ----- */
