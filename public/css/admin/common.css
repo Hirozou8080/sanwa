@@ -79,6 +79,10 @@ body {
     width: 90%;
   }
 }
+/* ----- main ----- */
+.main {
+  padding-top: 80px;
+}
 
 /* ----- footer ----- */
 footer{
