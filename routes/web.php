@@ -18,4 +18,5 @@ Route::controller(PriceController::class)->group(function () {
 });
 Route::controller(LoginController::class)->group(function () {
     Route::get('/login', 'index')->name('login');
+    Route::post('/login', 'loginPost')->name('login');
 });

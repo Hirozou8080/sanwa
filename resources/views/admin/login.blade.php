@@ -7,9 +7,11 @@
       <div class="head">
         ログイン
       </div>
-      <form action="">
-
-      </form>
+      {{ Form::open([ 'url'=>route("login") ,'class'=>'login-form', 'method'=>'post' ]) }}
+      {{Form::text('email', null, ['class' => 'form-control', 'id' => 'email', 'placeholder' => 'メールアドレス'])}}
+      {{Form::password('password', ['class' => 'form-control','id' => 'password','placeholder' => 'パスワード'])}}
+      {{ Form::submit('送信', ['class' => 'btn btn-primary']) }}
+      {{ Form::close() }}
     </div>
   </div>
 </main>
