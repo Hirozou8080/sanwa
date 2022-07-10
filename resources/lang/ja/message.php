@@ -9,4 +9,8 @@ return [
       'no_session' => 'セッションが切れました。再度ログインしてください。'
     ],
     
+    'attributes' => [
+      'email' => 'メールアドレス',
+      'password' => 'パスワード',
+    ],
 ];
