@@ -24,10 +24,14 @@
     <link rel="stylesheet" type="text/css" href="/js/slick/slick-theme.css"/>
     {{-- drawer --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
-    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/admin/common.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/admin/style.css') }}">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="css/sanitize.css">
+    <link rel="stylesheet" href="css/admin/common.css">
+    <link rel="stylesheet" href="css/admin/style.css">
+
+    <link rel="stylesheet" href="/css/admin/@yield('css').css">
+
+    
 </head>
 <body>
     @include('admin.tmpl.header')
