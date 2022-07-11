@@ -2,20 +2,19 @@
 
 namespace App\Services;
 
+use Illuminate\Http\Request;
+use App\Models\Admin_users;
+
 class LoginService
 {
 
 /**
  * ログイン処理
+ * @param request  : post値 
  */
-  public function postLogin($email,$password)
+  public function postLogin(Request $request)
   {
-    if(empty($email) || empty($password)){
-      $error['message'][] = \Lang::get("messages.require", ['name' => 'メールアドレス']);
-      $error['message'][] = \Lang::get("messages.require", ['name' => 'パスワード']);
-      dd($error);
-      return;      
-    }
-    dd($email);
+    
+    return dd($request->all());
   }
 }

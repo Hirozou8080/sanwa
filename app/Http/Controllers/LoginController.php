@@ -21,13 +21,13 @@ class LoginController extends Controller
         
         // バリデーション
         $validated = $request->validate([
-            'email' => 'required|unique:admin_users|max:255',
+            'email' => 'required|',
             'password' => 'required',
         ]);
-
+        
         //ログイン認証処理
         $loginService = new LoginService;
-        $login = $loginService->postLogin($email,$password);
+        $login = $loginService->postLogin($request);
         dd($login);
     }
 }
