@@ -17,6 +17,8 @@ Route::controller(PriceController::class)->group(function () {
     Route::get('/price/{{price_id}}', 'detail')->name('price/detail');
 });
 Route::controller(LoginController::class)->group(function () {
+    Route::get('/register', 'register')->name('register');
+    Route::post('/register', 'registerPost')->name('register');
     Route::get('/login', 'index')->name('login');
     Route::post('/login', 'loginPost')->name('login');
 });

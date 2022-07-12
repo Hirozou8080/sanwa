@@ -15,6 +15,20 @@ class LoginService
   public function postLogin(Request $request)
   {
     
+    
+    return dd($request->all());
+  }
+/**
+ * アカウント登録処理
+ * @param request  : post値 
+ */
+  public function postRegister(Request $request)
+  {
+    $adminUser = new Admin_users();
+    $adminUser['name'] = $request['name'];
+    $adminUser['email'] = $request['email'];
+    $adminUser['password'] = $request['password'];
+
     return dd($request->all());
   }
 }
