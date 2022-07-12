@@ -3,8 +3,11 @@
 namespace App\Services;
 
 use Illuminate\Http\Request;
-use App\Models\Admin_users;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
+use Carbon\Carbon;
+use App\Models\Admin_user;
 class LoginService
 {
 
@@ -24,11 +27,25 @@ class LoginService
  */
   public function postRegister(Request $request)
   {
-    $adminUser = new Admin_users();
-    $adminUser['name'] = $request['name'];
-    $adminUser['email'] = $request['email'];
-    $adminUser['password'] = $request['password'];
-
-    return dd($request->all());
+    // 作成時刻
+    $now = new Carbon();
+    // パスワードハッシュ化
+    $password = Hash::make($request['password']); 
+    try {
+      // トランザクション開始
+      DB::beginTransaction();
+      
+      Admin_user::create([
+        'name'     => $request['name'],
+        'email'    => $request['email'],
+        'password' => $password,
+        'register_date' => $now
+      ]);
+      DB::commit();
+      // トランザクション終了
+  } catch (Throwable $e) {
+      DB::rollBack();
+  }
+    return ;
   }
 }

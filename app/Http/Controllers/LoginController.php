@@ -51,12 +51,12 @@ class LoginController extends Controller
         // バリデーション
         $validated = $request->validate([
             'name' => 'required|',
-            'email' => 'required | email | unique:adminUsers',
+            'email' => 'required | email | unique:admin_users',
             'password' => 'required | min:8 | confirmed',
         ]);
         
         //アカウント登録処理
         $this->loginService->postRegister($request);
-        return view('admin.register');
+        return view('admin.login');
     }
 }

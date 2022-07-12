@@ -30,7 +30,7 @@
           {{ Form::password('password', ['class' => 'form-control','id' => 'password','placeholder' => 'パスワード'])}}
         </div>
         <div class="form-item">
-          {{ Form::password('password', ['class' => 'form-control','id' => 'password_confirmation','placeholder' => '再度パスワード'])}}
+          {{ Form::password('password_confirmation', ['class' => 'form-control','id' => 'password_confirmation','placeholder' => '再度パスワード'])}}
         </div>
         <div class="form-item">
           {{ Form::submit('登録', ['class' => 'btn ']) }}
