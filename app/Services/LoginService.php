@@ -17,9 +17,18 @@ class LoginService
  */
   public function postLogin(Request $request)
   {
-    
-    
-    return dd($request->all());
+    $loginUser = '';
+    try {
+      // トランザクション開始
+      DB::beginTransaction();
+      $loginUser = Admin_user::getUserEmail($request['email']);
+      DB::commit();
+      // トランザクション終了
+    } catch (Throwable $e) {
+      DB::rollBack();
+    }
+    dd($loginUser);
+    return;
   }
 /**
  * アカウント登録処理

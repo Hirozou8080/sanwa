@@ -14,4 +14,8 @@ class Admin_user extends Model
         'password',
         'register_date'
     ]; 
+
+    public static function getUserEmail($email){
+        return Admin_user::where('email',$email)->first();
+    }
 }
