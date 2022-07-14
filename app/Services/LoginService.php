@@ -27,8 +27,7 @@ class LoginService
     } catch (Throwable $e) {
       DB::rollBack();
     }
-    dd($loginUser);
-    return;
+    return $loginUser;
   }
 /**
  * アカウント登録処理

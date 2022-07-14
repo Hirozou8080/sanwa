@@ -15,7 +15,11 @@ class Admin_user extends Model
         'register_date'
     ]; 
 
+    /**
+     * Emailでユーザ取得
+     * @param email メールアドレス
+     */
     public static function getUserEmail($email){
-        return Admin_user::where('email',$email)->first();
+        return Admin_user::whereEmail($email)->first();
     }
 }

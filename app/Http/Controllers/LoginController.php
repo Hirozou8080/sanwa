@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Services\LoginService;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -33,8 +34,25 @@ class LoginController extends Controller
         ]);
         
         //ログイン認証処理
-        $login = $this->loginService->postLogin($request);
-        dd($login);
+        $loginUser = $this->loginService->postLogin($request);
+        
+        if(!empty($loginUser)){
+            // パスワードチェック
+            $request['password'];
+                if(Hash::check($request['password'], $loginUser['password'])){
+                    //sessionの保存
+                    session()->put('user_id', $loginUser['id']);
+                    
+            } else {
+                $errors['messages'] = 'パスワードが違います。' ;
+                return view('admin.login')->with($errors['messages']);
+            } 
+        } else {
+            $errors['messages'] = 'ユーザが存在しません。' ;
+            return view('admin.login')->with($errors['messages']);
+        }
+        
+        return redirect()->route('/');
     }
     /**
      * アカウント登録
