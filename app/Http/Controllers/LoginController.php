@@ -42,14 +42,14 @@ class LoginController extends Controller
                 if(Hash::check($request['password'], $loginUser['password'])){
                     //sessionの保存
                     session()->put('user_id', $loginUser['id']);
-                    
-            } else {
-                $errors['messages'] = 'パスワードが違います。' ;
-                return view('admin.login')->with($errors['messages']);
-            } 
+                    return redirect()->route('dashboard');
+                } else {
+                    $errors['messages'] = 'パスワードが違います。' ;
+                    return view('admin.login')->withErrors($errors['messages']);
+                } 
         } else {
             $errors['messages'] = 'ユーザが存在しません。' ;
-            return view('admin.login')->with($errors['messages']);
+            return view('admin.login')->withErrors($errors['messages']);
         }
         
         return redirect()->route('/');
