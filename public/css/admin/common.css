@@ -49,17 +49,19 @@ body {
 /* ----- header ----- */
 .header {
   width: 100%;
-  background-color: #042569;
+  background-color: #fff;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 100;
-  color: #fff;
+  color: #333;
 }
 
 .header .h-inner{
   width: 100%;
+  max-width: 1024px;
   margin: auto;
+  padding: 1rem;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 35px 35px;
   align-items: center;
@@ -68,16 +70,51 @@ body {
   height: 80px;
   position: relative;
 }
-.header .h-inner .ttl{
-  font-family:'Noto Sans JP' , 'serif';
-  padding: 1rem 0;
-  font-size: 1.5rem;
+.header .h-inner .left{
+  height: 100%;
 }
+.header .h-inner .left .logo{
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.header .h-inner .left .logo img {
+  height:100% ;
+}
+
+.header .h-inner .left .ttl{
+  display: inline-block;
+  vertical-align: middle;
+  font-family:'Noto Sans JP' , 'serif';
+  font-size: 1.5rem;
+  padding: 0 1rem;
+}
+.header .h-inner .right{
+  vertical-align: middle;
+}
+.header .h-inner .right .user-icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-size:2rem; 
+}
+.header .h-inner .right .user-name {
+  display: inline-block;
+  vertical-align: middle;
+  font-size:  1.2rem; 
+  
+}
+.header .h-inner .right .logout {
+  display: inline-block;
+  vertical-align: middle;
+  font-size:2rem; 
+}
+.header .h-inner .right .logout .fa-sign-out::before {
+  content: "\f08b";
+}
+
 /*  780px以上の場合 */
 @media screen and (min-width: 780px) {
-  .header .h-inner{
-    width: 90%;
-  }
+
 }
 /* ----- main ----- */
 .main {

@@ -16,9 +16,6 @@
                 <div class="user-name">
                     {{ $user->name }}
                 </div>
-                <div class="logout">
-                    <i class="fas fa-sign-out"></i>
-                </div>
             </div>
         </div>
 </header>

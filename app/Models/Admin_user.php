@@ -16,6 +16,13 @@ class Admin_user extends Model
     ]; 
 
     /**
+     * Idでユーザ取得
+     * @param id ユーザID
+     */
+    public static function getUserId($id){
+        return Admin_user::find($id)->first();
+    }
+    /**
      * Emailでユーザ取得
      * @param email メールアドレス
      */
