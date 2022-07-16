@@ -28,7 +28,7 @@ Route::prefix('admin')->group(function () {
     });
     Route::group(['middleware' => ['loginCheck']], function () {
         Route::controller(AdminController::class)->group(function () {
-            Route::get('/dashboard', 'dashboard')->name('dashboard');
+            Route::get('/', 'dashboard')->name('dashboard');
         });
     });
 });
