@@ -2,13 +2,13 @@
 @section('css','dashboard')
 @section('pageTitle','dashboard')
 @section('content')
-<main class="main dashboard">
+<div class="dashboard">
   <div class="wrapper">
     <div class="container">
       aaaaaa
     </div>
   </div>
-</main>
+</div>
 @endsection
 
 @section('script')

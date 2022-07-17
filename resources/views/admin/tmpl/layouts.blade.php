@@ -35,7 +35,10 @@
 </head>
 <body>
     @include('admin.tmpl.header')
-    @yield('content')
+    <main class="main">
+      @include('admin.tmpl.side')
+      @yield('content')
+    </main>
     @include('admin.tmpl.footer')
     
     <!-- jquery & iScroll -->

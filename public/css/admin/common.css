@@ -36,15 +36,16 @@ body {
 /*  1024px以上の場合 */
 @media screen and (min-width: 1024px) {
   .wrapper{
-    width: 1000px;
+    max-width: 1000px;
   }
 }
 /*  1200px以上の場合 */
 @media screen and (min-width: 1200px) {
   .wrapper{
-    width: 1200px;
+    max-width: 1200px;
   }
 }
+
 
 /* ----- header ----- */
 .header {
@@ -59,11 +60,9 @@ body {
 
 .header .h-inner{
   width: 100%;
-  max-width: 1024px;
   margin: auto;
   padding: 1rem;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 0 0 35px 35px;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -119,6 +118,31 @@ body {
 /* ----- main ----- */
 .main {
   padding-top: 80px;
+  display: flex;
+
+}
+/* ----- side ----- */
+.side{
+  width: 220px;
+  height: 100%;
+  z-index: 99;
+  background-color: #042569;
+  box-shadow: 10px 0 10px -8px rgba(0, 0, 0, 0.2);
+}
+.side .navi{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  color: #fff;
+}
+.side .navi .item{
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-family:'Noto Sans JP' , 'serif';
+}
+.side .navi .item:hover{
+  color: #ffffff52;
+  border-bottom:2px solid #fff;
 }
 
 /* ----- footer ----- */
