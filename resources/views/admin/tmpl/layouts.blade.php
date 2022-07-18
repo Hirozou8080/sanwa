@@ -31,15 +31,25 @@
 
     <link rel="stylesheet" href="/css/admin/@yield('css').css">
 
+    {{-- Font Awesome CDN --}}
+    <script src="https://kit.fontawesome.com/57884c2902.js" crossorigin="anonymous"></script>
     
 </head>
 <body>
     @include('admin.tmpl.header')
     <main class="main">
-      @include('admin.tmpl.side')
-      @yield('content')
+      <div class="side">
+        @include('admin.tmpl.side')
+      </div>
+      <div class="main-container @yield('pageName')">
+        <div class="wrapper">
+            <div class="container">
+              @yield('content')
+            </div>
+        </div>
+      </div>
     </main>
-    @include('admin.tmpl.footer')
+    {{-- @include('admin.tmpl.footer') --}}
     
     <!-- jquery & iScroll -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

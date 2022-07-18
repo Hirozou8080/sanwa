@@ -11,7 +11,6 @@
             <div class="right">
                 <div class="user-icon">
                     <i class="fas fa-user-circle user-circle"></i>
-                    <i class="far fa-sign-out"></i>
                 </div>
                 <div class="user-name">
                     {{ $user->name }}

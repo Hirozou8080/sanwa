@@ -1,14 +1,9 @@
 @extends('admin.tmpl.layouts')
 @section('css','dashboard')
+@section('pageName','dashboard')
 @section('pageTitle','dashboard')
 @section('content')
-<div class="dashboard">
-  <div class="wrapper">
-    <div class="container">
-      aaaaaa
-    </div>
-  </div>
-</div>
+aaaaaa
 @endsection
 
 @section('script')
