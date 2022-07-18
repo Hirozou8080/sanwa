@@ -1,9 +1,9 @@
 @extends('admin.tmpl.layouts')
-@section('css','dashboard')
-@section('pageName','dashboard')
-@section('pageTitle','dashboard')
+@section('css','alert')
+@section('pageClassName','alert')
+@section('pageTitle','お知らせ管理')
 @section('content')
-aaaaaa
+alert
 @endsection
 
 @section('script')

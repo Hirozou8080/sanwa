@@ -41,7 +41,7 @@
       <div class="side">
         @include('admin.tmpl.side')
       </div>
-      <div class="main-container @yield('pageName')">
+      <div class="main-container @yield('pageClassName')">
         <div class="wrapper">
             <div class="container">
               @yield('content')

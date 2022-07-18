@@ -5,7 +5,11 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\PriceController;
 use App\Http\Controllers\LoginController;
+// Admin
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\StoreController as AdminStoreController;
+use App\Http\Controllers\Admin\AlertController as AdminAlertController;
+use App\Http\Controllers\Admin\SettingController as AdminSettingController;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'home')->name('home');
@@ -23,12 +27,22 @@ Route::prefix('admin')->group(function () {
     Route::controller(LoginController::class)->group(function () {
         Route::get('/register', 'register')->name('register');
         Route::post('/register', 'registerPost')->name('register');
-        Route::get('/login', 'index')->name('login');
+        Route::get('/login', 'login')->name('login');
         Route::post('/login', 'loginPost')->name('login');
+        Route::get('/logout', 'logout')->name('logout');
     });
     Route::group(['middleware' => ['loginCheck']], function () {
         Route::controller(AdminController::class)->group(function () {
-            Route::get('/', 'dashboard')->name('dashboard');
+            Route::get('/', 'home')->name('admin/home');
+        });
+        Route::controller(AdminStoreController::class)->group(function () {
+            Route::get('/store', 'store')->name('admin/store');
+        });
+        Route::controller(AdminAlertController::class)->group(function () {
+            Route::get('/alert', 'alert')->name('admin/alert');
+        });
+        Route::controller(AdminSettingController::class)->group(function () {
+            Route::get('/setting', 'setting')->name('admin/setting');
         });
     });
 });

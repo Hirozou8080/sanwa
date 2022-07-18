@@ -31,6 +31,7 @@ class LoginService
     }
     return $loginUser;
   }
+  
 /**
  * アカウント登録処理
  * @param request  : post値 
