@@ -17,6 +17,8 @@ return new class extends Migration
             $table->increments('id')->comment('ID');
             $table->string('name')->comment('店舗名');
             $table->integer('post_num')->comment('郵便番号');
+            $table->integer('prefecture_id')->comment('都道府県ID');
+            $table->string('city')->comment('市区町村');
             $table->string('address')->comment('住所');
             $table->boolean('recruit_flg')->nullable()->comment('求人募集フラグ');
             $table->timestamps();
