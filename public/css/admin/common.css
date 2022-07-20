@@ -122,6 +122,16 @@ body {
   min-height: calc(100vh - 80px);
 }
 
+.main .main-container .container > .head{
+  width: 100%;
+  padding: 2rem 0;
+}
+.main .main-container .container > .head .title{
+  font-size: 2rem;
+  color: #333;
+}
+
+
 /* ----- side ----- */
 .main .side{
   width: 220px;
