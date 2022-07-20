@@ -3,7 +3,11 @@
 @section('pageClassName','alert')
 @section('pageTitle','お知らせ管理')
 @section('content')
-alert
+<div class="head">
+  <div class="title">
+    お知らせ一覧
+  </div>
+</div>
 @endsection
 
 @section('script')

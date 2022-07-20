@@ -1,0 +1,14 @@
+*{
+  font-family:'Noto Sans JP' , 'serif';
+}
+.store table.list{
+  width: 100%;
+  font-size: .8rem;
+}
+.store table.list th{
+  border:1px solid #ccc;
+  background-color:#042569 ;
+  color: #fff;
+  font-weight: 700;
+  padding: .5rem;
+}
