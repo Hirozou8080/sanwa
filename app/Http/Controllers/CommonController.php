@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 // models
 use App\Models\Admin_user;
+use App\Models\Store;
 
 class CommonController extends Controller
 {
@@ -17,5 +18,12 @@ class CommonController extends Controller
     public function getUser($id){
         $user = Admin_user::getUserId($id);
         return $user;
+    }
+    /**
+     * 全店舗の取得
+     */
+    public function getAllStore(){
+        $stores = Store::getAllStore();
+        return $stores;
     }
 }

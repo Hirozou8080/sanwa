@@ -14,7 +14,7 @@ class StoreController extends Controller
          // sessionユーザIDを取得
          $user_id = session()->get('user_id');
          $user = $commonController->getUser($user_id);
- 
-         return view('admin.store',['user'=>$user]);
+         $stores = $commonController->getAllStore();
+         return view('admin.store',['user'=>$user,'stores'=>$stores]);
     }
 }
