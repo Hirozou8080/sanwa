@@ -1,6 +1,14 @@
 *{
   font-family:'Noto Sans JP' , 'serif';
 }
+.store .list-head{
+  width: 100%;
+  text-align: right;
+  padding: .5rem 0;
+}
+.link-btn{
+  margin-left : auto;
+}
 .store table.list{
   width: 100%;
   font-size: .8rem;

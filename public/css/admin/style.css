@@ -12,3 +12,21 @@
 .content .pages .pages-inner{
   padding: 1rem;
 }
+
+
+/* btn各種 */
+.link-btn{
+  width: 120px;
+  padding: .5rem;
+  text-align: center;
+  background-color: #93cd39;
+  border-radius: 10px;
+}
+.link-btn:hover{
+  opacity: .5;
+}
+.link-btn a{
+  color:#fff;
+  font-size: 1rem;
+  font-family:'Noto Sans JP' , 'serif';
+}
