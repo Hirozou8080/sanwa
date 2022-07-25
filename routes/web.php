@@ -37,6 +37,7 @@ Route::prefix('admin')->group(function () {
         });
         Route::controller(AdminStoreController::class)->group(function () {
             Route::get('/store', 'store')->name('admin/store');
+            Route::get('/store/add', 'add')->name('admin/store/add');
         });
         Route::controller(AdminAlertController::class)->group(function () {
             Route::get('/alert', 'alert')->name('admin/alert');
