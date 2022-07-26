@@ -22,7 +22,7 @@ class StoreController extends Controller
     }
 
     /**
-     * 店舗追加
+     * 店舗登録
      */
     public function add(Request $request){
          // user取得
