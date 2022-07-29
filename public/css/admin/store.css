@@ -32,37 +32,39 @@
   font-size: 1rem;
   font-family:'Noto Sans JP' , 'serif';
 }
-.store-add .content .form-area{
+.store-add .content .form-block{
   width: 500px;
   padding: 1rem 0;
-  text-align: center;
   margin: auto;
 }
-.store-add .content .form-area .form-item{
+.store-add .content .form-block .form-item{
   width: 100%;
-  display: table;
-  vertical-align: middle;
-  table-layout:fixed; 
   padding: .5rem 0;
-
 }
-.store-add .content .form-area .form-item .t-head{
-  display: table-cell;
-  width: 50%;
+.store-add .content .form-block .form-item .form-title{
+  width: 100%;
+  text-align: left;
+  padding: .5rem 0;
 }
-.store-add .content .form-area .t-head>label{
+.store-add .content .form-block .form-title label{
   font-size: 1rem;
   font-family:'Noto Sans JP' , 'serif';
 }
-.store-add .content .form-area .form-item .t-body{
-  display: table-cell;
-  width: 50%;
+.store-add .content .form-block .form-item .form-content{
+  /*  */
 }
-.store-add .content .form-area .t-body>input{
-    width: 220px;
+.store-add .content .form-block .form-content>input{
+    width: 100%;
     height: 45px;
     text-align: initial;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     border: 1px solid #ccc;
+}
+
+.store-add .content .form-block .flex-items{
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
 }

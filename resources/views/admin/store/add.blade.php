@@ -15,49 +15,78 @@
         <div class="head">
           新しい店舗を登録
         </div>
-        <div class="form-area">
+        <div class="form-block">
           {{Form::open(['url' => route('admin/store/add') , 'files' => true])}}
             <div class="form-item">
-              <div class="t-head">
-              {{Form::label($for="store_nama",'店舗名')}}
-            </div>
-            <div class="t-body">
-              {{Form::text('store_nama', null, ['class' => 'form-control', 'id' => 'storeName', 'placeholder' => '店舗名'])}}
-            </div>
-            </div>
-            <div class="form-item">
-              <div class="t-head">
-                {{Form::label($for="postNum",'郵便番号')}}
+              <div class="form-title">
+                {{Form::label($for="storeName",'店舗名')}}
               </div>
-              <div class="t-body">
-                {{Form::text('postNum', null, ['class' => 'form-control', 'id' => 'postNum', 'placeholder' => '郵便番号'])}}
+              <div class="form-content">
+                {{Form::text('storeName', null, ['class' => 'form-control', 'id' => 'storeName', 'placeholder' => 'マリンピア店'])}}
               </div>
             </div>
             <div class="form-item">
-              <div class="t-head">
+              <div class="form-title">
+                {{Form::label($for="postNumPrev",'郵便番号')}}
+              </div>
+              <div class=" flex-items">
+                <div class="form-content">
+                  {{Form::text('postNumPrev', null, ['class' => 'form-control', 'id' => 'postNumPrev', 'placeholder' => '123'])}}
+                </div>
+                ー
+                <div class="form-content">
+                  {{Form::text('postNumNext', null, ['class' => 'form-control', 'id' => 'postNumNext', 'placeholder' => '4567'])}}
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <div class="form-title">
                 {{Form::label($for="prefecture",'都道府県')}}
               </div>
-              <div class="t-body">
-              {{Form::text('prefecture', null, ['class' => 'form-control', 'id' => 'prefecture', 'placeholder' => '都道府県'])}}
+              <div class="form-content">
+                {{Form::text('prefecture', null, ['class' => 'form-control', 'id' => 'prefecture', 'placeholder' => '千葉県'])}}
               </div>
             </div>
             <div class="form-item">
-              {{Form::label($for="city",'市区町村')}}
-              {{Form::text('city', null, ['class' => 'form-control', 'id' => 'city', 'placeholder' => '市区町村'])}}
+                <div class="form-title">
+                  {{Form::label($for="city",'市区町村')}}
+                </div>
+                <div class="form-content">
+                  {{Form::text('city', null, ['class' => 'form-control', 'id' => 'city', 'placeholder' => '千葉市中央区'])}}
+                </div>
+              </div>
+              <div class="form-item">
+                <div class="form-title">
+                  {{Form::label($for="address",'住所')}}
+                </div>
+                <div class="form-content">
+                  {{Form::text('address', null, ['class' => 'form-control', 'id' => 'address', 'placeholder' => '栄町1-1-1'])}}
+                </div>
+              </div>
+              <div class="form-item">
+                <div class="form-title">
+                  {{Form::label('求人情報')}}
+                </div>
+                <div class=" flex-items" style="justify-content:center">
+                  <div class="form-content">
+                    <div class=" flex-items">
+                      {{Form::label($for='recruit', '募集')}}
+                      <input type="checkbox" id="recruit">
+                    </div>
+                  </div>
+                  <div class="form-content">
+                    <div class=" flex-items">
+                      {{Form::label($for='noRecruit', '募集なし')}}
+                      <input type="checkbox" id="noRecruit">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-item">
+                  {{ Form::submit('登録', ['class'=>'register']) }}
+                </div>
+              </div>
+              {{Form::close()}}
             </div>
-            <div class="form-item">
-              {{Form::label($for="address",'市区町村')}}
-              {{Form::text('address', null, ['class' => 'form-control', 'id' => 'address', 'placeholder' => '市区町村'])}}
-            </div>
-            <div class="form-item">
-              {{Form::label('求人情報')}}
-                {{Form::label($for='recruit', '募集')}}
-                <input type="checkbox" id="recruit">
-                {{Form::label($for='noRecruit', '募集なし')}}
-                  <input type="checkbox" id="noRecruit">
-            </div>
-          {{Form::close()}}
-        </div>
       </div>
     </section>
   </div>
