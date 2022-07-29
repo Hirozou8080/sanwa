@@ -15,30 +15,46 @@
         <div class="head">
           新しい店舗を登録
         </div>
-        <div class="form-control">
+        <div class="form-area">
           {{Form::open(['url' => route('admin/store/add') , 'files' => true])}}
             <div class="form-item">
+              <div class="t-head">
               {{Form::label($for="store_nama",'店舗名')}}
+            </div>
+            <div class="t-body">
               {{Form::text('store_nama', null, ['class' => 'form-control', 'id' => 'storeName', 'placeholder' => '店舗名'])}}
             </div>
-            <div class="form-item">
-              {{Form::label($for="postNum",'郵便番号')}}
-              {{Form::text('postNum', null, ['class' => 'form-control', 'id' => 'postNum', 'placeholder' => '郵便番号'])}}
             </div>
             <div class="form-item">
-              <input type="text" placeholder="都道府県">
+              <div class="t-head">
+                {{Form::label($for="postNum",'郵便番号')}}
+              </div>
+              <div class="t-body">
+                {{Form::text('postNum', null, ['class' => 'form-control', 'id' => 'postNum', 'placeholder' => '郵便番号'])}}
+              </div>
             </div>
             <div class="form-item">
-              <input type="text" placeholder="市区町村">
+              <div class="t-head">
+                {{Form::label($for="prefecture",'都道府県')}}
+              </div>
+              <div class="t-body">
+              {{Form::text('prefecture', null, ['class' => 'form-control', 'id' => 'prefecture', 'placeholder' => '都道府県'])}}
+              </div>
             </div>
             <div class="form-item">
-              <input type="text" placeholder="住所">
+              {{Form::label($for="city",'市区町村')}}
+              {{Form::text('city', null, ['class' => 'form-control', 'id' => 'city', 'placeholder' => '市区町村'])}}
             </div>
             <div class="form-item">
-              <label id="yes">あり<label>
-                  <input type="checkbox" for="yes">
-              <label id="no">なし<label>
-                  <input type="checkbox" for="no">
+              {{Form::label($for="address",'市区町村')}}
+              {{Form::text('address', null, ['class' => 'form-control', 'id' => 'address', 'placeholder' => '市区町村'])}}
+            </div>
+            <div class="form-item">
+              {{Form::label('求人情報')}}
+                {{Form::label($for='recruit', '募集')}}
+                <input type="checkbox" id="recruit">
+                {{Form::label($for='noRecruit', '募集なし')}}
+                  <input type="checkbox" id="noRecruit">
             </div>
           {{Form::close()}}
         </div>

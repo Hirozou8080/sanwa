@@ -32,20 +32,35 @@
   font-size: 1rem;
   font-family:'Noto Sans JP' , 'serif';
 }
-.store-add .content .form-control{
-  width: 80%;
+.store-add .content .form-area{
+  width: 500px;
   padding: 1rem 0;
   text-align: center;
   margin: auto;
 }
-.store-add .content .form-control .form-item{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.store-add .content .form-area .form-item{
+  width: 100%;
+  display: table;
+  vertical-align: middle;
+  table-layout:fixed; 
+  padding: .5rem 0;
+
 }
-.store-add .content .form-control .form-item>input{
-  width: 220px;
-    height: 35px;
+.store-add .content .form-area .form-item .t-head{
+  display: table-cell;
+  width: 50%;
+}
+.store-add .content .form-area .t-head>label{
+  font-size: 1rem;
+  font-family:'Noto Sans JP' , 'serif';
+}
+.store-add .content .form-area .form-item .t-body{
+  display: table-cell;
+  width: 50%;
+}
+.store-add .content .form-area .t-body>input{
+    width: 220px;
+    height: 45px;
     text-align: initial;
     padding: 0.5rem 1rem;
     border-radius: 5px;
