@@ -14,7 +14,7 @@
       <div class="pages-inner">
         <div class="list-head">
           <div class="link-btn">
-            <a href={{ route('admin/store/add') }}>登録＞</a>
+            <a href={{ route('admin/store/add') }}>新規登録＞</a>
           </div>
         </div>
         <table class="list">

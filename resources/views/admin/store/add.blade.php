@@ -67,7 +67,7 @@
                 <div class="form-title">
                   {{Form::label('求人情報')}}
                 </div>
-                <div class=" flex-items" style="justify-content:center; gap:50px ">
+                <div class=" flex-items" style="justify-content:center; gap:50px ; border:1px solid #ccc;border-radius:5px; padding:.5rem">
                   <div class="form-content">
                     <div class=" flex-items">
                       {{Form::label($for='recruit', '募集' , ['class'=>'recruit'])}}
@@ -81,8 +81,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="form-item" style="text-align:center; padding-top:3rem">
-                  {{ Form::submit('登録', ['class'=>'register']) }}
+              </div>
+              <div class="form-item" style="justify-content:space-between; padding:3rem 1rem">
+                <div class="flex-items">
+                  <button type="button" onclick="location.href='{{ route('admin/store')}}' ">戻る＞</button>
+                  {{ Form::submit('登録＞', ['class'=>'register']) }}
                 </div>
               </div>
               {{Form::close()}}
