@@ -67,21 +67,21 @@
                 <div class="form-title">
                   {{Form::label('求人情報')}}
                 </div>
-                <div class=" flex-items" style="justify-content:center">
+                <div class=" flex-items" style="justify-content:center; gap:50px ">
                   <div class="form-content">
                     <div class=" flex-items">
-                      {{Form::label($for='recruit', '募集')}}
-                      <input type="checkbox" id="recruit">
+                      {{Form::label($for='recruit', '募集' , ['class'=>'recruit'])}}
+                      {{Form::radio('recruit', 1, true, ['id'=>'recruit','class'=>'circle'])}}
                     </div>
                   </div>
                   <div class="form-content">
-                    <div class=" flex-items">
-                      {{Form::label($for='noRecruit', '募集なし')}}
-                      <input type="checkbox" id="noRecruit">
+                    <div class="flex-items">
+                      {{Form::label($for='noRecruit', '募集なし',['class'=>'noRecruit'])}}
+                      {{Form::radio('recruit', 2, false, ['id'=>'noRecruit','class'=>'circle'])}}
                     </div>
                   </div>
                 </div>
-                <div class="form-item">
+                <div class="form-item" style="text-align:center; padding-top:3rem">
                   {{ Form::submit('登録', ['class'=>'register']) }}
                 </div>
               </div>
