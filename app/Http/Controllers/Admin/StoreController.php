@@ -38,7 +38,17 @@ class StoreController extends Controller
      * 店舗登録
      */
     public function addPost(Request $request){
-          dd($request->all());
+       
+     // バリデーション
+     $validated = $request->validate([
+       'storeName' => 'required | max:36',
+       'postNumPrev' => 'required | min:3',
+       'postNumNext' => 'required | min:4',
+       'prefecture' => 'required',
+       'city' => 'required | max:32',
+       'address' => 'required | max:64',
+       'recruit' => 'required',
+     ]);
          // user取得
          $commonController = new CommonController();
          // sessionユーザIDを取得

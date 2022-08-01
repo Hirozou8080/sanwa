@@ -15,6 +15,15 @@
         <div class="head">
           新しい店舗を登録
         </div>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+              <ul>
+                @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+                @endforeach
+              </ul>
+            </div>
+          @endif
         <div class="form-block">
           {{Form::open(['url' => route('admin/store/add') , 'files' => true])}}
             <div class="form-item">
