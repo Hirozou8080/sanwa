@@ -53,7 +53,7 @@ return [
     'image' => 'The :attribute must be an image.',
     'in' => 'The selected :attribute is invalid.',
     'in_array' => 'The :attribute field does not exist in :other.',
-    'integer' => 'The :attribute must be an integer.',
+    'integer' => ' :attribute は半角数字で入力してください',
     'ip' => 'The :attribute must be a valid IP address.',
     'ipv4' => 'The :attribute must be a valid IPv4 address.',
     'ipv6' => 'The :attribute must be a valid IPv6 address.',
@@ -150,6 +150,13 @@ return [
     'attributes' => [
       'email' => 'メールアドレス',
       'password' => 'パスワード',
+      'storeName' => '店舗名',
+      'postNumPrev' => '郵便番号(3桁)',
+      'postNumNext' => '郵便番号(4桁)',
+      'prefecture' => '都道府県',
+      'city' => '市区町村',
+      'address' => '住所(その他)',
+      'recruit' => '求人募集',
 
     ],
 

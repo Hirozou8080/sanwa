@@ -42,8 +42,8 @@ class StoreController extends Controller
      // バリデーション
      $validated = $request->validate([
        'storeName' => 'required | max:36',
-       'postNumPrev' => 'required | min:3',
-       'postNumNext' => 'required | min:4',
+       'postNumPrev' => 'required | min:3 | integer',
+       'postNumNext' => 'required | min:4 | integer',
        'prefecture' => 'required',
        'city' => 'required | max:32',
        'address' => 'required | max:64',
