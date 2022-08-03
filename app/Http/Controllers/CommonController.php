@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 // models
 use App\Models\Admin_user;
 use App\Models\Store;
+use App\Models\Prefecture;
 
 class CommonController extends Controller
 {
@@ -25,5 +26,13 @@ class CommonController extends Controller
     public function getAllStore(){
         $stores = Store::getAllStore();
         return $stores;
+    }
+
+    /**
+     * 全都道府県の取得
+     */
+    public function getAllPrefecture(){
+        $prefecture = Prefecture::getAllPrefecture();
+        return $prefecture;
     }
 }

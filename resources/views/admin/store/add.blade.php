@@ -53,7 +53,11 @@
                 {{Form::label($for="prefecture",'都道府県')}}
               </div>
               <div class="form-content">
-                {{Form::text('prefecture', null, ['class' => 'form-control', 'id' => 'prefecture', 'placeholder' => '千葉県'])}}
+                <select name="prefecture" id="prefecture">
+                  @foreach ($prefectures as $prefecture)
+                    <option class="form-control" value="{{$prefecture['id']}}">{{$prefecture['name']}}</option>
+                  @endforeach
+              </select>
               </div>
             </div>
             <div class="form-item">
