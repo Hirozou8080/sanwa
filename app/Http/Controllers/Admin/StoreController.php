@@ -4,10 +4,17 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\CommonController;
+use App\Services\StoreService;
 use Illuminate\Http\Request;
 
 class StoreController extends Controller
 {
+     protected $storeService;
+     public function __construct(StoreService $storeService)
+     {
+         //ログイン認証処理
+         $this->storeService = $storeService;
+     }
     /**
      * 店舗一覧
      */
@@ -50,6 +57,8 @@ class StoreController extends Controller
        'address' => 'required | max:64',
        'recruit' => 'required',
      ]);
+     // 店舗登録処理
+     $this->storeService->storeRegist($request);
          // user取得
          $commonController = new CommonController();
          // sessionユーザIDを取得
