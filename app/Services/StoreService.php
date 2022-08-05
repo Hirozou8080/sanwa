@@ -15,16 +15,16 @@ class StoreService
  */
   public function storeRegist(Request $request)
   {
-    dd($request);
     try {
       // トランザクション開始
       DB::beginTransaction();
-      
       Store::create([
-        'name'     => $request['name'],
-        'email'    => $request['email'],
-        'password' => $password,
-        'register_date' => $now
+        'name'     => $request['storeName'],
+        'post_num'    => $request['postNumPrev'].$request['postNumNext'],
+        'prefecture_id' => $request['prefecture'],
+        'city' => $request['city'],
+        'address' => $request['address'],
+        'recruit_flg' => $request['recruit']
       ]);
       DB::commit();
       // トランザクション終了

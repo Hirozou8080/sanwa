@@ -65,6 +65,6 @@ class StoreController extends Controller
          $user_id = session()->get('user_id');
          $user = $commonController->getUser($user_id);
          $stores = $commonController->getAllStore();
-         return view('admin.store.add',['user'=>$user,'stores'=>$stores]);
+         return view('admin.store.list',['user'=>$user,'stores'=>$stores]);
     }
 }

@@ -24,12 +24,15 @@
             <th>場所</th>
             <th></th>
           </tr>
+          @foreach ($stores as $store)
           <tr>
-            <td>1</td>
-            <td>金親</td>
-            <td>千葉県千葉市若葉区</td>
+            <td>{{$store->id}}</td>
+            <td>{{$store->name}}</td>
+            <td>{{$store->address}}</td>
             <td>編集ボタン</td>
           </tr>
+            
+          @endforeach
         </table>
       </div>
     </section>

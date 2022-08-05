@@ -8,6 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Store extends Model
 {
     use HasFactory;
+    
+    protected $fillable = [
+        'name',
+        'post_num',
+        'prefecture_id',
+        'city',
+        'address',
+        'recruit_flg',
+    ];
 
     /**
      * 全店舗取得
