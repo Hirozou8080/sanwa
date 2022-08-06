@@ -25,7 +25,8 @@ class StoreController extends Controller
          $user_id = session()->get('user_id');
          $user = $commonController->getUser($user_id);
          $stores = $commonController->getAllStore();
-         return view('admin.store.list',['user'=>$user,'stores'=>$stores]);
+         $prefectures = $commonController->getAllPrefecture();
+          return view('admin.store.list',['user'=>$user,'stores'=>$stores,'prefectures'=>$prefectures]);
     }
 
     /**

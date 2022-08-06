@@ -21,14 +21,16 @@
           <tr>
             <th>ID</th>
             <th>店舗名</th>
-            <th>場所</th>
-            <th></th>
+            <th>住所</th>
+            <th>求人状況</th>
+            <th>操作</th>
           </tr>
           @foreach ($stores as $store)
           <tr>
-            <td>{{$store->id}}</td>
+            <td style="text-align: center">{{$store->id}}</td>
             <td>{{$store->name}}</td>
-            <td>{{$store->address}}</td>
+            <td>{{$store->city.$store->address}}</td>
+            <td style="text-align: center">{{$store->recruit_flg ? '募集中':'募集なし'}}</td>
             <td>編集ボタン</td>
           </tr>
             

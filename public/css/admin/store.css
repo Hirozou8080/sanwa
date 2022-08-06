@@ -36,6 +36,21 @@
   padding-left:.5rem ;
   font-family:'Noto Sans JP' , 'serif';
 }
+.store-add .content .alert{
+  width: 500px;
+  margin: auto;
+  padding: 1rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: red;
+  border-radius: 5px;
+}
+.store-add .content .alert ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .store-add .content .form-block{
   width: 500px;
   padding: 1rem 0;
