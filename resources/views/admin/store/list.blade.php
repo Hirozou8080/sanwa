@@ -31,9 +31,18 @@
             <td>{{$store->name}}</td>
             <td>{{$store->city.$store->address}}</td>
             <td style="text-align: center">{{$store->recruit_flg ? '募集中':'募集なし'}}</td>
-            <td>編集ボタン</td>
+            <td style="text-align: center">
+              <div class="link-btn">
+                <a href={{ route('admin/store/edit',$store->id) }}>編集＞</a>
+              </div>
+              <div class="link-btn">
+                <a href={{ route('admin/store/detai',{{$store->id}}) }}>詳細＞</a>
+              </div>
+              <div class="link-btn">
+                <a href={{ route('admin/store/add') }}>料金設定＞</a>
+              </div>
+            </td>
           </tr>
-            
           @endforeach
         </table>
       </div>
