@@ -40,6 +40,7 @@ Route::prefix('admin')->group(function () {
             Route::get('/store/add', 'add')->name('admin/store/add');
             Route::post('/store/add', 'addPost')->name('admin/store/add');
             Route::get('/store/edit/{store_id}', 'edit')->name('admin/store/edit');
+            Route::post('/store/edit/{store_id}', 'editPost')->name('admin/store/edit');
             Route::get('/store/detail/{store_id}', 'detail')->name('admin/store/detail');
         });
         Route::controller(AdminAlertController::class)->group(function () {

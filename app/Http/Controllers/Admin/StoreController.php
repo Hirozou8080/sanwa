@@ -58,13 +58,8 @@ class StoreController extends Controller
           ]);
           // 店舗登録処理
           $this->storeService->storeRegist($request);
-          // user取得
-          $commonController = new CommonController();
-          // sessionユーザIDを取得
-          $user_id = session()->get('user_id');
-          $user = $commonController->getUser($user_id);
-          $stores = $commonController->getAllStore();
-          return view('admin.store.list',['user'=>$user,'stores'=>$stores]);
+          // return view('admin.store.list',['user'=>$user,'stores'=>$stores]);
+          return redirect()->route('admin/store');
      }
      /**
       * 店舗編集
@@ -77,7 +72,28 @@ class StoreController extends Controller
           $user = $commonController->getUser($user_id);
           $prefectures = $commonController->getAllPrefecture();
           $store = $commonController->getStore($store_id);
+          $store['postNumPrev'] = substr($store['post_num'],0,3);
+          $store['postNumNext'] = substr($store['post_num'],3,7);
           return view('admin.store.edit',['user'=>$user,'store'=>$store,'prefectures'=>$prefectures]);
+     }
+     /**
+      * 店舗編集
+      */
+     public function editPost(Request $request, $store_id){
+          // バリデーション
+          $validated = $request->validate([
+               'storeName' => 'required | max:36',
+               'postNumPrev' => 'required | min:3 | integer',
+               'postNumNext' => 'required | min:4 | integer',
+               'prefecture' => 'required',
+               'city' => 'required | max:32',
+               'address' => 'required | max:64',
+               'recruit' => 'required',
+          ]);
+          // 店舗登録処理
+          $this->storeService->storeEdit($request);
+          // return view('admin.store.list',['user'=>$user,'store'=>$store]);
+          return redirect()->route('admin/store');
      }
      /**
       * 店舗詳細
@@ -90,6 +106,6 @@ class StoreController extends Controller
           $user = $commonController->getUser($user_id);
           $prefectures = $commonController->getAllPrefecture();
           $store = $commonController->getStore($store_id);
-          return view('admin.store.edit',['user'=>$user,'store'=>$store,'prefectures'=>$prefectures]);
+          return view('admin.store.detail',['user'=>$user,'store'=>$store,'prefectures'=>$prefectures]);
      }
 }

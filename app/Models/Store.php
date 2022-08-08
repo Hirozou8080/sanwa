@@ -24,4 +24,10 @@ class Store extends Model
     public static function getAllStore(){
         return Store::all();
     }
+    /**
+     * IDから店舗取得
+     */
+    public static function getStoreId($id){
+        return Store::find($id);
+    }
 }

@@ -36,7 +36,7 @@
                 <a href={{ route('admin/store/edit',$store->id) }}>編集＞</a>
               </div>
               <div class="link-btn">
-                <a href={{ route('admin/store/detai',{{$store->id}}) }}>詳細＞</a>
+                <a href={{ route('admin/store/detail',$store->id) }}>詳細＞</a>
               </div>
               <div class="link-btn">
                 <a href={{ route('admin/store/add') }}>料金設定＞</a>

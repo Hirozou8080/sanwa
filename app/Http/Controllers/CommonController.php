@@ -27,6 +27,13 @@ class CommonController extends Controller
         $stores = Store::getAllStore();
         return $stores;
     }
+    /**
+     * IDから店舗の取得
+     */
+    public function getStore($id){
+        $store = Store::getStoreId($id);
+        return $store;
+    }
 
     /**
      * 全都道府県の取得
