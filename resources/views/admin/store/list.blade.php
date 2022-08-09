@@ -33,14 +33,14 @@
             <td style="text-align: center">{{$store->recruit_flg ? '募集中':'募集なし'}}</td>
             <td style="text-align: center">
               <div class="flex" style="text-align: center">
-                <div class="link-btn1 ">
+                <div class="link-btn2 ">
                   <a href={{ route('admin/store/edit',$store->id) }}>編集＞</a>
                 </div>
-                <div class="link-btn2">
+                <div class="link-btn3">
                   <a href={{ route('admin/store/detail',$store->id) }}>詳細＞</a>
                 </div>
-                <div class="link-btn3">
-                  <a href={{ route('admin/store/add') }}>料金設定＞</a>
+                <div class="link-btn4">
+                  <a href={{ route('admin/store/price',$store->id) }}>料金設定＞</a>
                 </div>
               </div>
             </td>

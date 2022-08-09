@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\StoreController as AdminStoreController;
 use App\Http\Controllers\Admin\AlertController as AdminAlertController;
 use App\Http\Controllers\Admin\SettingController as AdminSettingController;
+use App\Http\Controllers\Admin\PriceController as AdminPriceController;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'home')->name('home');
@@ -43,6 +44,10 @@ Route::prefix('admin')->group(function () {
             Route::post('/store/edit/{store_id}', 'editPost')->name('admin/store/edit');
             Route::get('/store/detail/{store_id}', 'detail')->name('admin/store/detail');
         });
+        Route::controller(AdminPriceController::class)->group(function () {
+            Route::get('/store/price/{store_id}', 'price')->name('admin/store/price');
+        });
+        
         Route::controller(AdminAlertController::class)->group(function () {
             Route::get('/alert', 'alert')->name('admin/alert');
         });
