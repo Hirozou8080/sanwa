@@ -30,6 +30,51 @@
   font-size: 1rem;
   font-family:'Noto Sans JP' , 'serif';
 }
+.link-btn2{
+  width: 120px;
+  text-align: center;
+  background-color: #00a608;
+  border-radius: 10px;
+}
+.link-btn2:hover{
+  opacity: .5;
+}
+.link-btn2 a{
+  padding: .5rem;
+  color:#fff;
+  font-size: 1rem;
+  font-family:'Noto Sans JP' , 'serif';
+}
+.link-btn3{
+  width: 120px;
+  text-align: center;
+  background-color: #3949ff;
+  border-radius: 10px;
+}
+.link-btn3:hover{
+  opacity: .5;
+}
+.link-btn3 a{
+  padding: .5rem;
+  color:#fff;
+  font-size: 1rem;
+  font-family:'Noto Sans JP' , 'serif';
+}
+.link-btn4{
+  width: 120px;
+  text-align: center;
+  background-color: #ffca39;
+  border-radius: 10px;
+}
+.link-btn4:hover{
+  opacity: .5;
+}
+.link-btn4 a{
+  padding: .5rem;
+  color:#fff;
+  font-size: 1rem;
+  font-family:'Noto Sans JP' , 'serif';
+}
 
 /* flex 設定*/
 .flex {
