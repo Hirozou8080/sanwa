@@ -91,7 +91,7 @@ class StoreController extends Controller
                'recruit' => 'required',
           ]);
           // 店舗登録処理
-          $this->storeService->storeEdit($request);
+          $this->storeService->storeEdit($request,$store_id);
           // return view('admin.store.list',['user'=>$user,'store'=>$store]);
           return redirect()->route('admin/store');
      }

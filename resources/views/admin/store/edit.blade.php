@@ -1,6 +1,6 @@
 @extends('admin.tmpl.layouts')
 @section('css', 'store')
-@section('pageClassName', 'store-add')
+@section('pageClassName', 'store-edit')
 @section('pageTitle', '店舗設定')
 @section('content')
   <div class="head">
