@@ -13,7 +13,7 @@
     <section class="pages">
       <div class="pages-inner">
         <div class="list-head">
-          <div class="link-btn">
+          <div class="link-btn1 regist">
             <a href={{ route('admin/store/add') }}>新規登録＞</a>
           </div>
         </div>
@@ -32,14 +32,16 @@
             <td>{{$store->city.$store->address}}</td>
             <td style="text-align: center">{{$store->recruit_flg ? '募集中':'募集なし'}}</td>
             <td style="text-align: center">
-              <div class="link-btn">
-                <a href={{ route('admin/store/edit',$store->id) }}>編集＞</a>
-              </div>
-              <div class="link-btn">
-                <a href={{ route('admin/store/detail',$store->id) }}>詳細＞</a>
-              </div>
-              <div class="link-btn">
-                <a href={{ route('admin/store/add') }}>料金設定＞</a>
+              <div class="flex" style="text-align: center">
+                <div class="link-btn1 ">
+                  <a href={{ route('admin/store/edit',$store->id) }}>編集＞</a>
+                </div>
+                <div class="link-btn2">
+                  <a href={{ route('admin/store/detail',$store->id) }}>詳細＞</a>
+                </div>
+                <div class="link-btn3">
+                  <a href={{ route('admin/store/add') }}>料金設定＞</a>
+                </div>
               </div>
             </td>
           </tr>
