@@ -15,4 +15,10 @@ class Prefecture extends Model
     public static function getAllPrefecture(){
         return Prefecture::all();
     }
+    /**
+     * IDから都道府県取得
+     */
+    public static function getPrefectureId($id){
+        return Prefecture::find($id);
+    }
 }

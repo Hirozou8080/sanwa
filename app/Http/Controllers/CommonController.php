@@ -42,4 +42,11 @@ class CommonController extends Controller
         $prefecture = Prefecture::getAllPrefecture();
         return $prefecture;
     }
+    /**
+     * IDから都道府県の取得
+     */
+    public function getPrefecture($id){
+        $prefecture = Prefecture::getPrefectureId($id);
+        return $prefecture;
+    }
 }

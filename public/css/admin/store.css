@@ -241,6 +241,7 @@
 .store-edit .content .form-block .form-item button:hover{
   opacity: .5;
 }
+
 /* ---------------------------------------
 店舗詳細画面 
 --------------------------------------- */
@@ -254,25 +255,25 @@
   font-family:'Noto Sans JP' , 'serif';
 }
 
-.store-add .content .form-block{
+.store-detail .content .form-block{
   width: 500px;
   padding: 1rem 0;
   margin: auto;
 }
-.store-add .content .form-block .form-item{
+.store-detail .content .form-block .form-item{
   width: 100%;
   padding: .5rem 0;
 }
-.store-add .content .form-block .form-item .form-title{
+.store-detail .content .form-block .form-item .form-title{
   width: 100%;
   text-align: left;
   padding: .5rem 0;
 }
-.store-add .content .form-block .form-title label{
+.store-detail .content .form-block .form-title label{
   font-size: 1rem;
   font-family:'Noto Sans JP' , 'serif';
 }
-.store-add .content .form-block .form-content > input{
+.store-detail .content .form-block .form-content > input{
   width: 100%;
   height: 45px;
   text-align: initial;
@@ -281,7 +282,7 @@
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-.store-add .content .form-block .form-content > select{
+.store-detail .content .form-block .form-content > select{
   width: 100%;
   height: 45px;
   text-align: initial;
@@ -290,24 +291,24 @@
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-.store-add .content .form-block .recruit,
-.store-add .content .form-block .noRecruit{
+.store-detail .content .form-block .recruit,
+.store-detail .content .form-block .noRecruit{
   font-size: 1rem;
   font-family:'Noto Sans JP' , 'serif';
 }
 
 
-.store-add .content .form-block .flex-items{
+.store-detail .content .form-block .flex-items{
   display: flex;
   justify-content: flex-start;
   gap: 20px;
   align-items: center;
 }
-.store-add .content .form-block .flex-items input[type=radio]{
+.store-detail .content .form-block .flex-items input[type=radio]{
   transform:scale(1.6);
 }
-.store-add .content .form-block .form-item input[type=submit],
-.store-add .content .form-block .form-item button{
+.store-detail .content .form-block .form-item input[type=submit],
+.store-detail .content .form-block .form-item button{
   margin: auto;
   width:120px;
   padding: 0.5rem;
@@ -315,16 +316,16 @@
   border: 1px solid #bbbbbb;
   font-size: 1rem;
 }
-.store-add .content .form-block .form-item input[type=submit]{
+.store-detail .content .form-block .form-item input[type=submit]{
   background-color: #ff1717;
   color: #fff;
 }
 
-.store-add .content .form-block .form-item button{
+.store-detail .content .form-block .form-item button{
   background-color: #bbbbbb;
   color: #000;
 }
-.store-add .content .form-block .form-item input[type=submit]:hover,
-.store-add .content .form-block .form-item button:hover{
+.store-detail .content .form-block .form-item input[type=submit]:hover,
+.store-detail .content .form-block .form-item button:hover{
   opacity: .5;
 }

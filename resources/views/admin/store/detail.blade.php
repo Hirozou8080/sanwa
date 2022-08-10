@@ -18,74 +18,68 @@
         <div class="form-block">
           <div class="form-item">
             <div class="form-title">
-              {{Form::label($for="storeName",'店舗名')}}
+              <div>店舗名</div>
             </div>
             <div class="form-content">
-              {{Form::text('storeName', null, ['class' => 'form-control', 'id' => 'storeName', 'placeholder' => 'マリンピア店'])}}
+              {{$store->name}}
             </div>
           </div>
           <div class="form-item">
             <div class="form-title">
-              {{Form::label($for="postNumPrev",'郵便番号')}}
+              郵便番号
             </div>
             <div class=" flex-items">
               <div class="form-content">
-                {{Form::text('postNumPrev', null, ['class' => 'form-control', 'id' => 'postNumPrev', 'placeholder' => '123'])}}
+                {{$store->postNumPrev}}
               </div>
               ー
               <div class="form-content">
-                {{Form::text('postNumNext', null, ['class' => 'form-control', 'id' => 'postNumNext', 'placeholder' => '4567'])}}
+                {{$store->postNumNext}}
               </div>
             </div>
           </div>
           <div class="form-item">
             <div class="form-title">
-              {{Form::label($for="prefecture",'都道府県')}}
+              都道府県
             </div>
             <div class="form-content">
-              <select name="prefecture" id="prefecture">
-                @foreach ($prefectures as $prefecture)
-                  <option class="form-control" value="{{$prefecture['id']}}">{{$prefecture['name']}}</option>
-                @endforeach
+                {{$prefecture->name}}
             </select>
             </div>
           </div>
           <div class="form-item">
             <div class="form-title">
-              {{Form::label($for="city",'市区町村')}}
+              市区町村
             </div>
             <div class="form-content">
-              {{Form::text('city', null, ['class' => 'form-control', 'id' => 'city', 'placeholder' => '千葉市中央区'])}}
+              {{$store->city}}  
             </div>
           </div>
           <div class="form-item">
             <div class="form-title">
-              {{Form::label($for="address",'住所')}}
+              住所
             </div>
             <div class="form-content">
-              {{Form::text('address', null, ['class' => 'form-control', 'id' => 'address', 'placeholder' => '栄町1-1-1'])}}
+              {{$store->address}}
             </div>
           </div>
           <div class="form-item">
             <div class="form-title">
-              {{Form::label('求人情報')}}
+              求人情報
             </div>
             <div class=" flex-items" style="justify-content:center; gap:50px ; border:1px solid #ccc;border-radius:5px; padding:.5rem">
               <div class="form-content">
                 <div class=" flex-items">
-                  {{Form::label($for='recruit', '募集' , ['class'=>'recruit'])}}
-                  {{Form::radio('recruit', 1, true, ['id'=>'recruit','class'=>'circle'])}}
-                </div>
-              </div>
-              <div class="form-content">
-                <div class="flex-items">
-                  {{Form::label($for='noRecruit', '募集なし',['class'=>'noRecruit'])}}
-                  {{Form::radio('recruit', 2, false, ['id'=>'noRecruit','class'=>'circle'])}}
+                @if($store->recruit_flg == 1)
+                  募集中
+                  @else
+                  募集なし
+                @endif
                 </div>
               </div>
             </div>
           </div>
-          <div class="form-item" style="justify-content:space-between; padding:3rem 1rem">
+          <div class="form-item" style="justify-content:center; padding:3rem 1rem">
             <div class="flex-items">
               <button type="button" onclick="location.href='{{ route('admin/store')}}' ">戻る＞</button>
             </div>
