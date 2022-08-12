@@ -46,12 +46,11 @@ class StoreController extends Controller
      * 店舗登録
      */
     public function addPost(Request $request){
-          dd($request->all());
           // バリデーション
           $validated = $request->validate([
                'storeName' => 'required | max:36',
-               'postNumPrev' => 'required | min:3 | integer',
-               'postNumNext' => 'required | min:4 | integer',
+               'postNumPrev' => 'required | min:3 | numeric',
+               'postNumNext' => 'required | min:4 | numeric',
                'prefecture' => 'required',
                'city' => 'required | max:32',
                'address' => 'required | max:64',
@@ -84,8 +83,8 @@ class StoreController extends Controller
            // バリデーション
            $validated = $request->validate([
                 'storeName' => 'required | max:36',
-                'postNumPrev' => 'required | min:3 | integer',
-                'postNumNext' => 'required | min:4 | integer',
+                'postNumPrev' => 'required | min:3 | numeric',
+                'postNumNext' => 'required | min:4 | numeric',
                 'prefecture' => 'required',
                 'city' => 'required | max:32',
                 'address' => 'required | max:64',

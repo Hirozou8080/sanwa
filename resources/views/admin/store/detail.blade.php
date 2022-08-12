@@ -8,7 +8,6 @@
       店舗詳細
     </div>
   </div>
-
   <div class="content">
     <section class="pages">
       <div class="pages-inner">
@@ -69,7 +68,7 @@
             </div>
             <div class=" flex-items" style="justify-content:center; gap:50px ; border:1px solid #ccc;border-radius:5px; padding:.5rem">
               <div class="form-content">
-                <div class=" flex-items">
+                <div class="flex-items">
                 @if($store->recruit_flg == 1)
                   募集中
                   @else
