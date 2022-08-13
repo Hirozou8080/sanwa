@@ -34,7 +34,7 @@ class StoreService
     return ;
   }
 /**
- * 店舗登録処理
+ * 店舗編集処理
  * @param request  : post値 
  * @param store_id : 店舗ID
  */
@@ -51,6 +51,24 @@ class StoreService
         'address' => $request['address'],
         'recruit_flg' => $request['recruit']
       ]);
+      DB::commit();
+      // トランザクション終了
+  } catch (Throwable $e) {
+      DB::rollBack();
+  }
+    return ;
+  }
+/**
+ * 店舗削除処理
+ * @param request  : post値 
+ * @param store_id : 店舗ID
+ */
+  public function storeDelete(Request $request,$store_id)
+  {
+    try {
+      // トランザクション開始
+      DB::beginTransaction();
+      Store::find($store_id)->delete();
       DB::commit();
       // トランザクション終了
   } catch (Throwable $e) {
