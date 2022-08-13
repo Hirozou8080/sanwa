@@ -209,7 +209,6 @@
   font-family:'Noto Sans JP' , 'serif';
 }
 
-
 .store-edit .content .form-block .flex-items{
   display: flex;
   justify-content: flex-start;
@@ -299,6 +298,7 @@
   align-items: center;
   padding: 1rem 0;
 }
+.store-detail .content .block .item input[type=submit],
 .store-detail .content .block .item button{
   margin: auto;
   width:120px;
@@ -307,6 +307,11 @@
   border: 1px solid #bbbbbb;
   font-size: 1rem;
 }
+.store-detail .content .block .item input[type=submit]{
+  background-color: #ff1717;
+  color: #fff;
+}
+
 
 .store-detail .content .block .item button{
   background-color: #bbbbbb;

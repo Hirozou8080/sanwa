@@ -43,6 +43,7 @@ Route::prefix('admin')->group(function () {
             Route::get('/store/edit/{store_id}', 'edit')->name('admin/store/edit');
             Route::post('/store/edit/{store_id}', 'editPost')->name('admin/store/edit');
             Route::get('/store/detail/{store_id}', 'detail')->name('admin/store/detail');
+            Route::post('/store/delete/{store_id}', 'deletePost')->name('admin/store/delete');
         });
         Route::controller(AdminPriceController::class)->group(function () {
             Route::get('/store/price/{store_id}', 'price')->name('admin/store/price');

@@ -89,24 +89,32 @@ class StoreController extends Controller
                 'city' => 'required | max:32',
                 'address' => 'required | max:64',
                 'recruit' => 'required',
-               ]);
-               // 店舗登録処理
-               $this->storeService->storeEdit($request,$store_id);
-               return redirect()->route('admin/store');
-          }
-          /**
-           * 店舗詳細
-           */
-          public function detail(Request $request, $store_id){
-               // user取得
-               $commonController = new CommonController();
-               // sessionユーザIDを取得
-               $user_id = session()->get('user_id');
-               $user = $commonController->getUser($user_id);
-               $store = $commonController->getStore($store_id);
-               $store['postNumPrev'] = substr($store['post_num'],0,3);
-               $store['postNumNext'] = substr($store['post_num'],3,7);
-               $prefecture = $commonController->getPrefecture($store->prefecture_id);
+          ]);
+          // 店舗登録処理
+          $this->storeService->storeEdit($request,$store_id);
+          return redirect()->route('admin/store');
+     }
+     /**
+     * 店舗削除
+     */
+     public function deletePost(Request $request, $store_id){
+     // 店舗登録処理
+     $this->storeService->storeDelete($request,$store_id);
+     return redirect()->route('admin/store');
+    }
+     /**
+      * 店舗詳細
+      */
+     public function detail(Request $request, $store_id){
+          // user取得
+          $commonController = new CommonController();
+          // sessionユーザIDを取得
+          $user_id = session()->get('user_id');
+          $user = $commonController->getUser($user_id);
+          $store = $commonController->getStore($store_id);
+          $store['postNumPrev'] = substr($store['post_num'],0,3);
+          $store['postNumNext'] = substr($store['post_num'],3,7);
+          $prefecture = $commonController->getPrefecture($store->prefecture_id);
           return view('admin.store.detail',['user'=>$user,'store'=>$store,'prefecture'=>$prefecture]);
      }
 }
