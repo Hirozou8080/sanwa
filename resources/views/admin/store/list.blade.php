@@ -30,7 +30,7 @@
             <td style="text-align: center">{{$store->id}}</td>
             <td>{{$store->name}}</td>
             <td>{{$store->city.$store->address}}</td>
-            <td style="text-align: center">{{$store->recruit_flg ? '募集中':'募集なし'}}</td>
+            <td style="text-align: center">{{$store->recruit_flg == 1 ? '募集中':'募集なし'}}</td>
             <td style="text-align: center">
               <div class="flex" style="text-align: center; gap:10px">
                 <div class="link-btn2 ">
