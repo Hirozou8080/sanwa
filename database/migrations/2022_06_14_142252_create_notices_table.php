@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('notices', function (Blueprint $table) {
+        Schema::create('alerts', function (Blueprint $table) {
             $table->increments('id')->comment('ID');
             $table->string('category_id')->nullable(false)->comment('カテゴリID');
             $table->string('title')->nullable(false)->comment('タイトル');
@@ -23,7 +23,7 @@ return new class extends Migration
             $table->softDeletes();
         });
         // ALTER 文を実行しテーブルにコメントを設定
-        DB::statement("ALTER TABLE notices COMMENT 'お知らせテーブル'");
+        DB::statement("ALTER TABLE alerts COMMENT 'お知らせテーブル'");
     }
 
     /**
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notices');
+        Schema::dropIfExists('alerts');
     }
 };
