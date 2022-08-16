@@ -15,7 +15,7 @@ class AlertController extends Controller
         $user_id = session()->get('user_id');
         $user = $commonController->getUser($user_id);
 
-        return view('admin.alert',['user'=>$user]);
+        return view('admin.alert.index',['user'=>$user]);
     }
 }
 
