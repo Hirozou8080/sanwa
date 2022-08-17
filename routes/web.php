@@ -51,6 +51,8 @@ Route::prefix('admin')->group(function () {
         
         Route::controller(AdminAlertController::class)->group(function () {
             Route::get('/alert', 'alert')->name('admin/alert');
+            Route::get('/alert/add', 'add')->name('admin/alert/add');
+            Route::post('/alert/add', 'addPost')->name('admin/alert/add');
         });
         Route::controller(AdminSettingController::class)->group(function () {
             Route::get('/setting', 'setting')->name('admin/setting');
