@@ -20,27 +20,24 @@
         <table class="list">
           <tr>
             <th>ID</th>
-            <th>店舗名</th>
-            <th>住所</th>
-            <th>求人状況</th>
+            <th>件名</th>
+            <th>本文</th>
+            <th>投稿日</th>
             <th>操作</th>
           </tr>
-          @foreach ($stores as $store)
+          @foreach ($alerts as $alert)
           <tr>
-            <td style="text-align: center">{{$store->id}}</td>
-            <td>{{$store->name}}</td>
-            <td>{{$store->city.$store->address}}</td>
-            <td style="text-align: center">{{$store->recruit_flg == 1 ? '募集中':'募集なし'}}</td>
+            <td style="text-align: center">{{$alert->id}}</td>
+            <td>{{$store->title}}</td>
+            <td>{{$alert->body}}</td>
+            <td style="text-align: center">{{$store->posted_date}}</td>
             <td style="text-align: center">
               <div class="flex" style="text-align: center; gap:10px">
                 <div class="link-btn2 ">
-                  <a href={{ route('admin/store/edit',$store->id) }}>編集＞</a>
+                  <a href={{ route('admin/store/edit',$alert->id) }}>編集＞</a>
                 </div>
                 <div class="link-btn3">
-                  <a href={{ route('admin/store/detail',$store->id) }}>詳細＞</a>
-                </div>
-                <div class="link-btn4">
-                  <a href={{ route('admin/store/price',$store->id) }}>料金設定＞</a>
+                  <a href={{ route('admin/store/detail',$alert->id) }}>詳細＞</a>
                 </div>
               </div>
             </td>

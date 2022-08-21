@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Admin_user;
 use App\Models\Store;
 use App\Models\Prefecture;
+use App\Models\Alert;
 
 class CommonController extends Controller
 {
@@ -48,5 +49,12 @@ class CommonController extends Controller
     public function getPrefecture($id){
         $prefecture = Prefecture::getPrefectureId($id);
         return $prefecture;
+    }
+    /**
+     * 全通知の取得
+     */
+    public function getAllAlert(){
+        $alerts = Alert::getAllAlert();
+        return $alerts;
     }
 }
