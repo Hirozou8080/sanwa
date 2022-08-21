@@ -13,9 +13,10 @@ class AlertController extends Controller
         $commonController = new CommonController();
         // sessionユーザIDを取得
         $user_id = session()->get('user_id');
+        $alerts = $commonController->getAllAlert();
         $user = $commonController->getUser($user_id);
 
-        return view('admin.alert.index',['user'=>$user]);
+        return view('admin.alert.index',['user'=>$user, 'alerts' => $alerts]);
     }
 }
 
