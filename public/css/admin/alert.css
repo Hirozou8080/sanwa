@@ -1,0 +1,21 @@
+*{
+  font-family:'Noto Sans JP' , 'serif';
+}
+/* ---------------------------------------
+通知一覧画面 
+--------------------------------------- */
+.alert .list{  
+  width: 100%;
+  font-size: .8rem;
+}
+.alert table.list td{
+  border:.5px solid #ccc;
+  padding: .3rem ;
+}
+.alert table.list th{
+  border:.5px solid #ccc;
+  background-color:#042569 ;
+  color: #fff;
+  font-weight: 700;
+  padding: .5rem;
+}
