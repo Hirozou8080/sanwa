@@ -19,3 +19,7 @@
   font-weight: 700;
   padding: .5rem;
 }
+.alert table.list .non-alert{
+  text-align: center;
+  font-size: 1rem;
+}

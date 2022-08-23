@@ -25,7 +25,7 @@
             <th>投稿日</th>
             <th>操作</th>
           </tr>
-          @if (!empty($alerts))
+          @if (empty($alerts))
             @foreach ($alerts as $alert)
             <tr>
               <td style="text-align: center">{{$alert->id}}</td>
@@ -46,8 +46,8 @@
             @endforeach
           @else
             <tr>
-              <td class="non-store" colspan="4">
-                店舗がありません
+              <td class="non-alert" colspan="5">
+                通知はありません
               </td>
             </tr>
           @endif
