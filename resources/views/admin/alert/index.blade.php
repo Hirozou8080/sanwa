@@ -25,7 +25,7 @@
             <th>投稿日</th>
             <th>操作</th>
           </tr>
-          @if (empty($alerts))
+          @if (!empty($alerts->all()))
             @foreach ($alerts as $alert)
             <tr>
               <td style="text-align: center">{{$alert->id}}</td>

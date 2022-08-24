@@ -4,7 +4,12 @@
 /* ---------------------------------------
 通知一覧画面 
 --------------------------------------- */
-.alert .link-btn1{
+.alert .list-head{
+  width: 100%;
+  padding: .5rem 0;
+}
+
+.alert .list-head .link-btn1{
   margin-left: auto;
 }  
 .alert .list{  
