@@ -31,7 +31,7 @@
                   〒{{ $store['post_num'] }}<br>
                   {{ $store['city'].$store['address']}} 
                 </td>
-                <td>{{ $store['recruit_flg'] ? '募集中': ''  }}</td>
+                <td>{{ $store['recruit_flg'] === 1? '募集中': '-'  }}</td>
               </tr>
               @endforeach
             @else
@@ -57,13 +57,13 @@
                 <th>住所</th>
                   <td>
                     〒{{ $store['post_num'] }}<br>
-                    {{ $prefectures[$store['prefecture_id']] . $store['city'].$store['address'] }} 
+                    {{  $store['city'].$store['address'] }} 
                   </td>
                 <tr>
                 </tr>
                 <tr>
                   <th>求人案内</th>
-                  <td>{{ $store['recruit_flg'] ? '募集中': ''  }}</td>
+                  <td>{{ $store['recruit_flg']===1 ? '募集中': '-'  }}</td>
                 </tr>
               </table>
             @endforeach
