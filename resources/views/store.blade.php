@@ -21,23 +21,17 @@
             <tr data-location-href="store">
               <th>店名</th>
               <th>住所</th>
-              <th>サービス案内</th>
               <th>求人案内</th>
             </tr>
-            @if(!empty($stores))
+            @if(!empty($stores->all()))
               @foreach ($stores as $store)
               <tr>
                 <td><a href="#">{{ $store['name'] }}</a> </td>
                 <td>
-                  〒{{ $store['post_code'] }}<br>
-                  {{ $store['prefectures'] . $store['address'] }} 
+                  〒{{ $store['post_num'] }}<br>
+                  {{ $store['city'].$store['address']}} 
                 </td>
-                <td>
-                  @foreach ($store['service'] as $service)
-                  {{ $service }} ,  
-                  @endforeach
-                </td>
-                <td>{{ $store['job_offer'] ? '募集中': ''  }}</td>
+                <td>{{ $store['recruit_flg'] ? '募集中': ''  }}</td>
               </tr>
               @endforeach
             @else
@@ -53,7 +47,7 @@
 
         {{-- sp用 --}}
         <div class="sp">
-          @if (!empty($stores))
+          @if (!empty($stores->all()))
             @foreach ($stores as $store)
               <table>
                 <tr>
@@ -62,22 +56,14 @@
                 </tr>
                 <th>住所</th>
                   <td>
-                    〒{{ $store['post_code'] }}<br>
-                    {{ $store['prefectures'] . $store['address'] }} 
+                    〒{{ $store['post_num'] }}<br>
+                    {{ $prefectures[$store['prefecture_id']] . $store['city'].$store['address'] }} 
                   </td>
                 <tr>
-                </tr>
-                <tr>
-                  <th>サービス案内</th>
-                  <td>
-                    @foreach ($store['service'] as $service)
-                      {{ $service }} ,  
-                    @endforeach
-                  </td>
                 </tr>
                 <tr>
                   <th>求人案内</th>
-                  <td>{{ $store['job_offer'] ? '募集中': ''  }}</td>
+                  <td>{{ $store['recruit_flg'] ? '募集中': ''  }}</td>
                 </tr>
               </table>
             @endforeach
