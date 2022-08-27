@@ -35,7 +35,6 @@ class CommonController extends Controller
         $store = Store::getStoreId($id);
         return $store;
     }
-
     /**
      * 全都道府県の取得
      */
