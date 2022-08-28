@@ -98,6 +98,15 @@
   border: 1px solid #ccc;
 }
 
+.alert-add .content .form-block .form-content>textarea {
+  width: 100%;
+  text-align: initial;
+  font-size: .8rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
 .alert-add .content .form-block .flex-items {
   display: flex;
   justify-content: flex-start;

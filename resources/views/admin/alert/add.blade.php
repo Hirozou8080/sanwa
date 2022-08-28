@@ -30,7 +30,15 @@
               {{ Form::label($for = 'title', '件名') }}
             </div>
             <div class="form-content">
-              {{ Form::text('title', null, ['class' => 'form-control', 'id' => 'storeName', 'placeholder' => 'マリンピア店']) }}
+              {{ Form::text('title', null, ['class' => 'form-control', 'id' => 'title', 'placeholder' => 'マリンピア店']) }}
+            </div>
+          </div>
+          <div class="form-item">
+            <div class="form-title">
+              {{ Form::label($for = 'body', '本文') }}
+            </div>
+            <div class="form-content">
+              {{ Form::textarea('body', null, ['class' => 'form-control', 'id' => 'body', 'placeholder' => '本文を入力してください', 'rows' => '20']) }}
             </div>
           </div>
           <div class="form-item" style="justify-content:space-between; padding:3rem 1rem">
