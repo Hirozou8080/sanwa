@@ -41,6 +41,19 @@
               {{ Form::textarea('body', null, ['class' => 'form-control', 'id' => 'body', 'placeholder' => '本文を入力してください', 'rows' => '20']) }}
             </div>
           </div>
+          <div class="form-item">
+            <div class="form-title">
+              {{ Form::label('カテゴリー') }}
+            </div>
+            <div class="flex-items" style="justify-content:flex-start; gap:50px ;  padding:.5rem;font-size:1rem:">
+              <div class="form-content">
+                <div class=" flex-items">
+                  {{ Form::checkbox('category', 1, true, ['id' => 'category_1', 'class' => 'circle']) }}
+                  {{ Form::label($for = 'category_1', '重量なお知らせ', ['class' => 'category']) }}
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="form-item" style="justify-content:space-between; padding:3rem 1rem">
             <div class="flex-items">
               <button type="button" onclick="location.href='{{ route('admin/alert') }}' ">戻る＞</button>

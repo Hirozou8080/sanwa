@@ -107,6 +107,10 @@
   border: 1px solid #ccc;
 }
 
+.alert-add .content .form-block .form-content .category {
+  font-size: .8rem;
+}
+
 .alert-add .content .form-block .flex-items {
   display: flex;
   justify-content: flex-start;
