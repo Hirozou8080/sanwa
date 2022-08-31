@@ -58,10 +58,10 @@
             <div class="form-title">
               {{ Form::label('タイトル画像') }}
             </div>
-            <div class="form-content">
-              {{ Form::file('image', ['class' => 'custom-file-input', 'id' => 'fileImage']) }}
+            <div class="form-content" style="display:flex;">
+              {{ Form::file('image', ['class' => 'custom-file-input', 'id' => 'fileImage', 'style' => 'border:none;']) }}
+              <img id="preview" style="max-width:200px" />
             </div>
-            <div id="preview"></div>
           </div>
           <div class="form-item" style="justify-content:space-between; padding:3rem 1rem">
             <div class="flex-items">
@@ -78,19 +78,16 @@
 
 @section('script')
   <script>
-    //fileを変更したら
+    // 画像表示処理
     $('#fileImage').on('change', function() {
-
-      //fileの値は空ではなくなるはず
+      //fileの値は空チェック
       if ($('#fileImage').val() !== '') {
-
         //propを使って、file[0]にアクセスする
         var image_ = $('#fileImage').prop('files')[0];
-
         //添付されたのが本当に画像かどうか、ファイル名と、ファイルタイプを正規表現で検証する
         if (!/\.(jpg|jpeg|png|gif|JPG|JPEG|PNG|GIF)$/.test(image_.name) || !/(jpg|jpeg|png|gif)$/.test(image_.type)) {
           alert('JPG、GIF、PNGファイルの画像を添付してください。');
-          //添付された画像ファイルが１M以下か検証する
+          //添付された画像ファイルが１M以下か検証
         } else if (1048576 < image_.size) {
           alert('1MB以下の画像を添付してください。');
         } else {
