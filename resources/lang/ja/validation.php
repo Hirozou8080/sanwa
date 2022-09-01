@@ -50,7 +50,7 @@ return [
         'string' => 'The :attribute must be greater than or equal to :value characters.',
         'array' => 'The :attribute must have :value items or more.',
     ],
-    'image' => 'The :attribute must be an image.',
+    'image' => ':attribute 画像をアップロードしてください.',
     'in' => 'The selected :attribute is invalid.',
     'in_array' => 'The :attribute field does not exist in :other.',
     'integer' => ' :attribute は半角数字で入力してください',
@@ -157,7 +157,7 @@ return [
       'city' => '市区町村',
       'address' => '住所(その他)',
       'recruit' => '求人募集',
-
+      'image' => '画像',
     ],
 
 ];
