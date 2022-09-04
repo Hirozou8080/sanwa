@@ -158,6 +158,8 @@ return [
       'address' => '住所(その他)',
       'recruit' => '求人募集',
       'image' => '画像',
+      'title' => 'タイトル',
+      'body' => '本文',
     ],
 
 ];

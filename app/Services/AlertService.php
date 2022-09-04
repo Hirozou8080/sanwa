@@ -14,7 +14,7 @@ class AlertService
  */
   public function alertRegist(Request $request)
   {
-    dd($request);
+    dd($request->all());
     try {
       // トランザクション開始
       DB::beginTransaction();
