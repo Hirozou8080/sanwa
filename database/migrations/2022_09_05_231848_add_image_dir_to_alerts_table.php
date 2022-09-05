@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('alerts', function (Blueprint $table) {
-            $table->string('image_dir')->nullable()->after('body')->comment('画像パス');
+            $table->string('file_name')->nullable()->after('body')->comment('ファイル名');
+            $table->string('file_path')->nullable()->after('file_name')->comment('画像パス');
         });
     }
 
@@ -26,7 +27,8 @@ return new class extends Migration
     public function down()
     {
         Schema::table('alerts', function (Blueprint $table) {
-            $table->dropColumn('image_dir');
+            $table->dropColumn('file_name');
+            $table->dropColumn('file_path');
         });
     }
 };
