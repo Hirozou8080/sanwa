@@ -15,16 +15,16 @@ class AlertService
   public function alertRegist(Request $request)
   {
     dd($request->all());
+
     try {
       // トランザクション開始
       DB::beginTransaction();
       Store::create([
-        'name'     => $request['storeName'],
-        'post_num'    => $request['postNumPrev'].$request['postNumNext'],
-        'prefecture_id' => $request['prefecture'],
-        'city' => $request['city'],
-        'address' => $request['address'],
-        'recruit_flg' => $request['recruit']
+        'category_id'     => $request['category_id'],
+        'title'    => $request['postNumPrev'].$request['title'],
+        'body' => $request['body'],
+        'image_dir' => $request['image_dir'],
+        'posted_date' => $request['posted_date'],
       ]);
       DB::commit();
       // トランザクション終了
