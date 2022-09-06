@@ -56,4 +56,13 @@ class CommonController extends Controller
         $alerts = Alert::getAllAlert();
         return $alerts;
     }
+    /**
+     * ファイルの保存
+     * @param disk = ディスク
+     * @param name = ファイル名
+     * @param node = ノード
+     */
+    public function saveFile($disc, $name, $node){
+        
+    }
 }
