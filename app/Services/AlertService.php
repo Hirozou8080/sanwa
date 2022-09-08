@@ -14,7 +14,12 @@ class AlertService
  */
   public function alertRegist(Request $request)
   {
-    dd($request->all());
+    if($request->file()){
+      $request->upload_file->store('alerts');
+      dd($request->file(),$request->all());
+    }else {
+      dd($request->all());
+    }
 
     try {
       // トランザクション開始
