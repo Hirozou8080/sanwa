@@ -15,6 +15,7 @@ class AlertService
   public function alertRegist(Request $request)
   {
     if($request->file()){
+      
       $request->upload_file->store('alerts');
       dd($request->file(),$request->all());
     }else {
