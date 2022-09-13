@@ -62,9 +62,9 @@ class CommonController extends Controller
      * @param name = ファイル名
      * @param node = ノード
      */
-    public function saveFile($disc, $name, $node){
+    public function saveFile($path, $name){
         //作成したいディレクトリ（のパス）
-        $directory_path = "../hoge";    //この場合、一つ上の階層に「hoge」というディレクトリを作成する
+        $directory_path = ".";    //この場合、一つ上の階層に「hoge」というディレクトリを作成する
     
         //「$directory_path」で指定されたディレクトリが存在するか確認
         if(file_exists($directory_path)){

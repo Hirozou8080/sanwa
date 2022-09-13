@@ -14,14 +14,13 @@ class AlertService
  */
   public function alertRegist(Request $request)
   {
-    if($request->file()){
-      
-      $request->upload_file->store('alerts');
-      dd($request->file(),$request->all());
-    }else {
-      dd($request->all());
+    if($request->file('image')){
+      // アップロード時のオリジナルのファイル名
+      $original_file_name = $request->file('image')->getClientOriginalName();
+      // アップロードされたファイルのmimeタイプ
+      $type = $request->file('image')->getMimeType();
+      dd($request->file('image'));
     }
-
     try {
       // トランザクション開始
       DB::beginTransaction();
