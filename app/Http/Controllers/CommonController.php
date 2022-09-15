@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 // models
 use App\Models\Admin_user;
@@ -58,29 +59,11 @@ class CommonController extends Controller
     }
     /**
      * ファイルの保存
-     * @param disk = ディスク
-     * @param name = ファイル名
-     * @param node = ノード
+     * @param file = 保存ファイル
+     * @param path = ディレクトリパス
      */
-    public function saveFile($path, $name){
-        //作成したいディレクトリ（のパス）
-        $directory_path = ".";    //この場合、一つ上の階層に「hoge」というディレクトリを作成する
-    
-        //「$directory_path」で指定されたディレクトリが存在するか確認
-        if(file_exists($directory_path)){
-            //存在したときの処理
-            echo "作成しようとしたディレクトリは既に存在します";
-        }else{
-            //存在しないときの処理（「$directory_path」で指定されたディレクトリを作成する）
-            if(mkdir($directory_path, 0777)){
-                //作成したディレクトリのパーミッションを確実に変更
-                chmod($directory_path, 0777);
-                //作成に成功した時の処理
-                echo "作成に成功しました";
-            }else{
-                //作成に失敗した時の処理
-                echo "作成に失敗しました";
-            }
-        }
+    public function saveFile($file,$path){
+        $upload_file_name = Storage::disk('public')->putFile($path, $file);
+        return $upload_file_name;
     }
 }

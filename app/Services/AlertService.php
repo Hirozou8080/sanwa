@@ -4,6 +4,9 @@ namespace App\Services;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+// Controller
+use App\Http\Controllers\CommonController;
 // models
 use App\Models\Alert;
 class AlertService
@@ -14,13 +17,14 @@ class AlertService
  */
   public function alertRegist(Request $request)
   {
-    if($request->file('image')){
-      // アップロード時のオリジナルのファイル名
-      $original_file_name = $request->file('image')->getClientOriginalName();
-      // アップロードされたファイルのmimeタイプ
-      $type = $request->file('image')->getMimeType();
-      dd($request->file('image'));
+    $file_name = null;
+    $file_path = null;
+    if($request->file()){
+      // file保存処理
+      $commonController = new CommonController();
+      $upload_file_name = $commonController->saveFile('alert',$request->file());
     }
+    dd($upload_file_name,$request->file());
     try {
       // トランザクション開始
       DB::beginTransaction();
