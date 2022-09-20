@@ -22,7 +22,7 @@ class AlertService
     if($request->file()){
       // file保存処理
       $commonController = new CommonController();
-      $upload_file_name = $commonController->saveFile('alert',$request->file());
+      $upload_file_name = $commonController->saveFile($request->file(),'alert');
     }
     dd($upload_file_name,$request->file());
     try {

@@ -63,6 +63,11 @@ class CommonController extends Controller
      * @param path = ディレクトリパス
      */
     public function saveFile($file,$path){
+        $disk = Storage::disk('public');
+        if(!$disk->exists($path)){
+            Storage::makeDirectory($path);
+        }
+        dd($file);
         $upload_file_name = Storage::disk('public')->putFile($path, $file);
         return $upload_file_name;
     }
