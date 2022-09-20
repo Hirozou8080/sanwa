@@ -58,16 +58,12 @@ class CommonController extends Controller
         return $alerts;
     }
     /**
+     * publicディスク用
      * ファイルの保存
      * @param file = 保存ファイル
      * @param path = ディレクトリパス
      */
     public function saveFile($file,$path){
-        $disk = Storage::disk('public');
-        if(!$disk->exists($path)){
-            Storage::makeDirectory($path);
-        }
-        dd($file);
         $upload_file_name = Storage::disk('public')->putFile($path, $file);
         return $upload_file_name;
     }

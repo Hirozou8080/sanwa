@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\CommonController;
 // models
 use App\Models\Alert;
+
+use Carbon\Carbon;
 class AlertService
 {
   /**
@@ -19,21 +21,26 @@ class AlertService
   {
     $file_name = null;
     $file_path = null;
-    if($request->file()){
+    if($request->file('image')){
+      $file_name = $request->file('image')->getClientOriginalName();
       // file保存処理
       $commonController = new CommonController();
-      $upload_file_name = $commonController->saveFile($request->file(),'alert');
+      $file_path = $commonController->saveFile($request->file('image'),'alert');
     }
-    dd($upload_file_name,$request->file());
+    
+    // 現在日時取得
+    $now = Carbon::now();
+
     try {
       // トランザクション開始
       DB::beginTransaction();
-      Store::create([
-        'category_id'     => $request['category_id'],
+      Alert::create([
+        'category_id'  => $request['category'],
         'title'    => $request['postNumPrev'].$request['title'],
         'body' => $request['body'],
-        'image_dir' => $request['image_dir'],
-        'posted_date' => $request['posted_date'],
+        'file_name' => $file_name,
+        'file_path' => $file_path,
+        'posted_date' => $now,
       ]);
       DB::commit();
       // トランザクション終了

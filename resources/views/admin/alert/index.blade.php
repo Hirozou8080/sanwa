@@ -29,9 +29,9 @@
             @foreach ($alerts as $alert)
               <tr>
                 <td style="text-align: center">{{ $alert->id }}</td>
-                <td>{{ $store->title }}</td>
+                <td>{{ $alert->title }}</td>
                 <td>{{ $alert->body }}</td>
-                <td style="text-align: center">{{ $store->posted_date }}</td>
+                <td style="text-align: center">{{ $alert->posted_date }}</td>
                 <td style="text-align: center">
                   <div class="flex" style="text-align: center; gap:10px">
                     <div class="link-btn2 ">

@@ -52,7 +52,7 @@ class AlertController extends Controller
         // user取得
         $commonController = new CommonController();
 
-        return view('admin.alert.add',['user'=>$user]);
+        return redirect()->route('admin/alert/add');
     }
 }
 
