@@ -9,7 +9,7 @@
   color: #fff;
 }
 
-.header .h-inner{
+.header .h-inner {
   width: 100%;
   margin: auto;
   align-items: center;
@@ -18,57 +18,64 @@
   height: 80px;
   position: relative;
 }
-.header .h-inner .ttl{
-  font-family:'Noto Sans JP' , 'serif';
+
+.header .h-inner .ttl {
+  font-family: 'Noto Sans JP', 'serif';
   padding: 1rem 0;
   font-size: 1.5rem;
 }
+
 /*  780px以上の場合 */
 @media screen and (min-width: 780px) {
-  .header .h-inner{
+  .header .h-inner {
     width: 90%;
   }
 }
+
 /* ----- main ----- */
 .main {
   padding-top: 80px;
 }
 
 /* ----- footer ----- */
-footer{
+footer {
   width: 100%;
   background-color: #ccc;
   position: relative;
   text-align: center;
 }
-footer .wrapper{
+
+footer .wrapper {
   text-align: center;
   padding: 10px;
 }
-footer .wrapper .author{
+
+footer .wrapper .author {
   font-size: .7rem;
 }
+
 /*  1024px以上の場合 */
 @media screen and (min-width: 1024px) {
-  footer .wrapper .author{
+  footer .wrapper .author {
     font-size: 1rem;
   }
 }
 
 
-.login .wrapper{
+.login .wrapper {
   padding: 0;
   position: relative;
   width: 100vw;
   height: 100vh;
 }
-.login .container{
+
+.login .container {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  -moz-transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
 
   background-color: #93cd39;
   color: #fff;
@@ -76,50 +83,60 @@ footer .wrapper .author{
   margin: auto;
   width: 100%;
   max-width: 350px;
-  height:  auto;
+  height: auto;
   /* min-height: 350px; */
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
-.login .container .head{
+
+.login .container .head {
   font-size: 1.5rem;
   text-align: center;
-  font-family:'Noto Sans JP' , 'serif';
+  font-family: 'Noto Sans JP', 'serif';
   padding: 1rem 0;
 }
-.login .container .head hr{
-  border:1px solid #fff;
+
+.login .container .head hr {
+  border: 1px solid #fff;
   ;
 }
-.login .container .content{
+
+.login .container .content {
   width: 100%;
   padding: 0;
-} 
-.login .container .content .form-item{
+}
+
+.login .container .content .form-item {
   text-align: center;
   padding: .5rem 0;
 }
-.login .container .content .form-item:nth-last-child(1){
+
+.login .container .content .form-item:nth-last-child(1) {
   text-align: right;
 }
+
 .login .container .content .form-item input[type='text'],
-.login .container .content .form-item input[type='password']{
+.login .container .content .form-item input[type='password'] {
   width: 100%;
   height: 45px;
   margin: auto;
   border: #C4C4C4;
   border-radius: 10px;
+  padding: 0 1rem;
 }
-.login .container .content .form-item input[type='submit']{
+
+.login .container .content .form-item input[type='submit'] {
   width: 100px;
   height: 40px;
   border: 1px solid #C4C4C4;
   border-radius: 10px;
-  background-color: #042569;;
+  background-color: #042569;
+  ;
   color: #fff;
   font-size: 1rem;
-  font-family:'Noto Sans JP' , 'serif';
+  font-family: 'Noto Sans JP', 'serif';
 }
-.login .container .content .form-item input[type='submit']:hover{
+
+.login .container .content .form-item input[type='submit']:hover {
   opacity: .8;
 }
 
@@ -127,16 +144,18 @@ footer .wrapper .author{
 
 /** レイアウト設定 **/
 
-header{
+header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
+
 .main {
   padding-top: 0;
 }
-footer{
+
+footer {
   position: fixed;
   bottom: 0;
   left: 0;
