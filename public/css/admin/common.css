@@ -20,26 +20,26 @@ body {
 }
 
 .pc {
-  display: none;
+  display: none !important;
 }
 
 .sp {
-  display: block;
+  display: block !important;
 }
 
-/*  780px以上の場合 */
-@media screen and (min-width: 780px) {
+/*  768px以上の場合 */
+@media screen and (min-width: 768px) {
   .wrapper {
     width: 86.666%;
     margin: auto;
   }
 
   .pc {
-    display: block;
+    display: block !important;
   }
 
   .sp {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -127,8 +127,8 @@ body {
   content: "\f08b";
 }
 
-/*  780px以上の場合 */
-@media screen and (min-width: 780px) {}
+/*  768px以上の場合 */
+@media screen and (min-width: 768px) {}
 
 /* ----- main ----- */
 .main {

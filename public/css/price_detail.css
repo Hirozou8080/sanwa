@@ -24,7 +24,8 @@
 
 .price-detail .container .head .link-area {
   display: table;
-  width: 250px;
+  width: 100%;
+  margin: 1.5rem auto;
   height: 45px;
   border-radius: 10px;
   text-align: center;
@@ -35,6 +36,10 @@
   display: table-cell;
   vertical-align: middle;
   font-size: 1.4rem;
+}
+
+.price-detail .container .head .link-area .back-link:hover {
+  opacity: .5;
 }
 
 .price-detail .container .head .text-area .head-title {
@@ -117,12 +122,8 @@
   margin-top: 0;
 }
 
-/* 1024px以上の場合 */
-@media screen and (min-width: 1024px) {
-  .price-detail .container .wrapper {
-    padding: 0 4rem;
-  }
-
+/* 768px以上の場合 */
+@media screen and (min-width: 768px) {
   .price-detail .container .head {
     padding: 4rem 0;
     display: flex;
@@ -131,6 +132,13 @@
     flex-direction: row-reverse;
     flex-wrap: nowrap;
     gap: 10px;
+  }
+}
+
+/* 1024px以上の場合 */
+@media screen and (min-width: 1024px) {
+  .price-detail .container .wrapper {
+    padding: 0 4rem;
   }
 
   .price-detail .container .head .text-area .head-title {

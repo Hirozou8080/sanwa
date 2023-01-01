@@ -25,8 +25,8 @@
   font-size: 1.5rem;
 }
 
-/*  780px以上の場合 */
-@media screen and (min-width: 780px) {
+/*  768px以上の場合 */
+@media screen and (min-width: 768px) {
   .header .h-inner {
     width: 90%;
   }
