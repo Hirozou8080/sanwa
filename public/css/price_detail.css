@@ -133,6 +133,10 @@
     flex-wrap: nowrap;
     gap: 10px;
   }
+
+  .price-detail .container .head .link-area {
+    width: 250px;
+  }
 }
 
 /* 1024px以上の場合 */
