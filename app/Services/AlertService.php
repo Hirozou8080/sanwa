@@ -11,23 +11,25 @@ use App\Http\Controllers\CommonController;
 use App\Models\Alert;
 
 use Carbon\Carbon;
+use Exception;
+
 class AlertService
 {
   /**
- * 通知登録処理
- * @param request  : post値 
- */
+   * 通知登録処理
+   * @param request  : post値 
+   */
   public function alertRegist(Request $request)
   {
     $file_name = null;
     $file_path = null;
-    if($request->file('image')){
+    if ($request->file('image')) {
       $file_name = $request->file('image')->getClientOriginalName();
       // file保存処理
       $commonController = new CommonController();
-      $file_path = $commonController->saveFile($request->file('image'),'alert');
+      $file_path = $commonController->saveFile($request->file('image'), 'alert');
     }
-    
+
     // 現在日時取得
     $now = Carbon::now();
 
@@ -36,7 +38,7 @@ class AlertService
       DB::beginTransaction();
       Alert::create([
         'category_id'  => $request['category'],
-        'title'    => $request['postNumPrev'].$request['title'],
+        'title'    => $request['postNumPrev'] . $request['title'],
         'body' => $request['body'],
         'file_name' => $file_name,
         'file_path' => $file_path,
@@ -44,9 +46,9 @@ class AlertService
       ]);
       DB::commit();
       // トランザクション終了
-  } catch (Throwable $e) {
+    } catch (Exception $e) {
       DB::rollBack();
-  }
-    return ;
+    }
+    return;
   }
 }
