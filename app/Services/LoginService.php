@@ -10,13 +10,15 @@ use Carbon\Carbon;
 
 // models
 use App\Models\Admin_user;
+use Throwable;
+
 class LoginService
 {
 
-/**
- * ログイン処理
- * @param request  : post値 
- */
+  /**
+   * ログイン処理
+   * @param request  : post値 
+   */
   public function postLogin(Request $request)
   {
     $loginUser = '';
@@ -31,21 +33,21 @@ class LoginService
     }
     return $loginUser;
   }
-  
-/**
- * アカウント登録処理
- * @param request  : post値 
- */
+
+  /**
+   * アカウント登録処理
+   * @param request  : post値 
+   */
   public function postRegister(Request $request)
   {
     // 作成時刻
     $now = new Carbon();
     // パスワードハッシュ化
-    $password = Hash::make($request['password']); 
+    $password = Hash::make($request['password']);
     try {
       // トランザクション開始
       DB::beginTransaction();
-      
+
       Admin_user::create([
         'name'     => $request['name'],
         'email'    => $request['email'],
@@ -54,9 +56,9 @@ class LoginService
       ]);
       DB::commit();
       // トランザクション終了
-  } catch (Throwable $e) {
+    } catch (Throwable $e) {
       DB::rollBack();
-  }
-    return ;
+    }
+    return;
   }
 }
