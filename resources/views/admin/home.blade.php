@@ -1,19 +1,17 @@
 @extends('admin.tmpl.layouts')
- {{-- css設定 --}}
-@section('css','home')
-@section('pageClassName','home')
+{{-- css設定 --}}
+@section('css', 'home')
+@section('pageClassName', 'home')
 {{-- ページタイトル --}}
-@section('pageTitle','ホーム')
+@section('pageTitle', 'ホーム')
 @section('content')
-<div class="head">
-  <div class="title">
-    ホーム
+  <div class="head">
+    <div class="title">
+      ホーム
+    </div>
   </div>
-</div>
 @endsection
 
 @section('script')
-<script>
-
-</script>
+  <script></script>
 @endsection
