@@ -4,7 +4,8 @@ namespace App\Services;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Log;
+
 // Controller
 use App\Http\Controllers\CommonController;
 // models
@@ -15,6 +16,13 @@ use Exception;
 
 class AlertService
 {
+
+  private $common;
+
+  public function __construct()
+  {
+    $this->common = new CommonController();
+  }
   /**
    * 通知登録処理
    * @param request  : post値 
@@ -48,6 +56,7 @@ class AlertService
       // トランザクション終了
     } catch (Exception $e) {
       DB::rollBack();
+      Log::info($e);
     }
     return;
   }
