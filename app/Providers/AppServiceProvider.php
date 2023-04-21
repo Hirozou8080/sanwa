@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Http\Controllers\CommonController;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+
+        view()->composer('*', function ($view) {
+            $commonController = new CommonController();
+            // user取得
+            $user_id = session()->get('user_id');
+            if ($user_id) {
+                $user = $commonController->getUser($user_id);
+                $view->with('user', $user);
+            }
+        });
     }
 }

@@ -26,7 +26,7 @@ class AlertController extends Controller
         $user_id = session()->get('user_id');
         $alerts = $this->commonController->getAllAlert();
         $user = $this->commonController->getUser($user_id);
-        return view('admin.alert.index', ['user' => $user, 'alerts' => $alerts]);
+        return view('admin.alert.index', ['alerts' => $alerts]);
     }
 
     /**
@@ -36,13 +36,12 @@ class AlertController extends Controller
     {
         // user取得
         $user_id = session()->get('user_id');
-        $user = $this->getUser($user_id);
+        $user = $this->commonController->getUser($user_id);
         return view('admin.alert.add', ['user' => $user]);
     }
 
     /**
      * 通知登録処理
-     * 
      */
     public function addPost(Request $request)
     {
@@ -54,6 +53,7 @@ class AlertController extends Controller
             'body' => 'required | min:4 ',
             'image' => 'image',
         ]);
+
         // 店舗登録処理
         $this->alertService->alertRegist($request);
 
