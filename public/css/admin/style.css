@@ -1,79 +1,92 @@
-.content{
+.content {
   width: 100%;
   padding: 1rem 0 5rem 0;
 }
-.content .pages{
+
+.content .pages {
   width: 100%;
   margin: auto;
   box-shadow: 5px 5px 5px #ccc;
   border-radius: 10px;
   background-color: #fff;
 }
-.content .pages .pages-inner{
+
+.content .pages .pages-inner {
   padding: 1rem;
 }
 
 
 /* btn各種 */
-.link-btn1{
+.link-btn1 {
   width: 120px;
   text-align: center;
   background-color: #ff1717;
   border-radius: 10px;
 }
-.link-btn1:hover{
+
+.link-btn1:hover {
   opacity: .5;
 }
-.link-btn1 a{
+
+.link-btn1 a {
   padding: .5rem;
-  color:#fff;
+  color: #fff;
   font-size: 1rem;
-  font-family:'Noto Sans JP' , 'serif';
+  font-family: 'Noto Sans JP', 'serif';
 }
-.link-btn2{
+
+.link-btn2 {
   width: 120px;
   text-align: center;
   background-color: #00a608;
   border-radius: 10px;
 }
-.link-btn2:hover{
+
+.link-btn2:hover {
   opacity: .5;
 }
-.link-btn2 a{
+
+.link-btn2 a {
   padding: .5rem;
-  color:#fff;
+  color: #fff;
   font-size: 1rem;
-  font-family:'Noto Sans JP' , 'serif';
+  font-family: 'Noto Sans JP', 'serif';
 }
-.link-btn3{
+
+.link-btn3 {
   width: 120px;
   text-align: center;
   background-color: #3949ff;
   border-radius: 10px;
 }
-.link-btn3:hover{
+
+.link-btn3:hover {
   opacity: .5;
 }
-.link-btn3 a{
+
+.link-btn3 a {
   padding: .5rem;
-  color:#fff;
+  color: #fff;
   font-size: 1rem;
-  font-family:'Noto Sans JP' , 'serif';
+  font-family: 'Noto Sans JP', 'serif';
 }
-.link-btn4{
+
+.link-btn4 {
   width: 120px;
   text-align: center;
   background-color: #fdb900;
   border-radius: 10px;
 }
-.link-btn4:hover{
+
+.link-btn4:hover {
   opacity: .5;
 }
-.link-btn4 a{
+
+.link-btn4 a {
   padding: .5rem;
-  color:#fff;
+  color: #fff;
   font-size: 1rem;
-  font-family:'Noto Sans JP' , 'serif';
+  font-family: 'Noto Sans JP', 'serif';
 }
 
 /* flex 設定*/
@@ -83,27 +96,36 @@
   align-items: center;
   padding: .3rem;
 }
+
 .flex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: .3rem;
 }
+
 .flex-around {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: .3rem;
 }
+
 .flex-start {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: .3rem;
 }
+
 .flex-end {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: .3rem;
+}
+
+/* text関連 */
+.text-nowrap {
+  white-space: nowrap;
 }

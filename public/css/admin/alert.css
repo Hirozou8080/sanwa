@@ -25,6 +25,7 @@
 }
 
 .alert table.list th {
+  white-space: nowrap;
   border: .5px solid #ccc;
   background-color: #042569;
   color: #fff;
