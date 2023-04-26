@@ -12,9 +12,15 @@ use App\Http\Controllers\Admin\AlertController as AdminAlertController;
 use App\Http\Controllers\Admin\SettingController as AdminSettingController;
 use App\Http\Controllers\Admin\PriceController as AdminPriceController;
 
+/**
+ * HPのTOP画面
+ */
 Route::controller(HomeController::class)->group(function () {
   Route::get('/', 'home')->name('home');
 });
+
+//店舗画面
+
 Route::controller(StoreController::class)->group(function () {
   Route::get('/store', 'index')->name('store');
 });
