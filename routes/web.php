@@ -12,25 +12,28 @@ use App\Http\Controllers\Admin\AlertController as AdminAlertController;
 use App\Http\Controllers\Admin\SettingController as AdminSettingController;
 use App\Http\Controllers\Admin\PriceController as AdminPriceController;
 
-/**
- * HPのTOP画面
- */
+
+//HPのTOP画面
 Route::controller(HomeController::class)->group(function () {
   Route::get('/', 'home')->name('home');
 });
 
-//店舗画面
-
+// 店舗画面
 Route::controller(StoreController::class)->group(function () {
   Route::get('/store', 'index')->name('store');
 });
+// 金額画面
 Route::controller(PriceController::class)->group(function () {
   Route::get('/price', 'index')->name('price');
   Route::get('/price/{{price_id}}', 'detail')->name('price/detail');
 });
 
 
+/**
+ * 管理者画面
+ */
 Route::prefix('admin')->group(function () {
+  // ログイン関連
   Route::controller(LoginController::class)->group(function () {
     Route::get('/register', 'register')->name('register');
     Route::post('/register', 'registerPost')->name('register');
@@ -42,6 +45,7 @@ Route::prefix('admin')->group(function () {
     Route::controller(AdminController::class)->group(function () {
       Route::get('/', 'home')->name('admin/home');
     });
+    // 店舗管理関連
     Route::controller(AdminStoreController::class)->group(function () {
       Route::get('/store', 'store')->name('admin/store');
       Route::get('/store/add', 'add')->name('admin/store/add');
@@ -51,15 +55,19 @@ Route::prefix('admin')->group(function () {
       Route::get('/store/detail/{store_id}', 'detail')->name('admin/store/detail');
       Route::post('/store/delete/{store_id}', 'deletePost')->name('admin/store/delete');
     });
+    // 金額管理関連
     Route::controller(AdminPriceController::class)->group(function () {
       Route::get('/store/price/{store_id}', 'price')->name('admin/store/price');
     });
 
+    // 通知管理関連
     Route::controller(AdminAlertController::class)->group(function () {
       Route::get('/alert', 'alert')->name('admin/alert');
       Route::get('/alert/add', 'add')->name('admin/alert/add');
       Route::post('/alert/add', 'addPost')->name('admin/alert/add');
     });
+
+    // 設定管理関連
     Route::controller(AdminSettingController::class)->group(function () {
       Route::get('/setting', 'setting')->name('admin/setting');
     });
