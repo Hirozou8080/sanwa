@@ -11,6 +11,7 @@ class AlertController extends Controller
 {
     protected $alertService;
     protected $commonController;
+
     public function __construct(AlertService $alertService)
     {
         $this->alertService = $alertService;
@@ -22,10 +23,7 @@ class AlertController extends Controller
      */
     public function alert()
     {
-        // user取得
-        $user_id = session()->get('user_id');
         $alerts = $this->commonController->getAllAlert();
-        $user = $this->commonController->getUser($user_id);
         return view('admin.alert.index', ['alerts' => $alerts]);
     }
 
@@ -34,10 +32,7 @@ class AlertController extends Controller
      */
     public function add()
     {
-        // user取得
-        $user_id = session()->get('user_id');
-        $user = $this->commonController->getUser($user_id);
-        return view('admin.alert.add', ['user' => $user]);
+        return view('admin.alert.add');
     }
 
     /**

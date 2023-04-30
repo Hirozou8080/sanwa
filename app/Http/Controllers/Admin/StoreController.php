@@ -11,14 +11,11 @@ class StoreController extends Controller
 {
      protected $storeService;
      protected $commonController;
-     protected $user_id;
 
      public function __construct(StoreService $storeService)
      {
           $this->storeService = $storeService;
           $this->commonController = new CommonController();
-          // sessionユーザIDを取得
-          $this->user_id = session()->get('user_id');
      }
 
      /**
@@ -29,9 +26,7 @@ class StoreController extends Controller
           $stores = $this->commonController->getAllStore();
           $prefectures = $this->commonController->getAllPrefecture();
 
-          // user取得
-          $user = $this->commonController->getUser($this->user_id);
-          return view('admin.store.index', ['user' => $user, 'stores' => $stores, 'prefectures' => $prefectures]);
+          return view('admin.store.index', ['stores' => $stores, 'prefectures' => $prefectures]);
      }
 
      /**
@@ -40,10 +35,7 @@ class StoreController extends Controller
      public function add()
      {
           $prefectures = $this->commonController->getAllPrefecture();
-
-          // user取得
-          $user = $this->commonController->getUser($this->user_id);
-          return view('admin.store.add', ['user' => $user, 'prefectures' => $prefectures]);
+          return view('admin.store.add', ['prefectures' => $prefectures]);
      }
 
      /**
@@ -77,9 +69,7 @@ class StoreController extends Controller
           $store['postNumPrev'] = substr($store['post_num'], 0, 3);
           $store['postNumNext'] = substr($store['post_num'], 3, 7);
 
-          // user取得
-          $user = $this->commonController->getUser($this->user_id);
-          return view('admin.store.edit', ['user' => $user, 'store' => $store, 'prefectures' => $prefectures]);
+          return view('admin.store.edit', ['store' => $store, 'prefectures' => $prefectures]);
      }
 
      /**
@@ -128,8 +118,6 @@ class StoreController extends Controller
           $store['postNumNext'] = substr($store['post_num'], 3, 7);
           $prefecture = $this->commonController->getPrefecture($store->prefecture_id);
 
-          // sessionユーザIDを取得
-          $user = $this->commonController->getUser($this->user_id);
-          return view('admin.store.detail', ['user' => $user, 'store' => $store, 'prefecture' => $prefecture]);
+          return view('admin.store.detail', ['store' => $store, 'prefecture' => $prefecture]);
      }
 }
