@@ -54,4 +54,15 @@ class AlertController extends Controller
 
         return redirect()->route('admin/alert');
     }
+
+    /**
+     * 店舗編集
+     * @param alert_id  対象店舗ID
+     */
+    public function edit($alert_id)
+    {
+        $alert = $this->commonController->getAlert($alert_id);
+
+        return view('admin.alert.edit', ['alert' => $alert]);
+    }
 }
