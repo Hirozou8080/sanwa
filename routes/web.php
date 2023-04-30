@@ -47,13 +47,13 @@ Route::prefix('admin')->group(function () {
     });
     // 店舗管理関連
     Route::controller(AdminStoreController::class)->group(function () {
-      Route::get('/store', 'store')->name('admin/store');
-      Route::get('/store/add', 'add')->name('admin/store/add');
-      Route::post('/store/add', 'addPost')->name('admin/store/add');
-      Route::get('/store/edit/{store_id}', 'edit')->name('admin/store/edit');
-      Route::post('/store/edit/{store_id}', 'editPost')->name('admin/store/edit');
-      Route::get('/store/detail/{store_id}', 'detail')->name('admin/store/detail');
-      Route::post('/store/delete/{store_id}', 'deletePost')->name('admin/store/delete');
+      Route::get('/store', 'store')->name('admin/store'); // 店舗一覧情報取得
+      Route::get('/store/add', 'add')->name('admin/store/add'); // 店舗登録画面情報取得
+      Route::post('/store/add', 'addPost')->name('admin/store/add'); // 店舗登録処理
+      Route::get('/store/edit/{store_id}', 'edit')->name('admin/store/edit'); // 店舗編集画面情報取得
+      Route::post('/store/edit/{store_id}', 'editPost')->name('admin/store/edit'); // 店舗編集処理
+      Route::get('/store/detail/{store_id}', 'detail')->name('admin/store/detail'); // 店舗詳細情報取得
+      Route::post('/store/delete/{store_id}', 'deletePost')->name('admin/store/delete'); // 店舗削除処理
     });
     // 金額管理関連
     Route::controller(AdminPriceController::class)->group(function () {
@@ -62,9 +62,12 @@ Route::prefix('admin')->group(function () {
 
     // 通知管理関連
     Route::controller(AdminAlertController::class)->group(function () {
-      Route::get('/alert', 'alert')->name('admin/alert');
-      Route::get('/alert/add', 'add')->name('admin/alert/add');
-      Route::post('/alert/add', 'addPost')->name('admin/alert/add');
+      Route::get('/alert', 'alert')->name('admin/alert'); // 通知一覧画面情報取得
+      Route::get('/alert/add', 'add')->name('admin/alert/add'); // 通知登録画面情報取得
+      Route::post('/alert/add', 'addPost')->name('admin/alert/add'); // 通知登録処理
+      Route::get('/alert/edit/{alert_id}', 'edit')->name('admin/alert/edit'); // 通知編集画面情報取得
+      Route::post('/alert/edit/{alert_id}', 'editPost')->name('admin/alert/edit'); // 通知編集画面情報取得
+      Route::get('/alert/detail/{alert_id}', 'detail')->name('admin/alert/detail'); // 通知詳細情報取得
     });
 
     // 設定管理関連

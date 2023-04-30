@@ -35,10 +35,10 @@
           <td style="text-align: center">
             <div class="flex" style="text-align: center; gap:10px">
               <div class="link-btn2 ">
-                <a href={{ route('admin/store/edit', $alert->id) }}>編集＞</a>
+                <a href={{ route('admin/alert/edit', $alert->id) }}>編集＞</a>
               </div>
               <div class="link-btn3">
-                <a href={{ route('admin/store/detail', $alert->id) }}>詳細＞</a>
+                <a href={{ route('admin/alert/detail', $alert->id) }}>詳細＞</a>
               </div>
             </div>
           </td>
