@@ -42,7 +42,7 @@ class AlertController extends Controller
     {
 
         // バリデーション
-        $validated = $request->validate([
+        $request->validate([
             'category' => 'required',
             'title' => 'required | min:3 ',
             'body' => 'required | min:4 ',
