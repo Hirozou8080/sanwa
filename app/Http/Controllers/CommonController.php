@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Storage;
-
 // models
 use App\Models\Admin_user;
 use App\Models\Store;
@@ -69,16 +67,5 @@ class CommonController extends Controller
   {
     $alert = Alert::getAlertId($id);
     return $alert;
-  }
-  /**
-   * publicディスク用
-   * ファイルの保存
-   * @param file = 保存ファイル
-   * @param path = ディレクトリパス
-   */
-  public function saveFile($file, $path)
-  {
-    $upload_file_name = Storage::disk('public')->putFile($path, $file);
-    return $upload_file_name;
   }
 }

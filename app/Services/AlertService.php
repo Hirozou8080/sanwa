@@ -21,7 +21,7 @@ class AlertService
 
   public function __construct()
   {
-    $this->common = new CommonController();
+    $this->common = new CommonService();
   }
   /**
    * 通知登録処理
@@ -33,13 +33,13 @@ class AlertService
     try {
       // トランザクション開始
       DB::transaction(function () use ($request) {
+
         $file_name = null;
         $file_path = null;
         if ($request->file('image')) {
           $file_name = $request->file('image')->getClientOriginalName();
           // file保存処理
-          $commonController = new CommonController();
-          $file_path = $commonController->saveFile($request->file('image'), 'alert');
+          $file_path = $this->common->saveFile($request->file('image'), 'alert');
         }
 
         // 現在日時取得
