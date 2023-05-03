@@ -45,14 +45,17 @@ class AlertService
         // 現在日時取得
         $now = Carbon::now();
 
-        Alert::create([
-          'category_id'  => $request['category'],
-          'title'    => $request['postNumPrev'] . $request['title'],
-          'body' => $request['body'],
-          'file_name' => $file_name,
-          'file_path' => $file_path,
-          'posted_date' => $now,
-        ]);
+        // 通知新規登録
+        $alert = new Alert();
+        $alert['category_id']  = $request['category'];
+        $alert['title']    = $request['postNumPrev'] . $request['title'];
+        $alert['body'] = $request['body'];
+        $alert['file_name'] = $file_name;
+        $alert['file_path'] = $file_path;
+        $alert['posted_date'] = $now;
+
+        // 登録
+        $alert->save();
       });
       Log::info(__CLASS__ . ' ' . __FUNCTION__ . ' success ');
     } catch (Exception $e) {

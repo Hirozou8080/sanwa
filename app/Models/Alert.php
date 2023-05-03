@@ -15,19 +15,23 @@ class Alert extends Model
         'category_id',
         'title',
         'body',
+        'file_name',
+        'file_path',
         'posted_date',
     ];
 
     /**
      * 全通知取得
      */
-    public static function getAllAlert(){
+    public static function getAllAlert()
+    {
         return Alert::all();
     }
     /**
      * IDから通知取得
      */
-    public static function getAlertId($id){
+    public static function getAlertId($id)
+    {
         return Alert::find($id);
     }
 }

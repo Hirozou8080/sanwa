@@ -60,7 +60,12 @@
             {{ Form::label('タイトル画像') }}
           </div>
           <div class="form-content" style="display:flex;">
-            {{ Form::file('image', ['class' => 'custom-file-input', 'id' => 'fileImage', 'style' => 'border:none;']) }}
+            {{ Form::file('image', [
+            'class' => 'custom-file-input',
+            'type' => 'image',
+            'id' => 'fileImage',
+            'style' =>'border:none;'
+            ]) }}
             <img id="preview" style="max-width:200px" />
           </div>
         </div>

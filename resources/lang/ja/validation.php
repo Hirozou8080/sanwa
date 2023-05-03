@@ -82,7 +82,7 @@ return [
     'min' => [
         'numeric' => ':attribute は :min文字以上で入力してください。',
         'file' => 'The :attribute must be at least :min kilobytes.',
-        'string' => 'The :attribute must be at least :min characters.',
+        'string' => ':attribute は :min文字以上で入力してください。',
         'array' => 'The :attribute must have at least :min items.',
     ],
     'multiple_of' => 'The :attribute must be a multiple of :value.',
@@ -148,18 +148,18 @@ return [
     */
 
     'attributes' => [
-      'email' => 'メールアドレス',
-      'password' => 'パスワード',
-      'storeName' => '店舗名',
-      'postNumPrev' => '郵便番号(3桁)',
-      'postNumNext' => '郵便番号(4桁)',
-      'prefecture' => '都道府県',
-      'city' => '市区町村',
-      'address' => '住所(その他)',
-      'recruit' => '求人募集',
-      'image' => '画像',
-      'title' => 'タイトル',
-      'body' => '本文',
+        'email' => 'メールアドレス',
+        'password' => 'パスワード',
+        'storeName' => '店舗名',
+        'postNumPrev' => '郵便番号(3桁)',
+        'postNumNext' => '郵便番号(4桁)',
+        'prefecture' => '都道府県',
+        'city' => '市区町村',
+        'address' => '住所(その他)',
+        'recruit' => '求人募集',
+        'image' => '画像',
+        'title' => 'タイトル',
+        'body' => '本文',
     ],
 
 ];
