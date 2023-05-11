@@ -62,10 +62,25 @@
           <div class="form-title">
             {{ Form::label('タイトル画像') }}
           </div>
+          {{-- ファイルが登録されているか --}}
+          @if($alert->file_name && $alert->file_path)
+          {{-- 登録されている場合 --}}
+          <div class="form-content" style="display:flex; justify-content: center;">
+            <img src="{{ url('storage', [$alert->file_path]) }}" alt="" style="max-width:200px" />
+            <button type='button' class="delete" onclick="ImageDelete()">×</button>
+          </div>
+          @else
+          {{-- 登録されていない場合 --}}
           <div class="form-content" style="display:flex;">
-            {{ Form::file('image', ['class' => 'custom-file-input', 'id' => 'fileImage', 'style' => 'border:none;']) }}
+            {{ Form::file('image', [
+            'class' => 'custom-file-input',
+            'type' => 'image',
+            'id' => 'fileImage',
+            'style' =>'border:none;'
+            ]) }}
             <img id="preview" style="max-width:200px" />
           </div>
+          @endif
         </div>
         <div class="form-item" style="justify-content:space-between; padding:3rem 1rem">
           <div class="flex-items">
@@ -114,5 +129,12 @@
     //ダメだったら値をクリアする
     $('#fileImage').val('');
   });
+
+// 画像削除ボタン押下時
+  function ImageDelete(){
+    console.log('Click');
+    $()
+    return false;
+}
 </script>
 @endsection
