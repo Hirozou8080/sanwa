@@ -30,7 +30,7 @@ class StoreController extends Controller
      }
 
      /**
-      * 店舗登録
+      * 店舗登録画面表示
       */
      public function add()
      {
@@ -43,6 +43,7 @@ class StoreController extends Controller
       */
      public function addPost(Request $request)
      {
+          dd($request->post());
           // バリデーション
           $request->validate([
                'storeName' => 'required | max:36',
@@ -79,11 +80,12 @@ class StoreController extends Controller
       */
      public function editPost(Request $request, $store_id)
      {
+
           // バリデーション
           $request->validate([
                'storeName' => 'required | max:36',
-               'postNumPrev' => 'required | min:3 | numeric',
-               'postNumNext' => 'required | min:4 | numeric',
+               'postNumPrev' => 'required | min:001 | numeric',
+               'postNumNext' => 'required | min:0001 | numeric',
                'prefecture' => 'required',
                'city' => 'required | max:32',
                'address' => 'required | max:64',
