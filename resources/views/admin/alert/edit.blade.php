@@ -84,7 +84,7 @@
         </div>
         <div class="form-item" style="justify-content:space-between; padding:3rem 1rem">
           <div class="flex-items">
-            <button type="button" onclick="location.href='{{ route('admin/alert')}}' ">戻る＞</button>
+            <button type="button" onclick="location.href=`{{ route('admin/alert')}}`">戻る＞</button>
             {{ Form::submit('登録＞', ['class' => 'register']) }}
           </div>
         </div>
