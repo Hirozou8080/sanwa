@@ -62,7 +62,6 @@ class AlertController extends Controller
     public function edit($alert_id)
     {
         $alert = $this->commonController->getAlert($alert_id);
-
         return view('admin.alert.edit', ['alert' => $alert]);
     }
 }

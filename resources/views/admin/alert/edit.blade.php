@@ -62,11 +62,15 @@
           <div class="form-title">
             {{ Form::label('タイトル画像') }}
           </div>
+          {{ Form::hidden('fileExisrtFlg', $alert->file_name,['id'=>'fileExisrtFlg']) }}
           {{-- ファイルが登録されているか --}}
-          @if($alert->file_name && $alert->file_path)
+          @if(fileExisrtCheckPHP())
           {{-- 登録されている場合 --}}
-          <div class="form-content" style="display:flex; justify-content: center;">
-            <img src="{{ url('storage', [$alert->file_path]) }}" alt="" style="max-width:200px" />
+          <div class="form-content">
+            <div>
+              <img src="{{ url('storage', [$alert->file_path]) }}" alt="" style="max-width:200px; max-height:300px" />
+              <!-- {{ Form::label($alert->file_name) }} -->
+            </div>
             <button type='button' class="delete" onclick="ImageDelete()">×</button>
           </div>
           @else
@@ -78,7 +82,7 @@
             'id' => 'fileImage',
             'style' =>'border:none;'
             ]) }}
-            <img id="preview" style="max-width:200px" />
+            <img id="preview" style="max-width:200px; max-height:300px" />
           </div>
           @endif
         </div>
@@ -132,8 +136,19 @@
 
   // 画像削除ボタン押下時
   function ImageDelete() {
+    fileExisrtCheck()
     console.log('{{$alert->file_name}}');
+    $('#fileExisrtFlg').val(''); // fileExisrtFlgを空にする
     return false;
+  }
+
+  // ファイル存在可能チェック
+  function fileExisrtCheck() {
+    const fileExisrtFlg = $('#fileExisrtFlg').val()
+    if (fileExisrtFlg) {
+      return true
+    }
+    return false
   }
 </script>
 @endsection
