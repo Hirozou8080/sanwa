@@ -73,7 +73,7 @@
         {{Form::open(['url' => route('admin/store/delete',$store->id), 'method'=>'post'])}}
         <div class="item" style="justify-content:center; padding:3rem 1rem">
           <div class="flex-items">
-            <button type="button" onclick="location.href='{{ route('admin/store')}}' ">戻る＞</button>
+            <button type="button" onclick="location.href=`{{ route('admin/store')}}`">戻る＞</button>
             {{ Form::submit('削除＞', ['class'=>'delete']) }}
           </div>
         </div>
