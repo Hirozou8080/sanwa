@@ -130,11 +130,10 @@
     $('#fileImage').val('');
   });
 
-// 画像削除ボタン押下時
-  function ImageDelete(){
-    console.log('Click');
-    $()
+  // 画像削除ボタン押下時
+  function ImageDelete() {
+    console.log('{{$alert->file_name}}');
     return false;
-}
+  }
 </script>
 @endsection
