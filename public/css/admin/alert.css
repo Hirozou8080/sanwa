@@ -246,15 +246,18 @@
 }
 
 .alert-edit .content .form-block .form-item button.delete {
+  position: absolute;
+  top: -20px;
+  right: -10px;
   border-radius: 25px;
   background-color: red;
   font-size: 1rem;
   color: white;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .alert-edit .content .form-block .form-item input[type=submit]:hover,
 .alert-edit .content .form-block .form-item button:hover {
-  opacity: .5;
+  opacity: .8;
 }

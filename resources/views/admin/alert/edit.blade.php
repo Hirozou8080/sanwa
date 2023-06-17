@@ -62,19 +62,10 @@
           <div class="form-title">
             {{ Form::label('タイトル画像') }}
           </div>
-          {{ Form::hidden('fileExisrtFlg', $alert->file_name,['id'=>'fileExisrtFlg']) }}
-          {{-- ファイルが登録されているか --}}
-          @if(fileExisrtCheckPHP())
-          {{-- 登録されている場合 --}}
-          <div class="form-content">
-            <div>
-              <img src="{{ url('storage', [$alert->file_path]) }}" alt="" style="max-width:200px; max-height:300px" />
-              <!-- {{ Form::label($alert->file_name) }} -->
-            </div>
-            <button type='button' class="delete" onclick="ImageDelete()">×</button>
-          </div>
-          @else
-          {{-- 登録されていない場合 --}}
+
+
+          {{ Form::hidden('fileDeleteFlg', false ,['id'=>'fileDeleteFlg']) }}
+          <!-- {{--  ファイルが登録されていない場合 --}} -->
           <div class="form-content" style="display:flex;">
             {{ Form::file('image', [
             'class' => 'custom-file-input',
@@ -82,9 +73,14 @@
             'id' => 'fileImage',
             'style' =>'border:none;'
             ]) }}
-            <img id="preview" style="max-width:200px; max-height:300px" />
+            <div style="position: relative;">
+              <img id="preview" style="max-width:200px; max-height:300px" />
+              <button id="delete" type='button' class="delete" onclick="ImageDelete()">×</button>
+            </div>
           </div>
-          @endif
+
+
+
         </div>
         <div class="form-item" style="justify-content:space-between; padding:3rem 1rem">
           <div class="flex-items">
@@ -136,19 +132,22 @@
 
   // 画像削除ボタン押下時
   function ImageDelete() {
-    fileExisrtCheck()
-    console.log('{{$alert->file_name}}');
-    $('#fileExisrtFlg').val(''); // fileExisrtFlgを空にする
+    $('#preview').attr('src', '');
+    $('#fileImage').val('');
+    $('#fileDeleteFlg').val(true); // 削除フラグをtrueに設定
+    $("#delete").hide();
     return false;
   }
 
-  // ファイル存在可能チェック
-  function fileExisrtCheck() {
-    const fileExisrtFlg = $('#fileExisrtFlg').val()
-    if (fileExisrtFlg) {
-      return true
+  // [初期読み込み] 登録済みの画像があれば表示
+  $(function () {
+    var img = '{{$alert->file_name}}'
+    if ('{{$alert->file_path}}') {
+      $('#preview').attr('src', `{{ url('storage', [$alert->file_path]) }}`);
     }
-    return false
-  }
+    return false;
+  });
+
+
 </script>
 @endsection
