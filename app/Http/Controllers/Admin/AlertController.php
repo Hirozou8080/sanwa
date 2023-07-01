@@ -64,4 +64,25 @@ class AlertController extends Controller
         $alert = $this->commonController->getAlert($alert_id);
         return view('admin.alert.edit', ['alert' => $alert]);
     }
+
+    /**
+     * 通知編集処理
+     */
+    public function editPost(Request $request)
+    {
+
+        dd($request->all());
+        // バリデーション
+        $request->validate([
+            'category' => 'required',
+            'title' => 'required | min:3 ',
+            'body' => 'required | min:4 ',
+            'image' => 'image',
+        ]);
+
+        // 店舗登録処理
+        // $this->alertService->alertRegist($request);
+
+        return redirect()->route('admin/alert');
+    }
 }

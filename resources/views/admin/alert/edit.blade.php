@@ -123,6 +123,7 @@
           //Data URI Schemeを取得する 
           reader_.readAsDataURL(image_);
         }
+        $('#fileDeleteFlg').val(true); // 削除フラグをtrueに設定
         return false;
       }
     }
