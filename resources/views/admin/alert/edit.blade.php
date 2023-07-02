@@ -28,6 +28,7 @@
 
         <div class="form-item">
           <div class="form-title">
+            {{ Form::hidden('id',$alert->id) }}
             {{ Form::label('カテゴリー') }}
           </div>
           <div class="flex-items" style="justify-content:flex-start; gap:50px ;  padding:.5rem;font-size:1rem;">

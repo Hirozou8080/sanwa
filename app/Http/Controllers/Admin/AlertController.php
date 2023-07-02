@@ -71,7 +71,6 @@ class AlertController extends Controller
     public function editPost(Request $request)
     {
 
-        dd($request->all());
         // バリデーション
         $request->validate([
             'category' => 'required',
@@ -80,8 +79,8 @@ class AlertController extends Controller
             'image' => 'image',
         ]);
 
-        // 店舗登録処理
-        // $this->alertService->alertRegist($request);
+        // 店舗編集処理
+        $this->alertService->alertEdit($request);
 
         return redirect()->route('admin/alert');
     }
