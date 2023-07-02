@@ -85,19 +85,21 @@ class AlertService
           $file_path = $this->common->saveFile($request->file('image'), 'alert');
         }
 
-        // 現在日時取得
-        $now = Carbon::now();
-
-        // 通知新規登録
+        // 通知編集
         $alert = Alert::find($request['id']);
         $alert['category_id']  = $request['category'];
         $alert['title']    = $request['postNumPrev'] . $request['title'];
         $alert['body'] = $request['body'];
         $alert['file_name'] = $file_name;
-        $alert['file_path'] = $file_path;
-        $alert['posted_date'] = $now;
 
-        // 登録
+        // 削除フラグがあればファイル削除
+        if ($request['fileDeleteFlg']) {
+          $this->common->deleteFile($alert['file_path']);
+        }
+
+        $alert['file_path'] = $file_path;
+
+        // 更新
         $alert->save();
       });
       Log::info(__CLASS__ . ' ' . __FUNCTION__ . ' success ');

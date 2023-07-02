@@ -17,4 +17,21 @@ class CommonService
     $upload_file_name = Storage::disk('public')->putFile($path, $file);
     return $upload_file_name;
   }
+  /**
+   * publicディスク用
+   * ファイルの削除
+   * @param path = 削除ディレクトリパス
+   * @return status : [0 : 成功, 1 : 失敗]
+   */
+  public function deleteFile($path)
+  {
+    $status = 1;
+    Storage::disk('public')->delete($path);
+
+    // 削除ファイル存在確認
+    if (!Storage::disk('public')->exists($path)) {
+      $status = 0;
+    }
+    return $status;
+  }
 }
