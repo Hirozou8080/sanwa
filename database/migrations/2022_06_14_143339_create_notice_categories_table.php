@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('alerts_categories', function (Blueprint $table) {
-            $table->increments('id')->comment('ID');
+            $table->id('id')->comment('ID');
             $table->string('name')->nullable(false)->comment('カテゴリ名');
             $table->timestamps();
             $table->softDeletes();

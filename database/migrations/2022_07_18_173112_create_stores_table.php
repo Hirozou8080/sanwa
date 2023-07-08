@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('stores', function (Blueprint $table) {
-            $table->increments('id')->comment('ID');
+            $table->id('id')->comment('ID');
             $table->string('name')->comment('店舗名');
             $table->integer('post_num')->comment('郵便番号');
             $table->integer('prefecture_id')->comment('都道府県ID');
@@ -24,8 +24,8 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
-    // ALTER 文を実行しテーブルにコメントを設定
-    DB::statement("ALTER TABLE stores COMMENT '店舗テーブル'");
+        // ALTER 文を実行しテーブルにコメントを設定
+        DB::statement("ALTER TABLE stores COMMENT '店舗テーブル'");
     }
 
     /**

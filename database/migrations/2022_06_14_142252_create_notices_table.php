@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('alerts', function (Blueprint $table) {
-            $table->increments('id')->comment('ID');
-            $table->string('category_id')->nullable(false)->comment('カテゴリID');
+            $table->id('id')->comment('ID');
+            $table->integer('category_id')->nullable(false)->comment('カテゴリID');
             $table->string('title')->nullable(false)->comment('タイトル');
             $table->string('body')->nullable(false)->comment('本文');
             $table->date('posted_date')->comment('投稿日');

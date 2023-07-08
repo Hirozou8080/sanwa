@@ -14,10 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('prefectures', function (Blueprint $table) {
-            $table->increments('id')->comment('ID');
+            $table->id('id')->comment('ID');
             $table->string('name')->comment('都道府県');
             $table->timestamps();
         });
+        // ALTER 文を実行しテーブルにコメントを設定
+        DB::statement("ALTER TABLE prefectures COMMENT '都道府県テーブル'");
     }
 
     /**
