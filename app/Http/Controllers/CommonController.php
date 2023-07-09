@@ -7,6 +7,7 @@ use App\Models\Admin_user;
 use App\Models\Store;
 use App\Models\Prefecture;
 use App\Models\Alert;
+use App\Models\Product;
 
 class CommonController extends Controller
 {
@@ -35,6 +36,14 @@ class CommonController extends Controller
   {
     $store = Store::getStoreId($id);
     return $store;
+  }
+  /**
+   * 店舗IDから店舗商品の取得
+   */
+  public function getProduct($store_id)
+  {
+    $products = Product::getProductId($store_id);
+    return $products;
   }
   /**
    * 全都道府県の取得

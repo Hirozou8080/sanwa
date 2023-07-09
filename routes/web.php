@@ -52,12 +52,11 @@ Route::prefix('admin')->group(function () {
       Route::post('/store/add', 'addPost')->name('admin/store/add'); // 店舗登録処理
       Route::get('/store/edit/{store_id}', 'edit')->name('admin/store/edit'); // 店舗編集画面情報取得
       Route::post('/store/edit/{store_id}', 'editPost')->name('admin/store/edit'); // 店舗編集処理
-      Route::get('/store/detail/{store_id}', 'detail')->name('admin/store/detail'); // 店舗詳細情報取得
+      Route::get('/store/detail/{store_id}', 'detail')->name('admin/store/detail'); // 店舗詳細情報取得     
       Route::post('/store/delete/{store_id}', 'deletePost')->name('admin/store/delete'); // 店舗削除処理
-    });
-    // 金額管理関連
-    Route::controller(AdminPriceController::class)->group(function () {
-      Route::get('/store/price/{store_id}', 'price')->name('admin/store/price');
+      Route::get('/store/product/{store_id}', 'product')->name('admin/store/product'); // 店舗商品設定画面情報取得
+      Route::post('/store/product/{store_id}', 'productPost')->name('admin/store/product'); // 店舗商品設定画面情報取得
+
     });
 
     // 通知管理関連

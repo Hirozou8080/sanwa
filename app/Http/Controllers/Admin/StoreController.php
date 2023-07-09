@@ -2,20 +2,17 @@
 
 namespace App\Http\Controllers\admin;
 
-use App\Http\Controllers\Controller;
 use App\Http\Controllers\CommonController;
 use App\Services\StoreService;
 use Illuminate\Http\Request;
 
-class StoreController extends Controller
+class StoreController extends CommonController
 {
      protected $storeService;
-     protected $commonController;
 
      public function __construct(StoreService $storeService)
      {
           $this->storeService = $storeService;
-          $this->commonController = new CommonController();
      }
 
      /**
@@ -23,8 +20,8 @@ class StoreController extends Controller
       */
      public function store()
      {
-          $stores = $this->commonController->getAllStore();
-          $prefectures = $this->commonController->getAllPrefecture();
+          $stores = $this->getAllStore();
+          $prefectures = $this->getAllPrefecture();
 
           return view('admin.store.index', ['stores' => $stores, 'prefectures' => $prefectures]);
      }
@@ -34,7 +31,7 @@ class StoreController extends Controller
       */
      public function add()
      {
-          $prefectures = $this->commonController->getAllPrefecture();
+          $prefectures = $this->getAllPrefecture();
           return view('admin.store.add', ['prefectures' => $prefectures]);
      }
 
@@ -43,7 +40,6 @@ class StoreController extends Controller
       */
      public function addPost(Request $request)
      {
-          dd($request->post());
           // バリデーション
           $request->validate([
                'storeName' => 'required | max:36',
@@ -65,8 +61,8 @@ class StoreController extends Controller
       */
      public function edit($store_id)
      {
-          $prefectures = $this->commonController->getAllPrefecture();
-          $store = $this->commonController->getStore($store_id);
+          $prefectures = $this->getAllPrefecture();
+          $store = $this->getStore($store_id);
           $store['postNumPrev'] = substr($store['post_num'], 0, 3);
           $store['postNumNext'] = substr($store['post_num'], 3, 7);
 
@@ -115,11 +111,31 @@ class StoreController extends Controller
       */
      public function detail($store_id)
      {
-          $store = $this->commonController->getStore($store_id);
+          $store = $this->getStore($store_id);
           $store['postNumPrev'] = substr($store['post_num'], 0, 3);
           $store['postNumNext'] = substr($store['post_num'], 3, 7);
-          $prefecture = $this->commonController->getPrefecture($store->prefecture_id);
+          $prefecture = $this->getPrefecture($store->prefecture_id);
 
           return view('admin.store.detail', ['store' => $store, 'prefecture' => $prefecture]);
+     }
+
+     /**
+      * 店舗商品設定画面
+      */
+     public function product($store_id)
+     {
+          $store = $this->getStore($store_id);
+          $product = $this->getProduct($store_id);
+
+          return view('admin.store.product', ['product' => $product, 'store' => $store]);
+     }
+     /**
+      * 店舗商品設定処理
+      */
+     public function productPost(Request $request)
+     {
+          dd($request);
+
+          return redirect()->route('admin/store');
      }
 }
