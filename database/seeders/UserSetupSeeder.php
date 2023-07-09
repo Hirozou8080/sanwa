@@ -31,8 +31,8 @@ class UserSetupSeeder extends Seeder
         DB::table('admin_users')->truncate(); // 既存のユーザを削除
 
         Admin_user::create([
-            'name' => Str::random(10),
-            'email' => Str::random(10) . '@test.com',
+            'name' => 'テスト太郎',
+            'email' =>  'test@test.com',
             'password' => Hash::make('aaaaaaa1'),
             'register_date' => Carbon::now(),
         ]);
