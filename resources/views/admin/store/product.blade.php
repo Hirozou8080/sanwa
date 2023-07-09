@@ -1,6 +1,6 @@
 @extends('admin.tmpl.layouts')
 @section('css', 'store')
-@section('pageClassName', 'product')
+@section('pageClassName', 'store-product')
 @section('pageTitle', '店舗商品設定')
 @section('content')
 <div class="head">
@@ -12,7 +12,7 @@
   <section class="pages">
     <div class="pages-inner">
       <div class="head">
-        新しい店舗を登録
+        店舗商品の登録/編集
       </div>
       @if ($errors->any())
       <div class="alert alert-danger">
