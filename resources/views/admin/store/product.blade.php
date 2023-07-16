@@ -27,7 +27,7 @@
         {{ Form::open(['url' => route('admin/store/product',$store->id), 'files' => true]) }}
         <div class="form-item">
           <div class="form-title">
-            {{ Form::label($for = 'productName', '店舗名') }}
+            {{ Form::label($for = 'productName', '商品名') }}
           </div>
           <div class="form-content">
             {{ Form::text('productName', null, ['class' => 'form-control', 'id' => 'productName', 'placeholder' =>
