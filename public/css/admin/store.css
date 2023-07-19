@@ -44,6 +44,7 @@
   color: #fff;
   font-weight: 700;
   padding: .5rem;
+  white-space: nowrap;
 }
 
 /* ---------------------------------------

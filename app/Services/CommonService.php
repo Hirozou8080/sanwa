@@ -26,8 +26,9 @@ class CommonService
   public function deleteFile($path)
   {
     $status = 1;
-    Storage::disk('public')->delete($path);
-
+    if (Storage::disk('public')->exists($path)) {
+      Storage::disk('public')->delete($path);
+    }
     // 削除ファイル存在確認
     if (!Storage::disk('public')->exists($path)) {
       $status = 0;

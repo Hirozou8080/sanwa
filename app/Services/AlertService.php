@@ -93,7 +93,7 @@ class AlertService
         $alert['file_name'] = $file_name;
 
         // 削除フラグがあればファイル削除
-        if ($request['fileDeleteFlg']) {
+        if ($request['fileDeleteFlg'] && $alert['file_path']) {
           $this->common->deleteFile($alert['file_path']);
         }
 

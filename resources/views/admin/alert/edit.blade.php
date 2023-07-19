@@ -25,7 +25,6 @@
       @endif
       <div class="form-block">
         {{ Form::open(['url' => route('admin/alert/edit',$alert->id), 'files' => true]) }}
-
         <div class="form-item">
           <div class="form-title">
             {{ Form::hidden('id',$alert->id) }}
@@ -63,8 +62,6 @@
           <div class="form-title">
             {{ Form::label('タイトル画像') }}
           </div>
-
-
           {{ Form::hidden('fileDeleteFlg', false ,['id'=>'fileDeleteFlg']) }}
           <!-- {{--  ファイルが登録されていない場合 --}} -->
           <div class="form-content" style="display:flex;">
@@ -79,9 +76,6 @@
               <button id="delete" type='button' class="delete" onclick="ImageDelete()">×</button>
             </div>
           </div>
-
-
-
         </div>
         <div class="form-item" style="justify-content:space-between; padding:3rem 1rem">
           <div class="flex-items">
@@ -125,6 +119,7 @@
           reader_.readAsDataURL(image_);
         }
         $('#fileDeleteFlg').val(true); // 削除フラグをtrueに設定
+        $("#delete").show();
         return false;
       }
     }
@@ -146,6 +141,8 @@
     var img = '{{$alert->file_name}}'
     if ('{{$alert->file_path}}') {
       $('#preview').attr('src', `{{ url('storage', [$alert->file_path]) }}`);
+    } else {
+      $("#delete").hide();
     }
     return false;
   });
