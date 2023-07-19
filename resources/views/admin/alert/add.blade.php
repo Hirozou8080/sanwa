@@ -66,7 +66,10 @@
             'id' => 'fileImage',
             'style' =>'border:none;'
             ]) }}
-            <img id="preview" style="max-width:200px" />
+            <div style="position: relative;">
+              <img id="preview" style="max-width:200px; max-height:300px" />
+              <button id="delete" type='button' class="delete" onclick="ImageDelete()" hidden>×</button>
+            </div>
           </div>
         </div>
         <div class="form-item" style="justify-content:space-between; padding:3rem 1rem">
@@ -110,11 +113,21 @@
           //Data URI Schemeを取得する 
           reader_.readAsDataURL(image_);
         }
+        $("#delete").show();
         return false;
       }
     }
     //ダメだったら値をクリアする
     $('#fileImage').val('');
   });
+
+  // 画像削除ボタン押下時
+  function ImageDelete() {
+    $('#preview').attr('src', '');
+    $('#fileImage').val('');
+    $('#fileDeleteFlg').val(true); // 削除フラグをtrueに設定
+    $("#delete").hide();
+    return false;
+  }
 </script>
 @endsection
