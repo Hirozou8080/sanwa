@@ -25,13 +25,25 @@
       @endif
       <div class="form-block">
         {{ Form::open(['url' => route('admin/store/product',$store->id), 'files' => true]) }}
-        <div class="form-item">
-          <div class="form-title">
-            {{ Form::label($for = 'productName', '商品名') }}
+        <div class="form-flex">
+          <div class="form-item left">
+            <div class="form-title">
+              {{ Form::label($for = 'productName', '商品名') }}
+            </div>
+            <div class="form-content">
+              {{ Form::text('productName', null, ['class' => 'form-control', 'id' => 'productName', 'placeholder' =>
+              'Tシャツ']) }}
+            </div>
           </div>
-          <div class="form-content">
-            {{ Form::text('productName', null, ['class' => 'form-control', 'id' => 'productName', 'placeholder' =>
-            'Tシャツ']) }}
+          <div class="form-item right">
+            <div class="form-title">
+              {{ Form::label($for = 'productName', '金額') }}
+            </div>
+            <div class="form-content">
+              {{ Form::number('productPrice', null, ['class' => 'form-control', 'id' => 'productPrice',
+              'placeholder' =>
+              '110', ]) }}
+            </div>
           </div>
         </div>
         <div class="form-item" style="justify-content:space-between; padding:3rem 1rem">

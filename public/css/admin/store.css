@@ -395,9 +395,24 @@
   margin: auto;
 }
 
-.store-product .content .form-block .form-item {
+.store-product .content .form-block .form-flex {
   width: 100%;
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+
+}
+
+.store-product .content .form-block .form-item {
   padding: .5rem 0;
+}
+
+.store-product .content .form-block .form-item.left {
+  width: 70%;
+}
+
+.store-product .content .form-block .form-item.right {
+  width: 30%;
 }
 
 .store-product .content .form-block .form-item .form-title {
