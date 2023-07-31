@@ -125,9 +125,9 @@ class StoreController extends CommonController
      public function product($store_id)
      {
           $store = $this->getStore($store_id);
-          $product = $this->getProduct($store_id);
+          $products = $this->getProduct($store_id);
 
-          return view('admin.store.product', ['product' => $product, 'store' => $store]);
+          return view('admin.store.product', ['products' => $products, 'store' => $store]);
      }
      /**
       * 店舗商品設定処理
