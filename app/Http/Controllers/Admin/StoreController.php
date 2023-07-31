@@ -134,7 +134,7 @@ class StoreController extends CommonController
       */
      public function productPost(Request $request)
      {
-          dd($request);
+          dd($request->post());
 
           return redirect()->route('admin/store');
      }
