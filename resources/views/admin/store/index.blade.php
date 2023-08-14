@@ -25,6 +25,7 @@
           <th>操作</th>
         </tr>
         @if (!empty($stores->all()))
+        <!-- 店舗が存在した場合 -->
         @foreach ($stores as $store)
         <tr>
           <td style="text-align: center">{{ $store->id }}</td>
@@ -47,6 +48,7 @@
         </tr>
         @endforeach
         @else
+        <!-- 店舗存在しなかった場合 -->
         <tr>
           <td class="non-alert" colspan="5">
             店舗はありません
@@ -57,10 +59,4 @@
     </div>
   </section>
 </div>
-@endsection
-
-@section('script')
-<script>
-
-</script>
 @endsection
