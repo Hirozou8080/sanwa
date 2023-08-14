@@ -17,6 +17,7 @@ class CommonService
     $upload_file_name = Storage::disk('public')->putFile($path, $file);
     return $upload_file_name;
   }
+
   /**
    * publicディスク用
    * ファイルの削除
