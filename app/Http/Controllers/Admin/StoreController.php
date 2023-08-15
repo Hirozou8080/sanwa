@@ -129,12 +129,13 @@ class StoreController extends CommonController
 
           return view('admin.store.product', ['products' => $products, 'store' => $store]);
      }
+
      /**
       * 店舗商品設定処理
       */
      public function productPost(Request $request)
      {
-          dd($request->post());
+          \Log::info($request);
 
           return redirect()->route('admin/store');
      }
