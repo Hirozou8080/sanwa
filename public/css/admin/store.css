@@ -531,10 +531,18 @@
   border: none;
   width: 100px;
   height: 45px;
+  font-size: 1rem;
 }
 
 .store-product .modal .modal-action .button-area .back {
   border: 1px solid #4b74c7;
   border-radius: 10px;
   color: #4b74c7;
+}
+
+.store-product .modal .modal-action .button-area .regist {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background-color: #ff1717;
+  color: #fff;
 }
