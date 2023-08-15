@@ -12,8 +12,8 @@
   <section class="pages">
     <div class="pages-inner">
       <div class="list-head">
-        <div class="link-btn1 regist">
-          <button id="modalOpen">新規登録＞</button>
+        <div class="link-btn1 add">
+          <button id="modalOpen">商品追加＞</button>
         </div>
       </div>
       <table class="list">
@@ -53,11 +53,11 @@
         <div class="form-area">
           <div class="form-item">
             <div class="form-title">商品名</div>
-            <input type="text">
+            <input type="text" placeholder="Tシャツ">
           </div>
           <div class="form-item">
             <div class="form-title">金額</div>
-            <input type="number">
+            <input type="number" placeholder="120">
           </div>
         </div>
       </div>
@@ -78,8 +78,8 @@
   const buttonOpen = document.getElementById('modalOpen');
   const modal = document.getElementById('modal');
 
-  // 一覧の登録ボタン押下
-  $('.regist').click(modalOpen)
+  // 一覧の追加ボタン押下
+  $('.add').click(modalOpen)
 
   $('.modalClose').click(modalClose)   // バツ印押下
   $('.back').click(modalClose)  // 戻るボタン押下
@@ -100,6 +100,10 @@
       modalClose()
     }
   }
+
+  $('.modal .regist').click(function () {
+    console.log('aaa')
+  })
 
 </script>
 @endsection

@@ -370,7 +370,11 @@
   padding: .5rem 0;
 }
 
-.store-product .list-head .link-btn1.regist button {
+.store-product .link-btn1.add {
+  margin-left: auto;
+}
+
+.store-product .list-head .link-btn1.add button {
   background-color: transparent;
   border: none;
   width: 100%;
