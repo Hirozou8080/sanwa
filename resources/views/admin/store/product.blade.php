@@ -110,15 +110,15 @@
 
 
   // モーダルの登録処理
-  $('.modal .regist').click(function () {
+  $('.modal .regist').click(async function () {
     const fd = new FormData();
     fd.append('store_id', "{{$store->id}}"); // id
-    fd.append('product_name', $('input[name="product_name"]').val()); // 商品名
-    fd.append('product_price', $('input[name="product_price"]').val()); // 金額
-    fd.append('product_detail', $('input[name="product_detail"]').val()); // 詳細
+    fd.append('name', $('input[name="product_name"]').val()); // 商品名
+    fd.append('price', $('input[name="product_price"]').val()); // 金額
+    fd.append('detail', $('textarea[name="product_detail"]').val()); // 詳細
 
     // postApi
-    const res = fetch('/admin/store/product', {
+    const res = await fetch('/admin/store/product', {
       method: 'POST',
       body: fd,
       headers: {
@@ -127,9 +127,11 @@
     })
       .then(response => {
         console.log(response)
+        return response.json()
       }).catch(e => {
-        console.log(e)
+        return e
       })
+    console.log(res)
   })
 
 </script>
