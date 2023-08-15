@@ -13,7 +13,7 @@
     <div class="pages-inner">
       <div class="list-head">
         <div class="link-btn1 regist">
-          <button>新規登録＞</button>
+          <button id="modalOpen">新規登録＞</button>
         </div>
       </div>
       <table class="list">
@@ -43,7 +43,6 @@
       </table>
     </div>
   </section>
-  <!-- <div id="modal-back" class="modal-back"></div> -->
   <div id="modal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
@@ -76,8 +75,31 @@
 
 @section('script')
 <script>
-  $('.regist').click(function () {
-    console.log('aaa')
-  })
+  const buttonOpen = document.getElementById('modalOpen');
+  const modal = document.getElementById('modal');
+
+  // 一覧の登録ボタン押下
+  $('.regist').click(modalOpen)
+
+  $('.modalClose').click(modalClose)   // バツ印押下
+  $('.back').click(modalClose)  // 戻るボタン押下
+
+  // モーダルOpen
+  function modalOpen() {
+    modal.style.display = 'block';
+  }
+  // モーダルClose
+  function modalClose() {
+    modal.style.display = 'none';
+  }
+
+  // モーダルコンテンツ以外がクリックされた時
+  addEventListener('click', outsideClose);
+  function outsideClose(e) {
+    if (e.target == modal) {
+      modalClose()
+    }
+  }
+
 </script>
 @endsection

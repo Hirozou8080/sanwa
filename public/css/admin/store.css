@@ -364,6 +364,12 @@
 店舗商品画面 
 --------------------------------------- */
 
+.store-product .list-head {
+  width: 100%;
+  text-align: right;
+  padding: .5rem 0;
+}
+
 .store-product .list-head .link-btn1.regist button {
   background-color: transparent;
   border: none;
@@ -415,18 +421,8 @@
 }
 
 /* モーダル部分 */
-.store-product .modal-back {
-  width: 100vw;
-  height: 100vh;
-  background-color: #bbbbbb;
-  z-index: 99;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
 .store-product .modal {
-  /* display: none; */
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -435,6 +431,11 @@
   width: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.store-product .modal button:hover,
+.store-product .modal .modalClose:hover {
+  opacity: .5;
 }
 
 @keyframes modalopen {
@@ -522,7 +523,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .store-product .modal .modal-action .button-area .back,
