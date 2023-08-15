@@ -487,6 +487,20 @@
   width: 100%;
 }
 
+.store-product .modal .modal-content .modal-body .alert {
+  padding: 1rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: red;
+  border-radius: 5px;
+}
+
+.store-add .content .alert ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .store-product .modal .modal-content .modal-body .form-area {
   padding: 1rem 0;
 }

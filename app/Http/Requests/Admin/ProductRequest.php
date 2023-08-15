@@ -48,7 +48,7 @@ class ProductRequest extends FormRequest
   protected function failedValidation(Validator $validator)
   {
     $res = response()->json(
-      ['errors' => $validator->errors()],
+      ['errors' => $validator->errors(), 'status' => 400],
       400
     );
     throw new HttpResponseException($res);

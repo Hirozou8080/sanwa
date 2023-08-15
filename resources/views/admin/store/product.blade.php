@@ -50,6 +50,10 @@
         <span class="modalClose">×</span>
       </div>
       <div class="modal-body">
+        <!-- バリデーションエリア -->
+        <div class="alert">
+          <ul> </ul>
+        </div>
         <div class="form-area">
           <div class="form-item">
             <div class="form-title">商品名</div>
@@ -85,6 +89,9 @@
   let product_price = '';
   let product_detail = '';
 
+  let alertUl = $('.alert') // バリデーション親エレメント
+
+
   // 一覧の追加ボタン押下
   $('.add').click(modalOpen)
 
@@ -98,6 +105,7 @@
   // モーダルClose
   function modalClose() {
     modal.style.display = 'none';
+    alertUl.empty(); // alertの子要素削除
   }
 
   // モーダルコンテンツ以外がクリックされた時
@@ -111,6 +119,8 @@
 
   // モーダルの登録処理
   $('.modal .regist').click(async function () {
+    alertUl.empty(); // alertの子要素削除
+
     const fd = new FormData();
     fd.append('store_id', "{{$store->id}}"); // id
     fd.append('name', $('input[name="product_name"]').val()); // 商品名
@@ -118,7 +128,7 @@
     fd.append('detail', $('textarea[name="product_detail"]').val()); // 詳細
 
     // postApi
-    const res = await fetch('/admin/store/product', {
+    const res = await fetch('/admin/store/product/add', {
       method: 'POST',
       body: fd,
       headers: {
@@ -126,12 +136,16 @@
       },
     })
       .then(response => {
-        console.log(response)
         return response.json()
       }).catch(e => {
+        console.log('error')
         return e
       })
-    console.log(res)
+    if (res.status === 400) {
+      $.each(res.errors, function (index, value) {
+        alertUl.append('<li>' + value + '</li>')
+      })
+    }
   })
 
 </script>
