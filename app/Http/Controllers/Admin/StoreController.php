@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\CommonController;
 use App\Services\StoreService;
+use App\Services\ProductService;
 use Illuminate\Http\Request;
 // request
 use App\Http\Requests\Admin\ProductRequest;
@@ -11,10 +12,12 @@ use App\Http\Requests\Admin\ProductRequest;
 class StoreController extends CommonController
 {
   protected $storeService;
+  protected $productService;
 
-  public function __construct(StoreService $storeService)
+  public function __construct(StoreService $storeService, ProductService $productService)
   {
     $this->storeService = $storeService;
+    $this->productService = $productService;
   }
 
   /**

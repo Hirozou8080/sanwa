@@ -90,10 +90,7 @@
   let product_name = '';
   let product_price = '';
   let product_detail = '';
-
   let alertUl = $('.alert') // バリデーション親エレメント
-
-
 
   $('.add').click(modalOpen) // 一覧の追加ボタン押下
   $('.modalClose').click(modalClose) // バツ印押下
@@ -102,16 +99,13 @@
 
   // モーダルOpen
   function modalOpen() {
-    console.log('aaa')
     $('#modal').removeClass('hidden')
   }
   // モーダルClose
   function modalClose() {
     $('#modal').addClass('hidden')
-
     alertUl.empty(); // alertの子要素削除
   }
-
   function outsideClose(e) {
     if (e.target == modal) {
       modalClose()
@@ -140,20 +134,19 @@
       .then(response => {
         return response.json()
       }).catch(e => {
-        console.log('error')
+        console.log(e)
         return e
       })
+    $('.loader-area').addClass('hidden')
 
     // バリデーション処理
     if (res.status === 400) {
       $.each(res.errors, function (index, value) {
         alertUl.append('<li>' + value + '</li>')
       })
+      return
     }
-
-    $('.loader-area').addClass('hidden')
-
+    modalClose()
   })
-
 </script>
 @endsection
