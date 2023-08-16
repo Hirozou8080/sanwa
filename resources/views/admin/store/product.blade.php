@@ -77,7 +77,7 @@
       </div>
     </div>
   </div>
-  <div class="loader-area">
+  <div class="loader-area hidden">
     <div class="loader">Loading...</div>
   </div>
 </div>
@@ -119,6 +119,7 @@
   // モーダルの登録処理
   $('.modal .regist').click(async function () {
     alertUl.empty(); // alertの子要素削除
+    $('.loader-area').removeClass('hidden')
 
     const fd = new FormData();
     fd.append('store_id', "{{$store->id}}"); // id
@@ -148,6 +149,7 @@
       })
     }
 
+    $('.loader-area').addClass('hidden')
 
   })
 
