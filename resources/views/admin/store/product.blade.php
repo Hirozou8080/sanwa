@@ -77,7 +77,9 @@
       </div>
     </div>
   </div>
-</div>
+  <div class="loader-area">
+    <div class="loader">Loading...</div>
+  </div>
 </div>
 @endsection
 
@@ -92,11 +94,11 @@
   let alertUl = $('.alert') // バリデーション親エレメント
 
 
-  // 一覧の追加ボタン押下
-  $('.add').click(modalOpen)
 
-  $('.modalClose').click(modalClose)   // バツ印押下
-  $('.back').click(modalClose)  // 戻るボタン押下
+  $('.add').click(modalOpen) // 一覧の追加ボタン押下
+  $('.modalClose').click(modalClose) // バツ印押下
+  $('.back').click(modalClose) // 戻るボタン押下
+  addEventListener('click', outsideClose); // モーダルコンテンツ以外がクリックされた時
 
   // モーダルOpen
   function modalOpen() {
@@ -108,14 +110,11 @@
     alertUl.empty(); // alertの子要素削除
   }
 
-  // モーダルコンテンツ以外がクリックされた時
-  addEventListener('click', outsideClose);
   function outsideClose(e) {
     if (e.target == modal) {
       modalClose()
     }
   }
-
 
   // モーダルの登録処理
   $('.modal .regist').click(async function () {
@@ -141,11 +140,15 @@
         console.log('error')
         return e
       })
+
+    // バリデーション処理
     if (res.status === 400) {
       $.each(res.errors, function (index, value) {
         alertUl.append('<li>' + value + '</li>')
       })
     }
+
+
   })
 
 </script>
