@@ -43,7 +43,7 @@
       </table>
     </div>
   </section>
-  <div id="modal" class="modal">
+  <div id="modal" class="modal hidden">
     <div class="modal-content">
       <div class="modal-header">
         <div class="head">商品登録 </div>
@@ -102,11 +102,13 @@
 
   // モーダルOpen
   function modalOpen() {
-    modal.style.display = 'block';
+    console.log('aaa')
+    $('#modal').removeClass('hidden')
   }
   // モーダルClose
   function modalClose() {
-    modal.style.display = 'none';
+    $('#modal').addClass('hidden')
+
     alertUl.empty(); // alertの子要素削除
   }
 

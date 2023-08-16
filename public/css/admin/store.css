@@ -426,15 +426,14 @@
 
 /* モーダル部分 */
 .store-product .modal {
-  display: none;
   position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
+  z-index: 100;
+  inset: 0;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .store-product .modal button:hover,
@@ -454,7 +453,6 @@
 
 .store-product .modal .modal-content {
   background-color: #f4f4f4;
-  margin: 12% auto;
   width: 50%;
   border-radius: 10px;
   padding: 1rem;
