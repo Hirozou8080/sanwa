@@ -131,6 +131,7 @@ class StoreController extends CommonController
   {
     $store = $this->getStore($store_id);
     $products = $this->getProduct($store_id);
+    // dd($products);
 
     return view('admin.store.product', ['products' => $products, 'store' => $store]);
   }
@@ -141,7 +142,7 @@ class StoreController extends CommonController
   public function productPost(ProductRequest $request)
   {
     \Log::info($request);
-
+    $this->productService->productRegist($request->post());
     return response()->json('success', 200);
   }
 }

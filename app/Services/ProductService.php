@@ -17,10 +17,10 @@ class ProductService
     // トランザクション開始
     DB::transaction(function () use ($post_data) {
       Product::create([
-        'store_id'     => $post_data['store_id'],
-        'name'    => $post_data['name'],
-        'price' => $post_data['price'],
-        'detail' => $post_data['detail'],
+        'store_id' => $post_data['store_id'],
+        'name'     => $post_data['name'],
+        'price'    => $post_data['price'],
+        'detail'   => $post_data['detail'],
       ]);
     });
     Log::info(__CLASS__ . ' ' . __FUNCTION__ . ' success');

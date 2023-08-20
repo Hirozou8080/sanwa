@@ -27,9 +27,9 @@
         <!-- 商品が存在した場合 -->
         @foreach ($products as $product)
         <tr>
-          <td style="text-align: center">{{ $product->id }}</td>
-          <td>{{ $product->name }}</td>
-          <td>{{ $product->price }}円</td>
+          <td style="text-align: center">{{ $product['id'] }}</td>
+          <td>{{ $product['name'] }}</td>
+          <td>{{ $product['price'] }}円</td>
         </tr>
         @endforeach
         @else
@@ -147,6 +147,7 @@
       return
     }
     modalClose()
+    reload() // リロード
   })
 </script>
 @endsection
