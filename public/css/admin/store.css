@@ -374,7 +374,8 @@
   margin-left: auto;
 }
 
-.store-product .list-head .link-btn1.add button {
+.store-product .list-head .link-btn1.add button,
+.store-product .list .link-btn2.edit button {
   background-color: transparent;
   border: none;
   width: 100%;

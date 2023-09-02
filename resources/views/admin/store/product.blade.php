@@ -30,6 +30,14 @@
           <td style="text-align: center">{{ $product['id'] }}</td>
           <td>{{ $product['name'] }}</td>
           <td>{{ $product['price'] }}円</td>
+          <td style="text-align: center">
+            <div class="flex" style="text-align: center; gap:10px">
+              <div class="link-btn2 edit">
+                <button id="modalOpen" value="{{$product['id']}}" data-name="{{$product['name']}}"
+                  data-price="{{$product['price']}}" data-detail="{{$product['detail']}}">編集＞</button>
+              </div>
+            </div>
+          </td>
         </tr>
         @endforeach
         @else
@@ -55,6 +63,7 @@
           <ul> </ul>
         </div>
         <div class="form-area">
+          <input type="hidden" name="product_id">
           <div class="form-item">
             <div class="form-title">商品名</div>
             <input type="text" name="product_name" placeholder="Tシャツ">
@@ -94,6 +103,8 @@
   let alertUl = $('.alert') // バリデーション親エレメント
 
   $('.add').click(modalOpen) // 一覧の追加ボタン押下
+  $('.edit').click(modalOpen) // 一覧の編集ボタン押下
+
   $('.modalClose').click(modalClose) // バツ印押下
   $('.back').click(modalClose) // 戻るボタン押下
   addEventListener('click', outsideClose); // モーダルコンテンツ以外がクリックされた時
@@ -107,11 +118,23 @@
 
   // モーダルOpen
   function modalOpen() {
+    const productId = $(this).children().val() // 商品ID取得 
+    if (productId) {
+      const productData = $(this).children().data()
+      $('input[name="product_id"]').val(productId)
+      $('input[name="product_name"]').val(productData.name)
+      $('input[name="product_price"]').val(productData.price)
+      $('textarea[name="product_detail"]').val(productData.detail)
+    }
     $('#modal').removeClass('hidden')
   }
   // モーダルClose
   function modalClose() {
     $('#modal').addClass('hidden')
+    $('input[name="product_id"]').val('')
+    $('input[name="product_name"]').val('')
+    $('input[name="product_price"]').val('')
+    $('textarea[name="product_detail"]').val('')
     alertUl.empty(); // alertの子要素削除
   }
 
@@ -122,6 +145,7 @@
 
     const fd = new FormData();
     fd.append('store_id', "{{$store->id}}"); // id
+    fd.append('product_id', $('input[name="product_id"]').val()); // id
     fd.append('name', $('input[name="product_name"]').val()); // 商品名
     fd.append('price', $('input[name="product_price"]').val()); // 金額
     fd.append('detail', $('textarea[name="product_detail"]').val()); // 詳細
