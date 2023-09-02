@@ -517,7 +517,6 @@
   font-size: 1rem;
   font-weight: 300;
   font-family: 'Noto Sans JP', 'serif';
-
 }
 
 .store-product .modal .modal-content .modal-body .form-area .form-item>input {
@@ -558,17 +557,16 @@
   width: 100px;
   height: 45px;
   font-size: 1rem;
+  border-radius: 10px;
 }
 
 .store-product .modal .modal-action .button-area .back {
   border: 1px solid #4b74c7;
-  border-radius: 10px;
   color: #4b74c7;
 }
 
 .store-product .modal .modal-action .button-area .regist {
   border: 1px solid #fff;
-  border-radius: 10px;
   background-color: #ff1717;
   color: #fff;
 }

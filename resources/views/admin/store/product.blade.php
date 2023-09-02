@@ -84,6 +84,7 @@
 @endsection
 
 @section('script')
+
 <script>
   const buttonOpen = document.getElementById('modalOpen');
   const modal = document.getElementById('modal');
@@ -97,6 +98,13 @@
   $('.back').click(modalClose) // 戻るボタン押下
   addEventListener('click', outsideClose); // モーダルコンテンツ以外がクリックされた時
 
+  // モーダル外をクリックした場合
+  function outsideClose(e) {
+    if (e.target == modal) {
+      modalClose()
+    }
+  }
+
   // モーダルOpen
   function modalOpen() {
     $('#modal').removeClass('hidden')
@@ -105,11 +113,6 @@
   function modalClose() {
     $('#modal').addClass('hidden')
     alertUl.empty(); // alertの子要素削除
-  }
-  function outsideClose(e) {
-    if (e.target == modal) {
-      modalClose()
-    }
   }
 
   // モーダルの登録処理
@@ -140,14 +143,15 @@
     $('.loader-area').addClass('hidden')
 
     // バリデーション処理
-    if (res.status === 400) {
+    if (res.status === 422) {
       $.each(res.errors, function (index, value) {
         alertUl.append('<li>' + value + '</li>')
       })
       return
     }
+
+    history.go(0) // リロード
     modalClose()
-    reload() // リロード
   })
 </script>
 @endsection
