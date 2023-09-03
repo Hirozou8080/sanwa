@@ -95,11 +95,7 @@
 @section('script')
 
 <script>
-  const buttonOpen = document.getElementById('modalOpen');
   const modal = document.getElementById('modal');
-  let product_name = '';
-  let product_price = '';
-  let product_detail = '';
   let alertUl = $('.alert') // バリデーション親エレメント
 
   $('.add').click(modalOpen) // 一覧の追加ボタン押下

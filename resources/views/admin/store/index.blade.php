@@ -50,7 +50,7 @@
         @else
         <!-- 店舗存在しなかった場合 -->
         <tr>
-          <td class="non-alert" colspan="5">
+          <td class="non-store" colspan="5">
             店舗はありません
           </td>
         </tr>

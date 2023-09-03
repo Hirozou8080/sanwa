@@ -47,6 +47,11 @@
   white-space: nowrap;
 }
 
+.store .non-store {
+  text-align: center;
+  font-size: 1rem;
+}
+
 /* ---------------------------------------
 店舗登録画面 
 --------------------------------------- */
@@ -423,6 +428,7 @@
 
 .store-product .non-product {
   text-align: center;
+  font-size: 1rem;
 }
 
 /* モーダル部分 */

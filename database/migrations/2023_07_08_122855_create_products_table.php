@@ -18,7 +18,8 @@ return new class extends Migration
             $table->unsignedBigInteger('store_id')->comment('店舗ID');
             $table->string('name')->comment('商品名');
             $table->text('detail')->nullable()->comment('詳細');
-            $table->integer('price')->comment('金額');
+            $table->integer('price')->default(0)->comment('金額');
+            $table->integer('disp_order')->default(1)->comment('表示順');
             $table->timestamps();
             $table->softDeletes();
             # 外部キー制約
