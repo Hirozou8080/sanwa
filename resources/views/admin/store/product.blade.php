@@ -140,8 +140,8 @@
     $('.loader-area').removeClass('hidden')
 
     const fd = new FormData();
-    fd.append('store_id', "{{$store->id}}"); // id
-    fd.append('product_id', $('input[name="product_id"]').val()); // id
+    fd.append('store_id', "{{$store->id}}"); // 店舗id
+    fd.append('product_id', $('input[name="product_id"]').val()); // 商品id
     fd.append('name', $('input[name="product_name"]').val()); // 商品名
     fd.append('price', $('input[name="product_price"]').val()); // 金額
     fd.append('detail', $('textarea[name="product_detail"]').val()); // 詳細
