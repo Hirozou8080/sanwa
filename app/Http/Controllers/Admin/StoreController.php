@@ -126,6 +126,7 @@ class StoreController extends CommonController
 
   /**
    * 店舗商品設定画面
+   * @param store_id  対象店舗ID
    */
   public function product($store_id)
   {
@@ -137,11 +138,21 @@ class StoreController extends CommonController
 
   /**
    * 店舗商品設定処理
+   * @ProductRequest $request
    */
   public function productPost(ProductRequest $request)
   {
-    \Log::info($request);
     $this->productService->productRegist($request->post());
+    return response()->json('success', 200);
+  }
+
+  /**
+   * 店舗商品削除処理
+   * @Request $request
+   */
+  public function productDeletePost(Request $request)
+  {
+    $this->productService->productDelete($request->post());
     return response()->json('success', 200);
   }
 }

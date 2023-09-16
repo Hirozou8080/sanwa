@@ -56,6 +56,7 @@ Route::prefix('admin')->group(function () {
       Route::post('/store/delete/{store_id}', 'deletePost')->name('admin/store/delete'); // 店舗削除処理
       Route::get('/store/product/{store_id}', 'product')->name('admin/store/product'); // 店舗商品設定画面情報取得
       Route::post('/store/product/add', 'productPost')->name('admin/store/product/add'); // 店舗商品設定画面情報取得
+      Route::post('/store/product/delete', 'productDeletePost')->name('admin/store/product/delete'); // 店舗商品設定画面情報取得
 
     });
 
