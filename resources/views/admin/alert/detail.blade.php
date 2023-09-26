@@ -36,8 +36,7 @@
             都道府県
           </div>
           <div class="item-content">
-            {{$prefecture->name}}
-            </select>
+            あああ
           </div>
         </div>
         <div class="item">

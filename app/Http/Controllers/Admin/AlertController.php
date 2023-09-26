@@ -2,20 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Http\Controllers\CommonController;
 use Illuminate\Http\Request;
 use App\Services\AlertService;
 
-class AlertController extends Controller
+class AlertController extends CommonController
 {
   protected $alertService;
-  protected $commonController;
 
   public function __construct(AlertService $alertService)
   {
     $this->alertService = $alertService;
-    $this->commonController = new CommonController();
   }
 
   /**
@@ -23,7 +20,7 @@ class AlertController extends Controller
    */
   public function alert()
   {
-    $alerts = $this->commonController->getAllAlert();
+    $alerts = $this->getAllAlert();
     return view('admin.alert.index', ['alerts' => $alerts]);
   }
 
@@ -56,12 +53,12 @@ class AlertController extends Controller
   }
 
   /**
-   * 店舗編集
-   * @param alert_id  対象店舗ID
+   * 通知編集
+   * @param alert_id  対象通知ID
    */
   public function edit($alert_id)
   {
-    $alert = $this->commonController->getAlert($alert_id);
+    $alert = $this->getAlert($alert_id);
     return view('admin.alert.edit', ['alert' => $alert]);
   }
 
@@ -85,6 +82,18 @@ class AlertController extends Controller
     return redirect()->route('admin/alert');
   }
 
+
+  /**
+   * 通知詳細
+   * @param alert_id  対象通知ID
+   */
+  public function detail($alert_id)
+  {
+    $alert = $this->getAlert($alert_id);
+
+    return view('admin.alert.detail', ['alert' => $alert]);
+  }
+
   /**
    * 通知削除
    * @param request  削除データ
@@ -93,7 +102,7 @@ class AlertController extends Controller
   public function deletePost($alert_id)
   {
     // 通知削除処理
-    // $this->alertService->storeDelete($alert_id);
+    $this->alertService->storeDelete($alert_id);
     return redirect()->route('admin/alert');
   }
 }

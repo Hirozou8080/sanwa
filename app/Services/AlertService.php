@@ -109,4 +109,26 @@ class AlertService
     }
     return;
   }
+
+  /**
+   * 通知削除処理
+   * @param alert_id : 通知ID
+   */
+  public function storeDelete($alert_id)
+  {
+    Log::info(__CLASS__ . ' ' . __FUNCTION__ . ' start');
+
+    try {
+      // トランザクション開始
+      DB::transaction(function () use ($alert_id) {
+        // 該当通知の削除
+        Alert::find($alert_id)->delete();
+      });
+      Log::info(__CLASS__ . ' ' . __FUNCTION__ . ' success');
+    } catch (Throwable $e) {
+      Log::error(__CLASS__ . ' ' . __FUNCTION__ . ' error');
+      Log::error($e);
+    }
+    return;
+  }
 }
