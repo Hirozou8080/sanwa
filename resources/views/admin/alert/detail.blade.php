@@ -12,53 +12,48 @@
   <section class="pages">
     <div class="pages-inner">
       <div class="head">
-        店舗詳細
+        通知詳細
       </div>
       <div class="block">
         <div class="item">
           <div class="item-title">
-            <div>店舗名</div>
+            <div>カテゴリ</div>
           </div>
           <div class="item-content">
-            aaa
+            {{ $alert->title }}
           </div>
         </div>
         <div class="item">
           <div class="item-title">
-            郵便番号
+            <div>タイトル</div>
           </div>
           <div class="item-content">
-            aaa
+            {{ $alert->title }}
           </div>
         </div>
         <div class="item">
           <div class="item-title">
-            都道府県
+            通知内容
           </div>
           <div class="item-content">
-            あああ
+            {{ $alert->body }}
           </div>
         </div>
         <div class="item">
           <div class="item-title">
-            市区町村
+            投稿日
           </div>
           <div class="item-content">
-            aaa </div>
+            {{ $alert->posted_date }}
+          </div>
         </div>
         <div class="item">
           <div class="item-title">
-            住所
+            通知画像
           </div>
           <div class="item-content">
-            aaa </div>
-        </div>
-        <div class="item">
-          <div class="item-title">
-            求人情報
-          </div>
-          <div class="item-content">
-            aaa
+            <img src="{{url('storage', [$alert->file_path])}}" alt="{{$alert->file_name}}"
+              style="max-width:200px; max-height:300px">
           </div>
         </div>
         <!-- {{Form::open(['url' => route('admin/alert/delete',$alert->id), 'method'=>'post'])}} -->
