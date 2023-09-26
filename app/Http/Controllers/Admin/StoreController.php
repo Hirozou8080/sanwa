@@ -105,7 +105,7 @@ class StoreController extends CommonController
    */
   public function deletePost($store_id)
   {
-    // 店舗登録処理
+    // 店舗削除処理
     $this->storeService->storeDelete($store_id);
     return redirect()->route('admin/store');
   }
