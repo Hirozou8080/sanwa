@@ -9,79 +9,91 @@ use App\Services\AlertService;
 
 class AlertController extends Controller
 {
-    protected $alertService;
-    protected $commonController;
+  protected $alertService;
+  protected $commonController;
 
-    public function __construct(AlertService $alertService)
-    {
-        $this->alertService = $alertService;
-        $this->commonController = new CommonController();
-    }
+  public function __construct(AlertService $alertService)
+  {
+    $this->alertService = $alertService;
+    $this->commonController = new CommonController();
+  }
 
-    /**
-     * 通知一覧取得
-     */
-    public function alert()
-    {
-        $alerts = $this->commonController->getAllAlert();
-        return view('admin.alert.index', ['alerts' => $alerts]);
-    }
+  /**
+   * 通知一覧取得
+   */
+  public function alert()
+  {
+    $alerts = $this->commonController->getAllAlert();
+    return view('admin.alert.index', ['alerts' => $alerts]);
+  }
 
-    /**
-     * 通知登録画面表示
-     */
-    public function add()
-    {
-        return view('admin.alert.add');
-    }
+  /**
+   * 通知登録画面表示
+   */
+  public function add()
+  {
+    return view('admin.alert.add');
+  }
 
-    /**
-     * 通知登録処理
-     */
-    public function addPost(Request $request)
-    {
+  /**
+   * 通知登録処理
+   */
+  public function addPost(Request $request)
+  {
 
-        // バリデーション
-        $request->validate([
-            'category' => 'required',
-            'title' => 'required | min:3 ',
-            'body' => 'required | min:4 ',
-            'image' => 'image',
-        ]);
+    // バリデーション
+    $request->validate([
+      'category' => 'required',
+      'title' => 'required | min:3 ',
+      'body' => 'required | min:4 ',
+      'image' => 'image',
+    ]);
 
-        // 店舗登録処理
-        $this->alertService->alertRegist($request);
+    // 店舗登録処理
+    $this->alertService->alertRegist($request);
 
-        return redirect()->route('admin/alert');
-    }
+    return redirect()->route('admin/alert');
+  }
 
-    /**
-     * 店舗編集
-     * @param alert_id  対象店舗ID
-     */
-    public function edit($alert_id)
-    {
-        $alert = $this->commonController->getAlert($alert_id);
-        return view('admin.alert.edit', ['alert' => $alert]);
-    }
+  /**
+   * 店舗編集
+   * @param alert_id  対象店舗ID
+   */
+  public function edit($alert_id)
+  {
+    $alert = $this->commonController->getAlert($alert_id);
+    return view('admin.alert.edit', ['alert' => $alert]);
+  }
 
-    /**
-     * 通知編集処理
-     */
-    public function editPost(Request $request)
-    {
+  /**
+   * 通知編集処理
+   */
+  public function editPost(Request $request)
+  {
 
-        // バリデーション
-        $request->validate([
-            'category' => 'required',
-            'title' => 'required | min:3 ',
-            'body' => 'required | min:4 ',
-            'image' => 'image',
-        ]);
+    // バリデーション
+    $request->validate([
+      'category' => 'required',
+      'title' => 'required | min:3 ',
+      'body' => 'required | min:4 ',
+      'image' => 'image',
+    ]);
 
-        // 店舗編集処理
-        $this->alertService->alertEdit($request);
+    // 店舗編集処理
+    $this->alertService->alertEdit($request);
 
-        return redirect()->route('admin/alert');
-    }
+    return redirect()->route('admin/alert');
+  }
+
+  /**
+   * 通知削除
+   * @param request  削除データ
+   * @param alert_id  対象通知ID
+   */
+  public function deletePost($alert_id)
+  {
+    // 通知削除処理
+    // $this->alertService->storeDelete($alert_id);
+    return redirect()->route('admin/alert');
+  }
 }

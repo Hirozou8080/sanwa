@@ -68,6 +68,7 @@ Route::prefix('admin')->group(function () {
       Route::get('/alert/edit/{alert_id}', 'edit')->name('admin/alert/edit'); // 通知編集画面情報取得
       Route::post('/alert/edit/{alert_id}', 'editPost')->name('admin/alert/edit'); // 通知編集画面情報取得
       Route::get('/alert/detail/{alert_id}', 'detail')->name('admin/alert/detail'); // 通知詳細情報取得
+      Route::post('/alert/delete/{alert_id}', 'deletePost')->name('admin/alert/delete'); // 通知削除処理
     });
 
     // 設定管理関連
