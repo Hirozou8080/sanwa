@@ -90,7 +90,6 @@ class AlertController extends CommonController
   public function detail($alert_id)
   {
     $alert = $this->getAlert($alert_id);
-    dd($alert);
     return view('admin.alert.detail', ['alert' => $alert]);
   }
 

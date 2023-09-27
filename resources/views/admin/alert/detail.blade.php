@@ -20,7 +20,7 @@
             <div>カテゴリ</div>
           </div>
           <div class="item-content">
-            {{ $alert->title }}
+            {{ $alert?->category?->name }}
           </div>
         </div>
         <div class="item">
