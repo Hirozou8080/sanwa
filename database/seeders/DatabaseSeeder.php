@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,8 +14,10 @@ class DatabaseSeeder extends Seeder
    */
   public function run()
   {
-    // \App\Models\User::factory(10)->create();
-    $this->call(prefectureSeeder::class);
-    $this->call(alertCategorySeeder::class);
+    DB::table('prefectures')->truncate();
+    DB::table('alerts_categories')->truncate();
+
+    $this->call(PrefectureSeeder::class);
+    $this->call(AlertCategorySeeder::class);
   }
 }

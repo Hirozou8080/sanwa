@@ -6,7 +6,7 @@ use App\Models\Alert_category;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class alertCategorySeeder extends Seeder
+class AlertCategorySeeder extends Seeder
 {
   /**
    * Run the database seeds.
@@ -16,7 +16,7 @@ class alertCategorySeeder extends Seeder
   public function run()
   {
     Alert_category::create([
-      'name' => '重要'
+      'name' => '重要なお知らせ'
     ]);
   }
 }

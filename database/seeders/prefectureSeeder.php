@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Prefecture;
 
-class prefectureSeeder extends Seeder
+class PrefectureSeeder extends Seeder
 {
   /**
    * Run the database seeds.
