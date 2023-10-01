@@ -27,6 +27,17 @@ class Alert extends Model
   {
     return Alert::all();
   }
+
+  /**
+   * Topページ用の通知取得 (３件)
+   */
+  public static function getTopAlert()
+  {
+    return Alert::orderBy('posted_date', 'desc')
+      ->limit(3)
+      ->get()
+      ->toArray();
+  }
   /**
    * IDから通知取得
    */

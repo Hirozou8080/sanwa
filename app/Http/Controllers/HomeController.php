@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\CommonController;
 
 class HomeController extends Controller
 {
+  private $commonController;
+  public function __construct()
+  {
+    $this->commonController = new CommonController();
+  }
   public function home()
   {
-    return view("home");
+    $alerts = $this->commonController->getTopAlert();
+    return view("home")->with('alerts', $alerts);
   }
 }
