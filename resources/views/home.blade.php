@@ -12,7 +12,7 @@
       </div>
     </div>
   </div>
-
+  @if(!empty($alerts))
   <section class="notice">
     <div class="wrapper">
       <div class="notice-inner">
@@ -31,7 +31,7 @@
       </div>
     </div>
   </section>
-
+  @endif
 
   <section class="introduction">
     <div class="wrapper">
