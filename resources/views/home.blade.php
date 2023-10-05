@@ -1,7 +1,11 @@
 @extends('tmpl.layouts')
 
+@section('pageTitle','【公式】三和クリーニング　ホームページ')
+@section('pageClassName','home')
+@section('css','home')
+
 @section('content')
-<main class="main home">
+<main class="main">
   <div class="top">
     <div class="img-area">
       <div class="slider-top">

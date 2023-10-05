@@ -1,7 +1,11 @@
 @extends('tmpl.layouts')
 
+@section('pageTitle','店舗一覧 | 三和クリーニング')
+@section('pageClassName','store')
+@section('css','store')
+
 @section('content')
-<main class="main store">
+<main class="main">
   <section class="page-title">
       <div class="wrapper">
         <div class="title">店舗一覧<br><small>STORE</small></div>

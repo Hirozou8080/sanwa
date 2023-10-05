@@ -78,7 +78,7 @@ class AlertService
       DB::transaction(function () use ($request) {
 
         Log::info($request);
-        
+
         // 通知編集
         $alert = Alert::find($request['id']);
         $alert->category_id  = $request['category'];
@@ -93,7 +93,7 @@ class AlertService
           $alert->file_name = NULL;
           $alert->file_path = NULL;
         }
-       
+
         if ($request->file('image')) {
           $file_name = $request->file('image')->getClientOriginalName();
           // file保存処理
@@ -101,7 +101,7 @@ class AlertService
           $alert->file_name = $file_name;
           $alert->file_path = $file_path;
         }
-        
+
 
         // 更新
         $alert->save();
