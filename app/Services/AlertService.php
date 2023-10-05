@@ -88,7 +88,7 @@ class AlertService
         // 通知編集
         $alert = Alert::find($request['id']);
         $alert['category_id']  = $request['category'];
-        $alert['title']    = $request['postNumPrev'] . $request['title'];
+        $alert['title']    = $request['title'];
         $alert['body'] = $request['body'];
         $alert['file_name'] = $file_name;
 
@@ -125,7 +125,7 @@ class AlertService
         Alert::find($alert_id)->delete();
       });
       Log::info(__CLASS__ . ' ' . __FUNCTION__ . ' success');
-    } catch (Throwable $e) {
+    } catch (Exception $e) {
       Log::error(__CLASS__ . ' ' . __FUNCTION__ . ' error');
       Log::error($e);
     }

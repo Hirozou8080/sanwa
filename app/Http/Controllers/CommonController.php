@@ -62,6 +62,14 @@ class CommonController extends Controller
     return $prefecture;
   }
   /**
+   * 全通知の取得
+   */
+  public function getAllAlert()
+  {
+    $alerts = Alert::getAllAlert();
+    return $alerts;
+  }
+  /**
    * Topページ用の通知取得
    */
   public function getTopAlert()

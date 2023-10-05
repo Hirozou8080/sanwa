@@ -85,8 +85,8 @@ class StoreController extends CommonController
     // バリデーション
     $request->validate([
       'storeName' => 'required | max:36',
-      'postNumPrev' => 'required | min:001 | numeric',
-      'postNumNext' => 'required | min:0001 | numeric',
+      'postNumPrev' => 'required | digits:3 | numeric',
+      'postNumNext' => 'required | digits:4 | numeric',
       'prefecture' => 'required',
       'city' => 'required | max:32',
       'address' => 'required | max:64',
