@@ -45,11 +45,11 @@ class AlertService
 
         // 現在日時取得
         $now = Carbon::now();
-
+        Log::info($request);
         // 通知新規登録
         $alert = new Alert();
         $alert['category_id']  = $request['category'];
-        $alert['title']    = $request['postNumPrev'] . $request['title'];
+        $alert['title']    =  $request['title'];
         $alert['body'] = $request['body'];
         $alert['file_name'] = $file_name;
         $alert['file_path'] = $file_path;
@@ -77,27 +77,31 @@ class AlertService
       // トランザクション開始
       DB::transaction(function () use ($request) {
 
-        $file_name = null;
-        $file_path = null;
-        if ($request->file('image')) {
-          $file_name = $request->file('image')->getClientOriginalName();
-          // file保存処理
-          $file_path = $this->common->saveFile($request->file('image'), 'alert');
-        }
-
+        Log::info($request);
+        
         // 通知編集
         $alert = Alert::find($request['id']);
-        $alert['category_id']  = $request['category'];
-        $alert['title']    = $request['title'];
-        $alert['body'] = $request['body'];
-        $alert['file_name'] = $file_name;
+        $alert->category_id  = $request['category'];
+        $alert->title    = $request['title'];
+        $alert->body = $request['body'];
+        $file_name = $alert->file_name;
+        $file_path = $alert->file_path;
 
         // 削除フラグがあればファイル削除
         if ($request['fileDeleteFlg'] && $alert['file_path']) {
           $this->common->deleteFile($alert['file_path']);
+          $alert->file_name = NULL;
+          $alert->file_path = NULL;
         }
-
-        $alert['file_path'] = $file_path;
+       
+        if ($request->file('image')) {
+          $file_name = $request->file('image')->getClientOriginalName();
+          // file保存処理
+          $file_path = $this->common->saveFile($request->file('image'), 'alert');
+          $alert->file_name = $file_name;
+          $alert->file_path = $file_path;
+        }
+        
 
         // 更新
         $alert->save();

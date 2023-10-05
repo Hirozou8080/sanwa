@@ -1,489 +1,488 @@
 a {
-  text-decoration: none;
-  display: block;
-  color: #000000;
+    text-decoration: none;
+    display: block;
+    color: #000000;
 }
 
 body {
-  font-family: 'メイリオ', 'Meiryo', 'ＭＳ ゴシック', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
-  font-size: 10px;
+    font-family: "メイリオ", "Meiryo", "ＭＳ ゴシック",
+        "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
+    font-size: 10px;
 }
 
 .wrapper {
-  position: relative;
-  width: 95%;
-  margin: auto;
-  height: 100%;
+    position: relative;
+    width: 95%;
+    margin: auto;
+    height: 100%;
 }
 
 /* ----- header ----- */
 .header {
-  width: 100%;
-  /* position: fixed; */
-  background-color: white;
-  border-bottom: #ccc;
-  border-collapse: collapse;
-  z-index: 999;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    /* position: fixed; */
+    background-color: white;
+    border-bottom: #ccc;
+    border-collapse: collapse;
+    z-index: 999;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 }
 
 .header .header-top {
-  position: relative;
-  padding: 0 2rem;
-  height: 80px;
-  background-color: #f6f9fa;
-  border-top: 5px solid #4e83f2;
+    position: relative;
+    padding: 0 2rem;
+    height: 80px;
+    background-color: #f6f9fa;
+    border-top: 5px solid #4e83f2;
 }
 
 header .header-top .img-area {
-  position: absolute;
-  vertical-align: middle;
-  width: 220px;
-  top: 50%;
-  transform: translate(0, -50%);
+    position: absolute;
+    vertical-align: middle;
+    width: 220px;
+    top: 50%;
+    transform: translate(0, -50%);
 }
 
 header .header-top .img-area img {
-  width: 100%;
+    width: 100%;
 }
 
 header .header-top .contact-area {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  right: 15%;
-  height: 50px;
-  background-color: #4e83f2;
-  border-radius: 5px;
-  width: 200px;
-  transform: translate(15%, -50%);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    height: 50px;
+    background-color: #4e83f2;
+    border-radius: 5px;
+    width: 200px;
+    transform: translate(15%, -50%);
 
-  color: white;
-  font-family: 'Noto Serif JP', 'serif';
-  font-size: 1.3rem;
+    color: white;
+    font-family: "Noto Serif JP", "serif";
+    font-size: 1.3rem;
 }
 
 /* ハンバーガーメニュー */
 header .header-top .hamburger {
-  font-family: 'Noto Sans JP', 'serif';
-  position: fixed;
-  top: 2.5rem;
-  right: 5%;
-  /* position: absolute; */
-  /* top: 50%; */
-  /* right: 0%; */
-  height: 50px;
-  width: 50px;
-  background-color: #93cd39;
-  border-radius: 5px;
-  transform: translate(0%, -50%);
-  z-index: 999;
+    font-family: "Noto Sans JP", "serif";
+    position: fixed;
+    top: 2.5rem;
+    right: 5%;
+    /* position: absolute; */
+    /* top: 50%; */
+    /* right: 0%; */
+    height: 50px;
+    width: 50px;
+    background-color: #93cd39;
+    border-radius: 5px;
+    transform: translate(0%, -50%);
+    z-index: 999;
 }
 
 .hamburger .humburger-menu {
-  position: relative;
-  width: 100%;
-  height: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .hamburger .humburger-menu .humburger-menu-trigger {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
 
 .hamburger .humburger-menu .humburger-menu-trigger .menu-text {
-  padding-top: 2px;
-  text-align: center;
-  color: #fff;
-  font-size: .8rem;
-  font-weight: bold;
+    padding-top: 2px;
+    text-align: center;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 
 .humburger-menu-trigger span {
-  display: block;
-  margin: auto;
-  width: 24px;
-  background-color: #fff;
-  height: 2px;
-  border-radius: 4px;
-  transition: all .4s;
+    display: block;
+    margin: auto;
+    width: 24px;
+    background-color: #fff;
+    height: 2px;
+    border-radius: 4px;
+    transition: all 0.4s;
 }
 
 .humburger-menu-trigger span:nth-of-type(1) {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .humburger-menu-trigger span:nth-of-type(2) {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
 .humburger-menu-trigger span:nth-of-type(3) {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
 #menu.active span:nth-of-type(1) {
-  transform: translateY(8px) rotate(-315deg);
+    transform: translateY(8px) rotate(-315deg);
 }
 
 #menu.active span:nth-of-type(2) {
-  opacity: 0;
+    opacity: 0;
 }
 
 #menu.active span:nth-of-type(3) {
-  transform: translateY(-7px) rotate(315deg);
+    transform: translateY(-7px) rotate(315deg);
 }
 
 /* 1024以上の場合 */
 @media screen and (min-width: 1024px) {
-  header .header-top .hamburger {
-    height: 80px;
-    width: 80px;
-    top: 8%;
-  }
+    header .header-top .hamburger {
+        height: 80px;
+        width: 80px;
+        top: 8%;
+    }
 
-  .hamburger .humburger-menu .humburger-menu-trigger {
-    width: 80px;
-    height: 80px;
-  }
+    .hamburger .humburger-menu .humburger-menu-trigger {
+        width: 80px;
+        height: 80px;
+    }
 
-  .hamburger .humburger-menu .humburger-menu-trigger .menu-text {
-    padding-top: 2px;
-    font-size: .9rem;
-  }
+    .hamburger .humburger-menu .humburger-menu-trigger .menu-text {
+        padding-top: 2px;
+        font-size: 0.9rem;
+    }
 
-  .humburger-menu-trigger span {
-    width: 40px;
-    height: 2px;
-  }
+    .humburger-menu-trigger span {
+        width: 40px;
+        height: 2px;
+    }
 
-  .humburger-menu-trigger span:nth-of-type(1) {
-    margin-top: 20px;
-  }
+    .humburger-menu-trigger span:nth-of-type(1) {
+        margin-top: 20px;
+    }
 
-  .humburger-menu-trigger span:nth-of-type(2) {
-    margin-top: 10px;
-  }
+    .humburger-menu-trigger span:nth-of-type(2) {
+        margin-top: 10px;
+    }
 
-  .humburger-menu-trigger span:nth-of-type(3) {
-    margin-top: 10px;
-  }
+    .humburger-menu-trigger span:nth-of-type(3) {
+        margin-top: 10px;
+    }
 
-  #menu.active span:nth-of-type(1) {
-    transform: translateY(12px) rotate(-315deg);
-  }
+    #menu.active span:nth-of-type(1) {
+        transform: translateY(12px) rotate(-315deg);
+    }
 
-  #menu.active span:nth-of-type(2) {
-    opacity: 0;
-  }
+    #menu.active span:nth-of-type(2) {
+        opacity: 0;
+    }
 
-  #menu.active span:nth-of-type(3) {
-    transform: translateY(-12px) rotate(315deg);
-  }
+    #menu.active span:nth-of-type(3) {
+        transform: translateY(-12px) rotate(315deg);
+    }
 }
 
 header .header-top .contact-area .tel,
 header .header-top .contact-area .contact {
-  border-radius: 5px;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  padding-top: 10px;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
 }
 
 header .header-top .contact-area .tel:hover,
 header .header-top .contact-area .contact:hover {
-  background-color: #004ef6;
-  color: white;
+    background-color: #004ef6;
+    color: white;
 }
 
 header .header-top .contact-area a {
-  display: block;
-  text-decoration: none;
-  color: white;
+    display: block;
+    text-decoration: none;
+    color: white;
 }
 
 /* ナビ */
 header .navi {
-  display: table;
-  height: 60px;
-  width: 90%;
-  margin: 1rem auto;
+    display: table;
+    height: 60px;
+    width: 90%;
+    margin: 1rem auto;
 }
 
 header .navi .navi_item {
-  position: relative;
-  display: table-cell;
-  width: 16%;
-  font-size: 1rem;
-  vertical-align: middle;
-  text-align: center;
-  border-left: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
-  border-collapse: collapse;
-  transition: 0.3s;
+    position: relative;
+    display: table-cell;
+    width: 16%;
+    font-size: 1rem;
+    vertical-align: middle;
+    text-align: center;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-collapse: collapse;
+    transition: 0.3s;
 }
 
 header .navi .navi_item small {
-  color: #004ef6;
+    color: #004ef6;
 }
 
 header .navi .navi_item::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0px;
-  width: 0;
-  border-bottom: solid 3px #001553;
-  transform: translateX(-50%);
-  transition: 0.3s;
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 0;
+    border-bottom: solid 3px #001553;
+    transform: translateX(-50%);
+    transition: 0.3s;
 }
 
 header .navi .navi_item:hover {
-  opacity: .5;
+    opacity: 0.5;
 }
 
 header .navi .navi_item:hover::before {
-  width: 100%;
+    width: 100%;
 }
 
 /* ハンバーガーメニュー部分 */
 .header .menu-content {
-  visibility: visible;
-  width: 100%;
-  /* height: 100%; */
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 80;
-  background-color: #575757ea;
-  transform: translateY(-100%);
-  transition: ease .4s;
+    visibility: visible;
+    width: 100%;
+    /* height: 100%; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #575757ea;
+    transform: translateY(-100%);
+    transition: ease 0.4s;
 }
 
 .header .menu-content.active {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
 .header .menu-content .menu-content-inner {
-  padding: 2rem;
+    padding: 2rem;
 }
 
 .header .menu-content .menu-content-inner .menu-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
-  text-align: left;
-  padding: 1rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+    padding: 1rem 0;
 }
 
 .header .menu-content .menu-content-inner .menu-block {
-  padding: 2rem;
-  font-size: 1rem;
-  border-bottom: 1px dotted #ffffff;
-  color: #fff;
+    padding: 2rem;
+    font-size: 1rem;
+    border-bottom: 1px dotted #ffffff;
+    color: #fff;
 }
 
 .header .menu-content .menu-content-inner .menu-footer {
-  padding: 1rem 0;
+    padding: 1rem 0;
 }
 
 .header .menu-content .menu-content-inner .menu-footer .contact {
-  font-weight: bold;
-  padding: 1rem 1.5rem;
-  text-align: center;
-  border: 1px solid #fff;
-  color: #fff;
-  font-size: 1.2rem;
-}
-
-.header .menu-content .menu-content-inner .menu-footer .tel-area {
-  padding: 1rem 0;
-  text-align: center;
-  font-weight: bold;
-
-}
-
-.header .menu-content .menu-content-inner .menu-footer .tel-area a {
-  color: #fff;
-  font-size: 1.5rem;
-}
-
-/* 1024以上の場合 */
-@media screen and (min-width:1024px) {
-  .header .menu-content .menu-content-inner .menu-footer {
-    padding: 1rem 3rem;
-  }
-
-  .header .menu-content .menu-content-inner .menu-footer .contact {
-    display: inline-block;
-    vertical-align: middle;
-    width: 30%;
+    font-weight: bold;
     padding: 1rem 1.5rem;
+    text-align: center;
     border: 1px solid #fff;
     color: #fff;
     font-size: 1.2rem;
-  }
+}
 
-  .header .menu-content .menu-content-inner .menu-footer .tel-area {
-    display: inline-block;
-    vertical-align: middle;
-    padding: 0 2rem;
-    font-size: 2rem;
-  }
+.header .menu-content .menu-content-inner .menu-footer .tel-area {
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.header .menu-content .menu-content-inner .menu-footer .tel-area a {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* 1024以上の場合 */
+@media screen and (min-width: 1024px) {
+    .header .menu-content .menu-content-inner .menu-footer {
+        padding: 1rem 3rem;
+    }
+
+    .header .menu-content .menu-content-inner .menu-footer .contact {
+        display: inline-block;
+        vertical-align: middle;
+        width: 30%;
+        padding: 1rem 1.5rem;
+        border: 1px solid #fff;
+        color: #fff;
+        font-size: 1.2rem;
+    }
+
+    .header .menu-content .menu-content-inner .menu-footer .tel-area {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 2rem;
+        font-size: 2rem;
+    }
 }
 
 /* ----- main ----- */
 .main .page-title {
-  width: 100%;
-  background-color: #4e83f2;
-  position: relative;
-  height: 115px;
+    width: 100%;
+    background-color: #4e83f2;
+    position: relative;
+    height: 115px;
 }
 
 .main .page-title .title {
-  position: absolute;
-  color: #fff;
-  text-align: center;
-  font-size: 1.3rem;
-  font-family: 'Noto Sans JP', 'serif';
-  line-height: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: "Noto Sans JP", "serif";
+    line-height: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
 }
 
 .main .breadcrumbs {
-  padding: .5rem 0;
-  background-color: #f9f8f8;
+    padding: 0.5rem 0;
+    background-color: #f9f8f8;
 }
 
 .main .breadcrumbs ul {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
 
 .main .breadcrumbs li {
-  font-size: .7rem;
-  font-family: 'Noto Sans JP', 'serif';
+    font-size: 0.7rem;
+    font-family: "Noto Sans JP", "serif";
 }
 
 .main .breadcrumbs li:after {
-  content: '\003e';
-  /* 「>」を要素間の区切り文字として表示 */
-  margin-left: 10px;
-  margin-right: 10px;
-  color: #888888;
-  /* 区切り文字の文字色 */
+    content: "\003e";
+    /* 「>」を要素間の区切り文字として表示 */
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #888888;
+    /* 区切り文字の文字色 */
 }
 
 .main .breadcrumbs li:last-child:after {
-  content: "";
+    content: "";
 }
 
 .main .breadcrumbs li a {
-  display: inline-block;
-  width: auto;
+    display: inline-block;
+    width: auto;
 }
 
 .main .breadcrumbs li a:hover {
-  background-color: #EEEEEE;
+    background-color: #eeeeee;
 }
 
 /* 1026pxの場合 */
 @media screen and (min-width: 1024px) {
-  .main .page-title {
-    height: 140px;
-  }
+    .main .page-title {
+        height: 140px;
+    }
 
-  .main .page-title .title {
-    font-size: 1.5rem;
-  }
+    .main .page-title .title {
+        font-size: 1.5rem;
+    }
 
-  .main .breadcrumbs li {
-    font-size: 1rem;
-  }
+    .main .breadcrumbs li {
+        font-size: 1rem;
+    }
 }
-
 
 /* ----- footer ----- */
 footer {
-  width: 100%;
-  background-color: #ccc;
-  position: relative;
-  text-align: center;
+    width: 100%;
+    background-color: #ccc;
+    position: relative;
+    text-align: center;
 }
 
 footer .wrapper {
-  text-align: center;
-  padding: 10px;
+    text-align: center;
+    padding: 10px;
 }
 
 footer .wrapper .content {
-  padding: 5%;
+    padding: 2rem;
 }
 
 footer .wrapper .author {
-  font-size: .7rem;
+    font-size: 0.7rem;
 }
 
 /*  1024px以上の場合 */
 @media screen and (min-width: 1024px) {
-  footer .wrapper .author {
-    font-size: 1rem;
-  }
+    footer .wrapper .author {
+        font-size: 1rem;
+    }
 }
 
 .pc {
-  display: none;
+    display: none;
 }
 
 .sp {
-  display: block;
+    display: block;
 }
 
 /*  780px以上の場合 */
 @media screen and (min-width: 780px) {
-  .wrapper {
-    width: 86.666%;
-    margin: auto;
-  }
+    .wrapper {
+        width: 86.666%;
+        margin: auto;
+    }
 
-  .pc {
-    display: block;
-  }
+    .pc {
+        display: block;
+    }
 
-  .sp {
-    display: none;
-  }
+    .sp {
+        display: none;
+    }
 }
 
 /*  1024px以上の場合 */
 @media screen and (min-width: 1024px) {
-  .wrapper {
-    width: 1000px;
-  }
+    .wrapper {
+        width: 1000px;
+    }
 
-  .header .header-top {
-    height: 120px;
-  }
+    .header .header-top {
+        height: 120px;
+    }
 }
 
 /*  1200px以上の場合 */
 @media screen and (min-width: 1200px) {
-  .wrapper {
-    width: 1200px;
-  }
+    .wrapper {
+        width: 1200px;
+    }
 }
