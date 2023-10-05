@@ -25,7 +25,7 @@ Route::controller(StoreController::class)->group(function () {
 // 金額画面
 Route::controller(PriceController::class)->group(function () {
   Route::get('/price', 'index')->name('price');
-  Route::get('/price/{{price_id}}', 'detail')->name('price/detail');
+  Route::get('/price/{price_id}', 'detail')->name('price/detail');
 });
 
 
