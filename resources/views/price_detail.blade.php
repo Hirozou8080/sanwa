@@ -9,7 +9,7 @@
         <div class="title">料金一覧<br><small>PRICE</small></div>
       </div>
   </section>
-  {{ Breadcrumbs::render('price')}}
+  {{ Breadcrumbs::render('price-detail',$stores['name'])}}
   <section class="container">
     <div class="wrapper">
       <div class="head">

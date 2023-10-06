@@ -1,7 +1,7 @@
 /* price_detail ページ */
 .price-detail .container {
     width: 100%;
-    padding: 2rem 0;
+    padding: 2rem 0 4rem;
     text-align: center;
     background-color: #ffffff;
     background-image: radial-gradient(#f6f9fa 2px, #ffffff 2px);
