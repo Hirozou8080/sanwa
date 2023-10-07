@@ -4,7 +4,7 @@
 
 .content {
   width: 100%;
-  padding: 1rem 0 5rem 0;
+  padding: 2rem 0 5rem 0;
 }
 
 .content .pages {
@@ -16,7 +16,7 @@
 }
 
 .content .pages .pages-inner {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 
@@ -33,9 +33,9 @@
 }
 
 .link-btn1 a {
-  padding: .5rem;
+  padding: .8rem;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-family: 'Noto Sans JP', 'serif';
 }
 
@@ -51,9 +51,9 @@
 }
 
 .link-btn2 a {
-  padding: .5rem;
+  padding: .8rem;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-family: 'Noto Sans JP', 'serif';
 }
 
@@ -69,9 +69,9 @@
 }
 
 .link-btn3 a {
-  padding: .5rem;
+  padding: .8rem;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-family: 'Noto Sans JP', 'serif';
 }
 
@@ -87,9 +87,9 @@
 }
 
 .link-btn4 a {
-  padding: .5rem;
+  padding: .8rem;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-family: 'Noto Sans JP', 'serif';
 }
 
@@ -98,35 +98,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: .3rem;
+  padding: .5rem 0;
 }
 
 .flex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .3rem;
+  padding: .5rem 0;
 }
 
 .flex-around {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: .3rem;
+  padding: .5rem 0;
 }
 
 .flex-start {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: .3rem;
+  padding: .5rem 0;
 }
 
 .flex-end {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: .3rem;
+  padding: .5rem 0;
 }
 
 /* text関連 */
