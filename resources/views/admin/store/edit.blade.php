@@ -99,7 +99,7 @@
               {{ Form::label('求人情報') }}
             </div>
             <div class=" flex-items"
-              style="justify-content:center; gap:50px ; border:1px solid #ccc;border-radius:5px; padding:.5rem">
+              style="justify-content:center; gap:50px ; border:1px solid #ccc;border-radius:5px; padding:1.5rem">
               <div class="form-content">
                 <div class=" flex-items">
                   {{ Form::label($for = 'recruit', '募集', ['class' => 'recruit']) }}
