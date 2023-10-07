@@ -4,6 +4,7 @@
     padding: 2rem 0 4rem;
     text-align: center;
 }
+
 .store .container .head {
     padding: 1rem 0;
     width: 100%;
@@ -12,22 +13,27 @@
     font-family: "Noto Sans JP", "serif";
     color: #5a5758;
 }
+
 .store .container .content {
     padding: 1rem 0;
     width: 100%;
 }
+
 .store .container table {
     margin: 1rem 0;
     width: 100%;
     border: 2px solid #ccc;
 }
+
 .store .container table .store-block:hover {
     opacity: 0.5;
 }
+
 .store .container table tr {
     padding: 1rem 0;
     width: 100%;
 }
+
 .store .container table th,
 .store .container table td {
     border: 1px dotted #ccc;
@@ -36,6 +42,7 @@
     font-family: "Noto Sans JP", "serif";
     color: #5a5758;
 }
+
 .store .container table th {
     background-color: #4f82f050;
     width: 105px;
@@ -43,40 +50,48 @@
     text-align: left;
     font-weight: 600;
 }
+
 .store .container table td {
     text-align: left;
     padding: 1rem;
     font-weight: 400;
 }
+
 .store .container table td a {
     display: block;
     font-family: "Noto Sans JP", "serif";
     color: #5a5758;
     line-height: 1.2;
 }
+
 .store .container table td a:hover {
     color: #313030;
     text-decoration: underline;
 }
+
 .non-store {
     padding: 1rem;
     text-align: center;
     color: #827d7f;
     border: 1px solid #ccc;
 }
+
 /* 1024px以上の場合 */
 @media screen and (min-width: 768px) {
     .store .container .head {
         padding: 2rem 0;
         font-size: 2rem;
     }
+
     .store .container table th,
     .store .container table td {
         font-size: 1rem;
     }
+
     .store .container table td {
         padding: 1.5rem 1rem;
     }
+
     .store .container table td.non-store {
         padding: 1rem;
         text-align: center;

@@ -1,5 +1,5 @@
 @extends('tmpl.layouts')
-@section('pageTitle', '料金一覧 | 三和クリーニング')
+@section('pageTitle', '料金詳細 [' . $stores['name'] . ']| 三和クリーニング')
 @section('pageClassName', 'price-detail')
 @section('css', 'price_detail')
 @section('content')

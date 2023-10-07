@@ -7,30 +7,36 @@
     background-image: radial-gradient(#f6f9fa 2px, #ffffff 2px);
     background-size: 20px 20px;
 }
+
 .price-detail .container .wrapper {
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0 0 3.96px 0.04px rgb(2 6 52 / 10%);
     padding: 0 1rem;
 }
+
 .price-detail .container .head {
     padding: 1rem 0;
     width: 100%;
     text-align: left;
     color: #5a5758;
 }
+
 .price-detail .container .head .head-title {
     font-family: "Noto Sans JP", "serif";
     font-size: 1.4rem;
 }
+
 .price-detail .container .head .txt {
     padding-top: 1rem;
     font-family: "Noto Sans JP", "serif";
     font-size: 1rem;
 }
+
 .price-detail .container .content {
     padding: 1rem 0;
 }
+
 .price-detail .container .content .block {
     width: 100%;
     margin-bottom: 1rem;
@@ -48,6 +54,7 @@
     color: #fff;
     font-family: "Noto Sans JP", "serif";
 }
+
 .price-detail .container .content .block .block-head::before {
     content: "";
     position: absolute;
@@ -57,10 +64,12 @@
     border: 10px solid transparent;
     border-top: 10px solid #93cd39;
 }
+
 .price-detail .container .content .block .block-body {
     width: 100%;
     padding: 1rem 0;
 }
+
 .price-detail .container .content .block .block-body .price-link {
     display: table;
     width: 250px;
@@ -69,6 +78,7 @@
     margin: auto;
     background-color: #5a5758;
 }
+
 .price-detail .container .content .block .block-body .price-link a {
     display: table-cell;
     vertical-align: middle;
@@ -77,6 +87,7 @@
     font-size: 1rem;
     font-family: "Noto Sans JP", "serif";
 }
+
 .price-detail .container .content .block .block-body .price-link a:hover {
     opacity: 0.5;
 }
@@ -96,16 +107,20 @@
     .price-detail .container .wrapper {
         padding: 0 2rem;
     }
+
     .price-detail .container .head {
         padding: 2rem 0;
     }
+
     .price-detail .container .head .head-title {
         font-size: 2rem;
     }
+
     .price-detail .container .head .txt {
         padding-top: 1.5rem;
         font-size: 1rem;
     }
+
     .price-detail .container .content {
         padding: 2rem 0;
     }

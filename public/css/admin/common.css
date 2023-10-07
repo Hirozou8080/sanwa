@@ -1,47 +1,55 @@
-a{
+a {
   text-decoration: none;
   display: block;
   color: #000000;
 }
 
 body {
-  font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+  font-family: 'メイリオ', 'Meiryo', 'ＭＳ ゴシック', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
   font-size: 10px;
 }
-.wrapper{
+
+.wrapper {
   position: relative;
   width: 95%;
   margin: auto;
   height: 100%;
 }
-.pc{
+
+.pc {
   display: none;
 }
-.sp{
+
+.sp {
   display: block;
 }
+
 /*  780px以上の場合 */
 @media screen and (min-width: 780px) {
-  .wrapper{
+  .wrapper {
     width: 86.666%;
     margin: auto;
   }
-  .pc{
+
+  .pc {
     display: block;
   }
-  .sp{
+
+  .sp {
     display: none;
   }
 }
+
 /*  1024px以上の場合 */
 @media screen and (min-width: 1024px) {
-  .wrapper{
+  .wrapper {
     max-width: 1000px;
   }
 }
+
 /*  1200px以上の場合 */
 @media screen and (min-width: 1200px) {
-  .wrapper{
+  .wrapper {
     max-width: 1200px;
   }
 }
@@ -55,7 +63,7 @@ body {
   color: #333;
 }
 
-.header .h-inner{
+.header .h-inner {
   width: 100%;
   margin: auto;
   padding: 1rem;
@@ -66,115 +74,130 @@ body {
   height: 80px;
   position: relative;
 }
-.header .h-inner .left{
+
+.header .h-inner .left {
   height: 100%;
-}
-.header .h-inner .left .logo{
-  height: 100%;
-  display: inline-block;
-  vertical-align: middle;
-}
-.header .h-inner .left .logo img {
-  height:100% ;
 }
 
-.header .h-inner .left .ttl{
+.header .h-inner .left .logo {
+  height: 100%;
   display: inline-block;
   vertical-align: middle;
-  font-family:'Noto Sans JP' , 'serif';
+}
+
+.header .h-inner .left .logo img {
+  height: 100%;
+}
+
+.header .h-inner .left .ttl {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'Noto Sans JP', 'serif';
   font-size: 1.5rem;
   padding: 0 1rem;
 }
-.header .h-inner .right{
+
+.header .h-inner .right {
   vertical-align: middle;
 }
+
 .header .h-inner .right .user-icon {
   display: inline-block;
   vertical-align: middle;
-  font-size:2rem; 
+  font-size: 2rem;
 }
+
 .header .h-inner .right .user-name {
   display: inline-block;
   vertical-align: middle;
-  font-size:  1.2rem; 
-  
+  font-size: 1.2rem;
+
 }
+
 .header .h-inner .right .logout {
   display: inline-block;
   vertical-align: middle;
-  font-size:2rem; 
+  font-size: 2rem;
 }
+
 .header .h-inner .right .logout .fa-sign-out::before {
   content: "\f08b";
 }
 
 /*  780px以上の場合 */
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 780px) {}
 
-}
 /* ----- main ----- */
 .main {
   display: flex;
 }
-.main .main-container{
+
+.main .main-container {
   flex-basis: 80%;
   background-color: #f5f5f5;
   min-height: calc(100vh - 80px);
 }
 
-.main .main-container .container > .head{
+.main .main-container .container>.head {
   width: 100%;
   padding: 2rem 0;
 }
-.main .main-container .container > .head .title{
+
+.main .main-container .container>.head .title {
   font-size: 2rem;
   color: #333;
 }
 
 
 /* ----- side ----- */
-.main .side{
+.main .side {
   width: 220px;
   z-index: 99;
   flex-basis: 20%;
   background-color: #042569;
   box-shadow: 10px 0 10px -8px rgba(0, 0, 0, 0.2);
 }
-.main .side .navi{
+
+.main .side .navi {
   padding-top: 1rem;
   padding-bottom: 1rem;
   width: 100%;
   color: #fff;
 }
-.main .side .navi .item a{
+
+.main .side .navi .item a {
   padding: 1rem;
   font-size: 1.2rem;
-  font-family:'Noto Sans JP' , 'serif';
+  font-family: 'Noto Sans JP', 'serif';
   color: #fff;
 }
-.main .side .navi .item a:hover{
+
+.main .side .navi .item a:hover {
   box-shadow: 10px 0 10px -8px #fff inset;
   color: #ffffffb1;
   transition: .5s;
 }
 
 /* ----- footer ----- */
-footer{
+footer {
   width: 100%;
   background-color: #ccc;
   position: relative;
   text-align: center;
 }
-footer .wrapper{
+
+footer .wrapper {
   text-align: center;
   padding: 10px;
 }
-footer .wrapper .author{
+
+footer .wrapper .author {
   font-size: .7rem;
 }
+
 /*  1024px以上の場合 */
 @media screen and (min-width: 1024px) {
-  footer .wrapper .author{
+  footer .wrapper .author {
     font-size: 1rem;
   }
 }
