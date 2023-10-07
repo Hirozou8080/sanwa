@@ -49,7 +49,7 @@
 .home .introduction .wrapper {
     width: 86.666%;
     margin: auto;
-    padding: 2rem 0;
+    padding: 2rem 0 4rem;
 }
 
 .home .introduction .wrapper .content {
@@ -61,7 +61,7 @@
     width: 100%;
     text-align: center;
     font-family: "Noto Serif JP", "serif";
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #333;
     display: inline-block;
     margin: 47px auto;
@@ -92,13 +92,13 @@
 
 .home .introduction .wrapper .content .text-area .text {
     color: #333;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     font-family: "Noto Sans JP", "serif";
 }
 
 .home .introduction .wrapper .content .text-area .text .strong {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: 1.5px;
     color: #7b80db;
@@ -179,16 +179,16 @@
     }
 
     .home .introduction .wrapper .content .title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .home .introduction .wrapper .content .text-area {
-        padding: 2rem 0rem;
+        padding: 2.5rem 0rem;
         text-align: center;
     }
 
     .home .introduction .wrapper .content .text-area .text {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
         line-height: 1.8;
     }
 
@@ -200,7 +200,7 @@
 
 /* notice */
 .home .notice {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
 }
 
 .home .notice .notice-inner {
@@ -218,20 +218,20 @@
     width: 100%;
     text-align: center;
     padding-top: 15px;
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: #fff;
     font-family: "Noto Serif JP", "serif";
 }
 
 .home .notice .notice-inner .notice-body {
-    padding: 0.5rem 0;
+    padding: 1rem 0;
 }
 
 .home .notice .notice-inner .notice-body .notice-item {
     display: block;
     position: relative;
     width: 100%;
-    font-size: 0.7rem;
+    font-size: 1.4rem;
     padding: 0.5rem;
 }
 
@@ -272,8 +272,8 @@
     right: 0.5rem;
     top: 0.5rem;
     text-align: center;
-    font-size: 0.7rem;
-    padding: 0.2rem 0;
+    font-size: 1rem;
+    padding: 0.5rem 0;
     background-color: #eee;
     width: 120px;
     border-radius: 10px;
@@ -287,7 +287,6 @@
 
 .home .notice .notice-inner .notice-body .notice-list-link.on {
     transition: 0.3s;
-    font-size: 0.8rem;
     background-color: #bbbbbb;
 }
 
@@ -306,8 +305,8 @@
     .home .notice .notice-inner .notice-head .notice-caption {
         height: 50px;
         width: 200px;
-        padding-top: 10px;
-        font-size: 1.2rem;
+        padding-top: 11px;
+        font-size: 1.7rem;
         margin: auto;
     }
 
@@ -319,7 +318,7 @@
     .home .notice .notice-inner .notice-body .notice-item {
         display: table;
         width: 100%;
-        font-size: 1rem;
+        font-size: 1.4rem;
         text-align: center;
     }
 
@@ -338,13 +337,13 @@
         display: table-cell;
         vertical-align: middle;
         position: unset;
-        font-size: 0.8rem;
+        font-size: 1.3rem;
         padding: 0.3rem 0;
         width: 135px;
     }
 
     .home .notice .notice-inner .notice-body .notice-list-link.on {
         transition: 0.3s;
-        font-size: 0.9rem;
+        font-size: 1.4rem;
     }
 }

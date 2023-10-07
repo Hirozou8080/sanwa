@@ -1,7 +1,7 @@
 /* price_detail ページ */
 .price-detail .container {
   width: 100%;
-  padding: 2rem 0 4rem;
+  padding: 4rem 0 6rem;
   text-align: center;
   background-color: #ffffff;
   background-image: radial-gradient(#f6f9fa 2px, #ffffff 2px);
@@ -16,7 +16,7 @@
 }
 
 .price-detail .container .head {
-  padding: 1rem 0;
+  padding: 2rem 0;
   width: 100%;
   text-align: left;
   color: #5a5758;
@@ -34,22 +34,22 @@
 .price-detail .container .head .link-area .back-link {
   display: table-cell;
   vertical-align: middle;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 .price-detail .container .head .text-area .head-title {
   font-family: "Noto Sans JP", "serif";
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 
 .price-detail .container .head .text-area .txt {
-  padding-top: 1rem;
+  padding: 1rem 0;
   font-family: "Noto Sans JP", "serif";
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .price-detail .container .content {
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 }
 
 .price-detail .container .content .block {
@@ -120,11 +120,11 @@
 /* 1024px以上の場合 */
 @media screen and (min-width: 1024px) {
   .price-detail .container .wrapper {
-    padding: 0 2rem;
+    padding: 0 4rem;
   }
 
   .price-detail .container .head {
-    padding: 2rem 0;
+    padding: 4rem 0;
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -133,13 +133,13 @@
     gap: 10px;
   }
 
-  .price-detail .container .head .head-title {
-    font-size: 2rem;
+  .price-detail .container .head .text-area .head-title {
+    font-size: 2.8rem;
   }
 
-  .price-detail .container .head .txt {
+  .price-detail .container .head .text-area .txt {
     padding-top: 1.5rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .price-detail .container .content {

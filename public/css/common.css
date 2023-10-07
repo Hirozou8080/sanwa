@@ -67,14 +67,14 @@ header .header-top .contact-area {
 
   color: white;
   font-family: "Noto Serif JP", "serif";
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 /* ハンバーガーメニュー */
 header .header-top .hamburger {
   font-family: "Noto Sans JP", "serif";
   position: fixed;
-  top: 2.5rem;
+  top: 4.5rem;
   right: 5%;
   /* position: absolute; */
   /* top: 50%; */
@@ -108,7 +108,7 @@ header .header-top .hamburger {
   padding-top: 2px;
   text-align: center;
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 
@@ -161,7 +161,7 @@ header .header-top .hamburger {
 
   .hamburger .humburger-menu .humburger-menu-trigger .menu-text {
     padding-top: 2px;
-    font-size: 0.9rem;
+    font-size: 1.4rem;
   }
 
   .humburger-menu-trigger span {
@@ -228,7 +228,7 @@ header .navi .navi_item {
   position: relative;
   display: table-cell;
   width: 16%;
-  font-size: 1rem;
+  font-size: 1.5rem;
   vertical-align: middle;
   text-align: center;
   border-left: 1px solid #cccccc;
@@ -279,68 +279,68 @@ header .navi .navi_item:hover::before {
 }
 
 .header .menu-content .menu-content-inner {
-  padding: 2rem;
+  padding: 3.5rem;
 }
 
 .header .menu-content .menu-content-inner .menu-title {
-  font-size: 2rem;
+  font-size: 3.5rem;
   font-weight: bold;
   color: #fff;
   text-align: left;
-  padding: 1rem 0;
+  padding: 1.6rem 0;
 }
 
 .header .menu-content .menu-content-inner .menu-block {
-  padding: 2rem;
-  font-size: 1rem;
+  padding: 2.5rem;
+  font-size: 1.5rem;
   border-bottom: 1px dotted #ffffff;
   color: #fff;
 }
 
 .header .menu-content .menu-content-inner .menu-footer {
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 
 .header .menu-content .menu-content-inner .menu-footer .contact {
   font-weight: bold;
-  padding: 1rem 1.5rem;
+  padding: 1.6rem 0;
   text-align: center;
   border: 1px solid #fff;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
 }
 
 .header .menu-content .menu-content-inner .menu-footer .tel-area {
-  padding: 1rem 0;
+  padding: 1.6rem 0;
   text-align: center;
   font-weight: bold;
 }
 
 .header .menu-content .menu-content-inner .menu-footer .tel-area a {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 /* 1024以上の場合 */
 @media screen and (min-width: 1024px) {
   .header .menu-content .menu-content-inner .menu-footer {
-    padding: 1rem 3rem;
+    padding: 2.5rem 4rem;
   }
 
   .header .menu-content .menu-content-inner .menu-footer .contact {
     display: inline-block;
     vertical-align: middle;
     width: 30%;
-    padding: 1rem 1.5rem;
+    padding: 2rem 0;
     border: 1px solid #fff;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.9rem;
   }
 
   .header .menu-content .menu-content-inner .menu-footer .tel-area {
     display: inline-block;
     vertical-align: middle;
-    padding: 0 2rem;
+    padding: 0 3.2rem;
     font-size: 2rem;
   }
 }
@@ -361,7 +361,7 @@ header .navi .navi_item:hover::before {
   position: absolute;
   color: #fff;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-family: "Noto Sans JP", "serif";
   line-height: 1;
   top: 50%;
@@ -372,7 +372,7 @@ header .navi .navi_item:hover::before {
 }
 
 .main .breadcrumbs {
-  padding: 0.5rem 0;
+  padding: 1.5rem 0;
   background-color: #f9f8f8;
 }
 
@@ -384,7 +384,7 @@ header .navi .navi_item:hover::before {
 }
 
 .main .breadcrumbs li {
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-family: "Noto Sans JP", "serif";
 }
 
@@ -417,11 +417,11 @@ header .navi .navi_item:hover::before {
   }
 
   .main .page-title .title {
-    font-size: 1.5rem;
+    font-size: 2.4rem;
   }
 
   .main .breadcrumbs li {
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -443,13 +443,13 @@ footer .wrapper .content {
 }
 
 footer .wrapper .author {
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 
 /*  1024px以上の場合 */
 @media screen and (min-width: 1024px) {
   footer .wrapper .author {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
 

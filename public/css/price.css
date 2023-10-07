@@ -1,7 +1,7 @@
 /* priceページ */
 .price .container {
     width: 100%;
-    padding: 2rem 0 4rem;
+    padding: 4rem 0 6rem;
     text-align: center;
     background-color: #ffffff;
     background-image: radial-gradient(#f6f9fa 2px, #ffffff 2px);
@@ -16,7 +16,7 @@
 }
 
 .price .container .head {
-    padding: 1rem 0;
+    padding: 2rem 0;
     width: 100%;
     text-align: left;
     color: #5a5758;
@@ -24,22 +24,22 @@
 
 .price .container .head .head-title {
     font-family: "Noto Sans JP", "serif";
-    font-size: 1.4rem;
+    font-size: 1.8rem;
 }
 
 .price .container .head .txt {
-    padding-top: 1rem;
+    padding: 1rem 0;
     font-family: "Noto Sans JP", "serif";
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .price .container .content {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
 }
 
 .price .container .content .block {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
     border-radius: 5px;
     box-shadow: 0 0 3.96px 0.04px rgb(2 6 52 / 10%);
 }
@@ -47,10 +47,10 @@
 .price .container .content .block .block-head {
     width: 100%;
     position: relative;
-    padding: 1rem 0;
+    padding: 1.6rem 0;
     border-radius: 5px 5px 0 0;
     background-color: #93cd39;
-    font-size: 1.1rem;
+    font-size: 1.7rem;
     color: #fff;
     font-family: "Noto Sans JP", "serif";
 }
@@ -67,7 +67,7 @@
 
 .price .container .content .block .block-body {
     width: 100%;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 .price .container .content .block .block-body .price-link {
@@ -84,7 +84,7 @@
     vertical-align: middle;
     height: 100%;
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: "Noto Sans JP", "serif";
 }
 
@@ -96,29 +96,29 @@
     font-family: "Font Awesome 5 Free";
     color: #ffffff;
     content: "\f15c";
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 900;
-    margin-right: 0.5rem;
+    margin-right: 0.8rem;
     margin-top: 0;
 }
 
 /* 1024px以上の場合 */
 @media screen and (min-width: 1024px) {
     .price .container .wrapper {
-        padding: 0 2rem;
+        padding: 0 4rem;
     }
 
     .price .container .head {
-        padding: 2rem 0;
+        padding: 4rem 0;
     }
 
     .price .container .head .head-title {
-        font-size: 2rem;
+        font-size: 2.8rem;
     }
 
     .price .container .head .txt {
         padding-top: 1.5rem;
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .price .container .content {

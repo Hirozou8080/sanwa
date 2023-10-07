@@ -1,21 +1,21 @@
 /* storeページ */
 .store .container {
     width: 100%;
-    padding: 2rem 0 4rem;
+    padding: 4rem 0 6rem;
     text-align: center;
 }
 
 .store .container .head {
-    padding: 1rem 0;
+    padding: 2rem 0;
     width: 100%;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     text-align: left;
     font-family: "Noto Sans JP", "serif";
     color: #5a5758;
 }
 
 .store .container .content {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     width: 100%;
 }
 
@@ -38,7 +38,7 @@
 .store .container table td {
     border: 1px dotted #ccc;
     border-collapse: collapse;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-family: "Noto Sans JP", "serif";
     color: #5a5758;
 }
@@ -85,7 +85,7 @@
 
     .store .container table th,
     .store .container table td {
-        font-size: 1rem;
+        font-size: 1.6rem;
     }
 
     .store .container table td {

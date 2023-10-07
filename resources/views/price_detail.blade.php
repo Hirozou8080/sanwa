@@ -23,7 +23,7 @@
             <div class="txt">
               店舗によって料金の異なる場合がございます。<br>
               お客様のご希望に寄った店舗へお越しください。
-            </div>rgba(155, 138, 138, 0.24)
+            </div>
           </div>
         </div>
         <div class="content">
