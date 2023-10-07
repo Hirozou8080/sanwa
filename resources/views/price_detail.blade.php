@@ -13,10 +13,17 @@
     <section class="container">
       <div class="wrapper">
         <div class="head">
-          <div class="head-title">店舗「{{ $stores['name'] }}」の料金</div>
-          <div class="txt">
-            店舗によって料金の異なる場合がございます。<br>
-            お客様のご希望に寄った店舗へお越しください。
+          <div class="link-area">
+            <a class="back-link" href="{{ route('price') }}">
+              料金一覧へ戻る＞
+            </a>
+          </div>
+          <div class="text-area">
+            <div class="head-title">店舗「{{ $stores['name'] }}」の料金</div>
+            <div class="txt">
+              店舗によって料金の異なる場合がございます。<br>
+              お客様のご希望に寄った店舗へお越しください。
+            </div>rgba(155, 138, 138, 0.24)
           </div>
         </div>
         <div class="content">
@@ -26,8 +33,8 @@
       {{-- ./wrapper --}}
     </section>
     {{-- ./container --}}
+  </main>
+@endsection
 
-  @endsection
-
-  @section('script')
-  @endsection
+@section('script')
+@endsection

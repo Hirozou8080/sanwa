@@ -4,9 +4,12 @@ a {
   color: #000000;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   font-family: 'メイリオ', 'Meiryo', 'ＭＳ ゴシック', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
-  font-size: 10px;
 }
 
 .wrapper {
