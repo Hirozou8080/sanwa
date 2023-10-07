@@ -3,17 +3,17 @@
     <div class="wrapper">
       <ul>
         @foreach ($breadcrumbs as $breadcrumb)
-        <li>
-          @if ($breadcrumb->url && !$loop->last)
-          <a href="{{ $breadcrumb->url }}">
-            {{ $breadcrumb->title }} 
-          </a>
-          @else
-          <span>
-            {{ $breadcrumb->title }}
-          </span>
-          @endif
-        </li>
+          <li>
+            @if ($breadcrumb->url && !$loop->last)
+              <a href="{{ $breadcrumb->url }}">
+                {{ $breadcrumb->title }}
+              </a>
+            @else
+              <span>
+                {{ $breadcrumb->title }}
+              </span>
+            @endif
+          </li>
         @endforeach
       </ul>
     </div>

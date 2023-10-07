@@ -52,19 +52,19 @@
             通知画像
           </div>
           <div class="item-content">
-            <img src="{{url('storage', [$alert->file_path])}}" alt="{{$alert->file_name}}"
+            <img src="{{ url('storage', [$alert->file_path]) }}" alt="{{ $alert->file_name }}"
               style="max-width:200px; max-height:300px">
           </div>
         </div>
-        <!-- {{Form::open(['url' => route('admin/alert/delete',$alert->id), 'method'=>'post'])}} -->
-        {{Form::open(['url' => route('admin/alert/delete',1), 'method'=>'post'])}}
+        <!-- {{ Form::open(['url' => route('admin/alert/delete', $alert->id), 'method' => 'post']) }} -->
+        {{ Form::open(['url' => route('admin/alert/delete', 1), 'method' => 'post']) }}
         <div class="item" style="justify-content:center; padding:3rem 1rem">
           <div class="flex-items">
-            <button type="button" onclick="location.href=`{{ route('admin/alert')}}`">戻る＞</button>
-            {{ Form::submit('削除＞', ['class'=>'delete']) }}
+            <button type="button" onclick="location.href=`{{ route('admin/alert') }}`">戻る＞</button>
+            {{ Form::submit('削除＞', ['class' => 'delete']) }}
           </div>
         </div>
-        {{Form::close()}}
+        {{ Form::close() }}
       </div>
     </div>
   </section>
