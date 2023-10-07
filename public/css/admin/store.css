@@ -8,7 +8,7 @@
 .store .list-head {
   width: 100%;
   text-align: right;
-  padding: .5rem 0;
+  padding: 1rem 0;
 }
 
 .link-btn1.regist {
@@ -20,23 +20,23 @@
 .link-btn4,
 .link-btn1.delete {
   width: 80px;
-  font-size: .8rem;
+  font-size: 1.2rem;
 }
 
 .link-btn2 a,
 .link-btn3 a,
 .link-btn4 a {
-  font-size: .8rem;
+  font-size: 1.2rem;
 }
 
 .store table.list {
   width: 100%;
-  font-size: .8rem;
+  font-size: 1.2rem;
 }
 
 .store table.list td {
   border: .5px solid #ccc;
-  padding: .3rem;
+  padding: .8rem;
 }
 
 .store table.list th {
@@ -44,13 +44,13 @@
   background-color: #042569;
   color: #fff;
   font-weight: 700;
-  padding: .5rem;
+  padding: .8rem;
   white-space: nowrap;
 }
 
 .store .non-store {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 /* ---------------------------------------
@@ -58,19 +58,19 @@
 --------------------------------------- */
 .store-add .content .head {
   width: 500px;
-  margin: 1rem auto;
-  font-size: 1.5rem;
+  margin: 2rem auto;
+  font-size: 2.4rem;
   font-weight: 700;
   border-left: 10px solid #042569;
-  padding-left: .5rem;
+  padding-left: 1rem;
   font-family: 'Noto Sans JP', 'serif';
 }
 
 .store-add .content .alert {
   width: 500px;
   margin: auto;
-  padding: 1rem 0;
-  font-size: 1rem;
+  padding: 1.5rem 0;
+  font-size: 1.2rem;
   font-weight: 700;
   color: red;
   border-radius: 5px;
@@ -84,7 +84,7 @@
 
 .store-add .content .form-block {
   width: 500px;
-  padding: 1rem 0;
+  padding: 1.3rem 0;
   margin: auto;
 }
 
@@ -100,7 +100,7 @@
 }
 
 .store-add .content .form-block .form-title label {
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-family: 'Noto Sans JP', 'serif';
 }
 
@@ -108,7 +108,7 @@
   width: 100%;
   height: 45px;
   text-align: initial;
-  font-size: .8rem;
+  font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -118,7 +118,7 @@
   width: 100%;
   height: 45px;
   text-align: initial;
-  font-size: .8rem;
+  font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -126,7 +126,7 @@
 
 .store-add .content .form-block .recruit,
 .store-add .content .form-block .noRecruit {
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-family: 'Noto Sans JP', 'serif';
 }
 
@@ -146,10 +146,10 @@
 .store-add .content .form-block .form-item button {
   margin: auto;
   width: 120px;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 5px;
   border: 1px solid #bbbbbb;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 .store-add .content .form-block .form-item input[type=submit] {
@@ -172,8 +172,8 @@
 --------------------------------------- */
 .store-edit .content .head {
   width: 500px;
-  margin: 1rem auto;
-  font-size: 1.5rem;
+  margin: 2rem auto;
+  font-size: 2.4rem;
   font-weight: 700;
   border-left: 10px solid #042569;
   padding-left: .5rem;
@@ -183,8 +183,8 @@
 .store-edit .content .alert {
   width: 500px;
   margin: auto;
-  padding: 1rem 0;
-  font-size: 1rem;
+  padding: 1.5rem 0;
+  font-size: 1.2rem;
   font-weight: 700;
   color: red;
   border-radius: 5px;
@@ -198,7 +198,7 @@
 
 .store-edit .content .form-block {
   width: 500px;
-  padding: 1rem 0;
+  padding: 1.3rem 0;
   margin: auto;
 }
 
@@ -214,7 +214,7 @@
 }
 
 .store-edit .content .form-block .form-title label {
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-family: 'Noto Sans JP', 'serif';
 }
 
@@ -222,7 +222,7 @@
   width: 100%;
   height: 45px;
   text-align: initial;
-  font-size: .8rem;
+  font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -232,7 +232,7 @@
   width: 100%;
   height: 45px;
   text-align: initial;
-  font-size: .8rem;
+  font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -240,7 +240,7 @@
 
 .store-edit .content .form-block .recruit,
 .store-edit .content .form-block .noRecruit {
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-family: 'Noto Sans JP', 'serif';
 }
 
@@ -259,10 +259,10 @@
 .store-edit .content .form-block .form-item button {
   margin: auto;
   width: 120px;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 5px;
   border: 1px solid #bbbbbb;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 .store-edit .content .form-block .form-item input[type=submit] {
@@ -285,8 +285,8 @@
 --------------------------------------- */
 .store-detail .content .head {
   width: 500px;
-  margin: 1rem auto;
-  font-size: 1.5rem;
+  margin: 2rem auto;
+  font-size: 2.4rem;
   font-weight: 700;
   border-left: 10px solid #042569;
   padding-left: .5rem;
@@ -295,14 +295,13 @@
 
 .store-detail .content .block {
   width: 500px;
-  padding: 1rem 0;
+  padding: 2rem 0;
   margin: auto;
 }
 
 .store-detail .content .block .item {
   display: table;
   width: 100%;
-  padding: .5rem 0;
   border-collapse: collapse;
 }
 
@@ -313,13 +312,9 @@
   text-align: left;
   padding: .5rem 1rem;
   border: 0.5px solid #ccc;
-  font-size: .8rem;
   color: #fff;
   background-color: #042569;
-}
-
-.store-detail .content .block .item-title label {
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-family: 'Noto Sans JP', 'serif';
 }
 
@@ -329,7 +324,7 @@
   width: 60%;
   height: 45px;
   text-align: initial;
-  font-size: .8rem;
+  font-size: 1.3rem;
   padding: 0.5rem 1rem;
   border: 0.5px solid #ccc;
 }
@@ -339,17 +334,17 @@
   justify-content: flex-start;
   gap: 20px;
   align-items: center;
-  padding: 1rem 0;
+  padding: 3rem 0;
 }
 
 .store-detail .content .block .item input[type=submit],
 .store-detail .content .block .item button {
   margin: auto;
   width: 120px;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 5px;
   border: 1px solid #bbbbbb;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 .store-detail .content .block .item input[type=submit] {
@@ -373,7 +368,7 @@
 .store-product .list-head {
   width: 100%;
   text-align: right;
-  padding: .5rem 0;
+  padding: 1rem 0;
 }
 
 .store-product .link-btn1.add {
@@ -387,9 +382,9 @@
   border: none;
   width: 100%;
   height: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-family: 'Noto Sans JP', 'serif';
 }
 
@@ -397,7 +392,7 @@
   width: 500px;
   margin: auto;
   padding: 1rem 0;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: red;
   border-radius: 5px;
@@ -411,12 +406,12 @@
 
 .store-product table.list {
   width: 100%;
-  font-size: .8rem;
+  font-size: 1.2rem;
 }
 
 .store-product table.list td {
   border: .5px solid #ccc;
-  padding: .3rem;
+  padding: .8rem;
 }
 
 .store-product table.list th {
@@ -424,13 +419,13 @@
   background-color: #042569;
   color: #fff;
   font-weight: 700;
-  padding: .5rem;
+  padding: .8rem;
   white-space: nowrap;
 }
 
 .store-product .non-product {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 /* モーダル部分 */
@@ -468,7 +463,7 @@
   background-color: #f4f4f4;
   width: 50%;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1.6rem;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalopen;
   animation-duration: 1s;
@@ -479,21 +474,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1.6rem 0;
   border-bottom: 1px solid #bbbbbb;
 }
 
 .store-product .modal .modal-content .modal-header .head,
 .store-product .delete-modal .modal-content .modal-header .head {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   border-left: 10px solid #042569;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
 }
 
 .store-product .modal .modal-content .modal-header .modalClose,
 .store-product .delete-modal .modal-content .modal-header .modalClose {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -504,8 +499,8 @@
 
 .store-product .modal .modal-content .modal-body .alert,
 .store-product .delete-modal .modal-content .modal-body .alert {
-  padding: 1rem 0;
-  font-size: 1rem;
+  padding: 1.3rem 0;
+  font-size: 1.3rem;
   font-weight: 700;
   color: red;
   border-radius: 5px;
@@ -519,12 +514,12 @@
 
 .store-product .modal .modal-content .modal-body .form-area,
 .store-product .delete-modal .modal-content .modal-body .form-area {
-  padding: 1rem 0;
+  padding: 1.6rem 0;
 }
 
 .store-product .modal .modal-content .modal-body .form-area .form-item,
 .store-product .delete-modal .modal-content .modal-body .form-area .form-item {
-  padding: .5rem 0;
+  padding: 1rem 0;
   display: flex;
   justify-content: start;
   gap: 20px;
@@ -535,7 +530,7 @@
 .store-product .modal .modal-content .modal-body .form-area .form-item .form-title,
 .store-product .delete-modal .modal-content .modal-body .form-area .form-item .form-title {
   min-width: 100px;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 300;
   font-family: 'Noto Sans JP', 'serif';
 }
@@ -545,7 +540,7 @@
   height: 45px;
   width: 100%;
   text-align: initial;
-  font-size: .8rem;
+  font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -555,7 +550,7 @@
 .store-product .delete-modal .modal-content .modal-body .form-area .form-item>textarea {
   width: 100%;
   text-align: initial;
-  font-size: .8rem;
+  font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -568,7 +563,7 @@
 
 .store-product .modal .modal-action .button-area,
 .store-product .delete-modal .modal-action .button-area {
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -583,7 +578,7 @@
   border: none;
   width: 100px;
   height: 45px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   border-radius: 10px;
 }
 
