@@ -37,6 +37,9 @@
         <div class="menu-block">
           >お問合せ
         </div>
+        <div class="menu-block">
+          >みやぎ あやか
+        </div>
         <div class="menu-footer">
           <div class="contact">お問い合わせ</div>
           <div class="tel-area">
@@ -78,6 +81,11 @@
         <div class="navi_item">
           <a href="#">
             お問い合わせ<br><small>CONTACT</small>
+          </a>
+        </div>
+        <div class="navi_item" style="font-size: 8pt;">
+          <a href="#">
+            あやか<br><small>AYAKA</small>
           </a>
         </div>
       </div>
