@@ -122,6 +122,11 @@
   margin-top: 0;
 }
 
+
+.price-detail .container .content .table {
+  width: 100%;
+}
+
 /* 768px以上の場合 */
 @media screen and (min-width: 768px) {
   .price-detail .container .head {
@@ -156,5 +161,12 @@
 
   .price-detail .container .content {
     padding: 2rem 0;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+  }
+
+  .price-detail .container .content .table {
+    width: 50%;
   }
 }

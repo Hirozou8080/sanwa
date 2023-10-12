@@ -36,7 +36,38 @@
           </div>
         </div>
         <div class="content">
-          aaaaa
+          {{-- 左側 --}}
+          <table class="table">
+            <tr>
+              <th>品名</th>
+              <th>参考値段</th>
+            </tr>
+            @foreach ($store['product_left'] as $product)
+              <tr>
+                <td>{{ $product['name'] }}</td>
+                <td>{{ $product['price'] }}円〜</td>
+              </tr>
+            @endforeach
+          </table>
+          {{-- 右側 --}}
+          @if (!empty($store['product_right']))
+            <table class="table">
+              <tr>
+                <th>品名</th>
+                <th>参考値段</th>
+              </tr>
+              @foreach ($store['product_right'] as $product)
+                <tr>
+                  <td>{{ $product['name'] }}</td>
+                  <td>{{ $product['price'] }}円〜</td>
+                </tr>
+              @endforeach
+            </table>
+          @endif
+        </div>
+        <div class="txt">
+          ※料金・サービスは店舗によって異なります。<br>
+          ※上記のメニューは一部となっております。上記以外のメニューはお気軽にお問い合わせください。 ※全ての価格は消費税込み価格となります。
         </div>
       </div>
       {{-- ./wrapper --}}

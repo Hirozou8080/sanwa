@@ -27,12 +27,14 @@ class Store extends Model
   {
     return Store::all();
   }
+
   /**
    * IDから店舗取得
    */
   public static function getStoreId($id)
   {
-    return Store::with('product')->with('prefecture')->find($id);
+    $store = Store::with('product')->with('prefecture')->find($id);
+    return json_decode(json_encode($store), true);
   }
 
   /**
@@ -40,7 +42,7 @@ class Store extends Model
    */
   public function product()
   {
-    return $this->hasOne(Product::class);
+    return $this->hasMany(Product::class);
   }
 
   /**

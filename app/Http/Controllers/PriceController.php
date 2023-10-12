@@ -33,7 +33,22 @@ class PriceController extends Controller
   {
     // 店舗情報取得
     $store = $this->commonController->getStore($store_id);
-
-    return view("price_detail")->with('store', $store);
+    $res = [];
+    $res['name'] = $store['name'];
+    $res['product_left'] = [];
+    $res['product_right'] = [];
+    foreach ($store['product'] as $key => $product) {
+      if ($key % 2 !== 0) {
+        // 奇数の場合
+        $res['product_left']['name'] = $product['name'];
+        $res['product_left']['price'] = $product['price'];
+      } else {
+        // 偶数の場合
+        $res['product_right']['name'] = $product['name'];
+        $res['product_right']['price'] = $product['price'];
+      }
+    }
+    // dd($store);
+    return view("price_detail")->with('store', $res);
   }
 }
