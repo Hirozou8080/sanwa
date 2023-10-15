@@ -37,18 +37,21 @@
         </div>
         <div class="content">
           {{-- 左側 --}}
-          <table class="table">
-            <tr>
-              <th>品名</th>
-              <th>参考値段</th>
-            </tr>
-            @foreach ($store['product_left'] as $product)
+          @if (!empty($store['product_left']))
+            <table class="table">
               <tr>
-                <td>{{ $product['name'] }}</td>
-                <td>{{ $product['price'] }}円〜</td>
+                <th>品名</th>
+                <th>参考値段</th>
               </tr>
-            @endforeach
-          </table>
+              @foreach ($store['product_left'] as $product)
+                <tr>
+                  <td class="align-left">{{ $product['name'] }}</td>
+                  <td>{{ $product['price'] }}円　〜</td>
+                </tr>
+              @endforeach
+            </table>
+          @endif
+
           {{-- 右側 --}}
           @if (!empty($store['product_right']))
             <table class="table">
@@ -58,8 +61,8 @@
               </tr>
               @foreach ($store['product_right'] as $product)
                 <tr>
-                  <td>{{ $product['name'] }}</td>
-                  <td>{{ $product['price'] }}円〜</td>
+                  <td class="align-left">{{ $product['name'] }}</td>
+                  <td>{{ $product['price'] }}円　〜</td>
                 </tr>
               @endforeach
             </table>

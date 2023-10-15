@@ -125,7 +125,28 @@
 
 .price-detail .container .content .table {
   width: 100%;
+  border: 1px solid #ccc;
 }
+
+.price-detail .container .content .table th {
+  background-color: #f6f9fa;
+  text-align: center;
+}
+
+.price-detail .container .content .table th,
+.price-detail .container .content .table td {
+  height: 45px;
+  max-width: 50%;
+  padding: 0 2rem;
+  border: 1px solid #ccc;
+  font-size: 1.3rem;
+  font-family: "Noto Sans JP", "serif";
+}
+
+.price-detail .container .content .table .align-left {
+  text-align: left;
+}
+
 
 /* 768px以上の場合 */
 @media screen and (min-width: 768px) {
