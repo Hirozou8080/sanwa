@@ -53,10 +53,6 @@
   font-size: 1.2rem;
 }
 
-.price-detail .container .content {
-  padding: 1.5rem 0;
-}
-
 .price-detail .container .content .block {
   width: 100%;
   margin-bottom: 1rem;
@@ -124,6 +120,7 @@
 
 .price-detail .container .content .table {
   width: 100%;
+  margin: 1.5rem 0;
   border: 1px solid #ccc;
 }
 
@@ -142,8 +139,21 @@
   font-family: 'Noto Sans JP', 'serif';
 }
 
-.price-detail .container .content .table .align-left {
+.price-detail .container .content .table .left {
+  width: 70%;
   text-align: left;
+}
+
+.price-detail .container .content .table .right {
+  width: 30%;
+}
+
+.price-detail .container .txt {
+  padding: 1rem 0;
+  text-align: left;
+  font-size: 1.5rem;
+  color: #5a5758;
+  font-family: "Noto Sans JP", "serif";
 }
 
 /* 768px以上の場合 */
@@ -179,7 +189,6 @@
   }
 
   .price-detail .container .content {
-    padding: 2rem 0;
     display: flex;
     justify-content: start;
     align-items: flex-start;

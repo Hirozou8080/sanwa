@@ -45,8 +45,8 @@
               </tr>
               @foreach ($store['product_left'] as $product)
                 <tr>
-                  <td class="align-left">{{ $product['name'] }}</td>
-                  <td>{{ $product['price'] }}円　〜</td>
+                  <td class="left">{{ $product['name'] }}</td>
+                  <td class="right">{{ $product['price'] }}円　〜</td>
                 </tr>
               @endforeach
             </table>
@@ -61,8 +61,8 @@
               </tr>
               @foreach ($store['product_right'] as $product)
                 <tr>
-                  <td class="align-left">{{ $product['name'] }}</td>
-                  <td>{{ $product['price'] }}円　〜</td>
+                  <td class="left">{{ $product['name'] }}</td>
+                  <td class="right">{{ $product['price'] }}円　〜</td>
                 </tr>
               @endforeach
             </table>
