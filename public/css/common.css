@@ -9,8 +9,8 @@ html {
 }
 
 body {
-  font-family: "メイリオ", "Meiryo", "ＭＳ ゴシック",
-    "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
+  font-family: 'メイリオ', 'Meiryo', 'ＭＳ ゴシック', 'Hiragino Kaku Gothic ProN',
+    'ヒラギノ角ゴ ProN W3', sans-serif;
 }
 
 .wrapper {
@@ -66,13 +66,13 @@ header .header-top .contact-area {
   transform: translate(15%, -50%);
 
   color: white;
-  font-family: "Noto Serif JP", "serif";
+  font-family: 'Noto Serif JP', 'serif';
   font-size: 1.5rem;
 }
 
 /* ハンバーガーメニュー */
 header .header-top .hamburger {
-  font-family: "Noto Sans JP", "serif";
+  font-family: 'Noto Sans JP', 'serif';
   position: fixed;
   top: 4.5rem;
   right: 5%;
@@ -242,7 +242,7 @@ header .navi .navi_item small {
 }
 
 header .navi .navi_item::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 50%;
   bottom: 0px;
@@ -362,7 +362,7 @@ header .navi .navi_item:hover::before {
   color: #fff;
   text-align: center;
   font-size: 2rem;
-  font-family: "Noto Sans JP", "serif";
+  font-family: 'Noto Sans JP', 'serif';
   line-height: 1;
   top: 50%;
   left: 50%;
@@ -385,11 +385,11 @@ header .navi .navi_item:hover::before {
 
 .main .breadcrumbs li {
   font-size: 1rem;
-  font-family: "Noto Sans JP", "serif";
+  font-family: 'Noto Sans JP', 'serif';
 }
 
 .main .breadcrumbs li:after {
-  content: "\003e";
+  content: '\003e';
   /* 「>」を要素間の区切り文字として表示 */
   margin-left: 10px;
   margin-right: 10px;
@@ -398,7 +398,7 @@ header .navi .navi_item:hover::before {
 }
 
 .main .breadcrumbs li:last-child:after {
-  content: "";
+  content: '';
 }
 
 .main .breadcrumbs li a {

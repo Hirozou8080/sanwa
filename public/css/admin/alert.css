@@ -7,7 +7,7 @@
 --------------------------------------- */
 .alert .list-head {
   width: 100%;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 .alert .list-head .link-btn1 {
@@ -20,17 +20,17 @@
 }
 
 .alert table.list td {
-  border: .5px solid #ccc;
-  padding: .3rem;
+  border: 0.5px solid #ccc;
+  padding: 0.3rem;
 }
 
 .alert table.list th {
   white-space: nowrap;
-  border: .5px solid #ccc;
+  border: 0.5px solid #ccc;
   background-color: #042569;
   color: #fff;
   font-weight: 700;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .alert table.list .non-alert {
@@ -75,13 +75,13 @@
 
 .alert-add .content .form-block .form-item {
   width: 100%;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 .alert-add .content .form-block .form-item .form-title {
   width: 100%;
   text-align: left;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 .alert-add .content .form-block .form-title label {
@@ -89,7 +89,7 @@
   font-family: 'Noto Sans JP', 'serif';
 }
 
-.alert-add .content .form-block .form-content>input {
+.alert-add .content .form-block .form-content > input {
   width: 100%;
   height: 45px;
   text-align: initial;
@@ -99,7 +99,7 @@
   border: 1px solid #ccc;
 }
 
-.alert-add .content .form-block .form-content>textarea {
+.alert-add .content .form-block .form-content > textarea {
   width: 100%;
   text-align: initial;
   font-size: 1.3rem;
@@ -119,7 +119,7 @@
   align-items: center;
 }
 
-.alert-add .content .form-block .form-item input[type=submit],
+.alert-add .content .form-block .form-item input[type='submit'],
 .alert-add .content .form-block .form-item button {
   margin: auto;
   width: 120px;
@@ -129,7 +129,7 @@
   font-size: 1.3rem;
 }
 
-.alert-add .content .form-block .form-item input[type=submit] {
+.alert-add .content .form-block .form-item input[type='submit'] {
   background-color: #ff1717;
   color: #fff;
 }
@@ -151,11 +151,10 @@
   height: 40px;
 }
 
-.alert-add .content .form-block .form-item input[type=submit]:hover,
+.alert-add .content .form-block .form-item input[type='submit']:hover,
 .alert-add .content .form-block .form-item button:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
-
 
 /* ---------------------------------------
 通知編集画面 
@@ -194,13 +193,13 @@
 
 .alert-edit .content .form-block .form-item {
   width: 100%;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 .alert-edit .content .form-block .form-item .form-title {
   width: 100%;
   text-align: left;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 .alert-edit .content .form-block .form-title label {
@@ -208,7 +207,7 @@
   font-family: 'Noto Sans JP', 'serif';
 }
 
-.alert-edit .content .form-block .form-content>input {
+.alert-edit .content .form-block .form-content > input {
   width: 100%;
   height: 45px;
   text-align: initial;
@@ -218,7 +217,7 @@
   border: 1px solid #ccc;
 }
 
-.alert-edit .content .form-block .form-content>textarea {
+.alert-edit .content .form-block .form-content > textarea {
   width: 100%;
   text-align: initial;
   font-size: 1.3rem;
@@ -238,7 +237,7 @@
   align-items: center;
 }
 
-.alert-edit .content .form-block .form-item input[type=submit],
+.alert-edit .content .form-block .form-item input[type='submit'],
 .alert-edit .content .form-block .form-item button {
   margin: auto;
   width: 120px;
@@ -248,7 +247,7 @@
   font-size: 1.3rem;
 }
 
-.alert-edit .content .form-block .form-item input[type=submit] {
+.alert-edit .content .form-block .form-item input[type='submit'] {
   background-color: #ff1717;
   color: #fff;
 }
@@ -270,11 +269,10 @@
   height: 40px;
 }
 
-.alert-edit .content .form-block .form-item input[type=submit]:hover,
+.alert-edit .content .form-block .form-item input[type='submit']:hover,
 .alert-edit .content .form-block .form-item button:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
-
 
 /* ---------------------------------------
 店舗詳細画面 
@@ -307,7 +305,7 @@
   vertical-align: middle;
   width: 40%;
   text-align: left;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border: 0.5px solid #ccc;
   font-size: 1.3rem;
   color: #fff;
@@ -333,7 +331,7 @@
   padding: 1rem 0;
 }
 
-.alert-detail .content .block .item input[type=submit],
+.alert-detail .content .block .item input[type='submit'],
 .alert-detail .content .block .item button {
   margin: 2rem auto;
   width: 120px;
@@ -343,7 +341,7 @@
   font-size: 1.3rem;
 }
 
-.alert-detail .content .block .item input[type=submit] {
+.alert-detail .content .block .item input[type='submit'] {
   background-color: #ff1717;
   color: #fff;
 }
@@ -354,5 +352,5 @@
 }
 
 .alert-detail .content .block .item button:hover {
-  opacity: .5;
+  opacity: 0.5;
 }

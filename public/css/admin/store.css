@@ -35,16 +35,16 @@
 }
 
 .store table.list td {
-  border: .5px solid #ccc;
-  padding: .8rem;
+  border: 0.5px solid #ccc;
+  padding: 0.8rem;
 }
 
 .store table.list th {
-  border: .5px solid #ccc;
+  border: 0.5px solid #ccc;
   background-color: #042569;
   color: #fff;
   font-weight: 700;
-  padding: .8rem;
+  padding: 0.8rem;
   white-space: nowrap;
 }
 
@@ -90,13 +90,13 @@
 
 .store-add .content .form-block .form-item {
   width: 100%;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 .store-add .content .form-block .form-item .form-title {
   width: 100%;
   text-align: left;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 .store-add .content .form-block .form-title label {
@@ -104,7 +104,7 @@
   font-family: 'Noto Sans JP', 'serif';
 }
 
-.store-add .content .form-block .form-content>input {
+.store-add .content .form-block .form-content > input {
   width: 100%;
   height: 45px;
   text-align: initial;
@@ -114,7 +114,7 @@
   border: 1px solid #ccc;
 }
 
-.store-add .content .form-block .form-content>select {
+.store-add .content .form-block .form-content > select {
   width: 100%;
   height: 45px;
   text-align: initial;
@@ -130,7 +130,6 @@
   font-family: 'Noto Sans JP', 'serif';
 }
 
-
 .store-add .content .form-block .flex-items {
   display: flex;
   justify-content: flex-start;
@@ -138,11 +137,11 @@
   align-items: center;
 }
 
-.store-add .content .form-block .flex-items input[type=radio] {
+.store-add .content .form-block .flex-items input[type='radio'] {
   transform: scale(1.6);
 }
 
-.store-add .content .form-block .form-item input[type=submit],
+.store-add .content .form-block .form-item input[type='submit'],
 .store-add .content .form-block .form-item button {
   margin: auto;
   width: 120px;
@@ -152,7 +151,7 @@
   font-size: 1.4rem;
 }
 
-.store-add .content .form-block .form-item input[type=submit] {
+.store-add .content .form-block .form-item input[type='submit'] {
   background-color: #ff1717;
   color: #fff;
 }
@@ -162,9 +161,9 @@
   color: #000;
 }
 
-.store-add .content .form-block .form-item input[type=submit]:hover,
+.store-add .content .form-block .form-item input[type='submit']:hover,
 .store-add .content .form-block .form-item button:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 /* ---------------------------------------
@@ -176,7 +175,7 @@
   font-size: 2.4rem;
   font-weight: 700;
   border-left: 10px solid #042569;
-  padding-left: .5rem;
+  padding-left: 0.5rem;
   font-family: 'Noto Sans JP', 'serif';
 }
 
@@ -204,13 +203,13 @@
 
 .store-edit .content .form-block .form-item {
   width: 100%;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 .store-edit .content .form-block .form-item .form-title {
   width: 100%;
   text-align: left;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 .store-edit .content .form-block .form-title label {
@@ -218,7 +217,7 @@
   font-family: 'Noto Sans JP', 'serif';
 }
 
-.store-edit .content .form-block .form-content>input {
+.store-edit .content .form-block .form-content > input {
   width: 100%;
   height: 45px;
   text-align: initial;
@@ -228,7 +227,7 @@
   border: 1px solid #ccc;
 }
 
-.store-edit .content .form-block .form-content>select {
+.store-edit .content .form-block .form-content > select {
   width: 100%;
   height: 45px;
   text-align: initial;
@@ -251,11 +250,11 @@
   align-items: center;
 }
 
-.store-edit .content .form-block .flex-items input[type=radio] {
+.store-edit .content .form-block .flex-items input[type='radio'] {
   transform: scale(1.6);
 }
 
-.store-edit .content .form-block .form-item input[type=submit],
+.store-edit .content .form-block .form-item input[type='submit'],
 .store-edit .content .form-block .form-item button {
   margin: auto;
   width: 120px;
@@ -265,7 +264,7 @@
   font-size: 1.4rem;
 }
 
-.store-edit .content .form-block .form-item input[type=submit] {
+.store-edit .content .form-block .form-item input[type='submit'] {
   background-color: #ff1717;
   color: #fff;
 }
@@ -275,9 +274,9 @@
   color: #000;
 }
 
-.store-edit .content .form-block .form-item input[type=submit]:hover,
+.store-edit .content .form-block .form-item input[type='submit']:hover,
 .store-edit .content .form-block .form-item button:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 /* ---------------------------------------
@@ -289,7 +288,7 @@
   font-size: 2.4rem;
   font-weight: 700;
   border-left: 10px solid #042569;
-  padding-left: .5rem;
+  padding-left: 0.5rem;
   font-family: 'Noto Sans JP', 'serif';
 }
 
@@ -310,7 +309,7 @@
   vertical-align: middle;
   width: 40%;
   text-align: left;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border: 0.5px solid #ccc;
   color: #fff;
   background-color: #042569;
@@ -337,7 +336,7 @@
   padding: 3rem 0;
 }
 
-.store-detail .content .block .item input[type=submit],
+.store-detail .content .block .item input[type='submit'],
 .store-detail .content .block .item button {
   margin: auto;
   width: 120px;
@@ -347,7 +346,7 @@
   font-size: 1.4rem;
 }
 
-.store-detail .content .block .item input[type=submit] {
+.store-detail .content .block .item input[type='submit'] {
   background-color: #ff1717;
   color: #fff;
 }
@@ -358,7 +357,7 @@
 }
 
 .store-detail .content .block .item button:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 /* ---------------------------------------
@@ -410,16 +409,16 @@
 }
 
 .store-product table.list td {
-  border: .5px solid #ccc;
-  padding: .8rem;
+  border: 0.5px solid #ccc;
+  padding: 0.8rem;
 }
 
 .store-product table.list th {
-  border: .5px solid #ccc;
+  border: 0.5px solid #ccc;
   background-color: #042569;
   color: #fff;
   font-weight: 700;
-  padding: .8rem;
+  padding: 0.8rem;
   white-space: nowrap;
 }
 
@@ -445,16 +444,16 @@
 .store-product .delete-modal button:hover,
 .store-product .modal .modalClose:hover,
 .store-product .delete-modal .modalClose:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 @keyframes modalopen {
   from {
-    opacity: 0
+    opacity: 0;
   }
 
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
 
@@ -535,8 +534,8 @@
   font-family: 'Noto Sans JP', 'serif';
 }
 
-.store-product .modal .modal-content .modal-body .form-area .form-item>input,
-.store-product .delete-modal .modal-content .modal-body .form-area .form-item>input {
+.store-product .modal .modal-content .modal-body .form-area .form-item > input,
+.store-product .delete-modal .modal-content .modal-body .form-area .form-item > input {
   height: 45px;
   width: 100%;
   text-align: initial;
@@ -546,8 +545,8 @@
   border: 1px solid #ccc;
 }
 
-.store-product .modal .modal-content .modal-body .form-area .form-item>textarea,
-.store-product .delete-modal .modal-content .modal-body .form-area .form-item>textarea {
+.store-product .modal .modal-content .modal-body .form-area .form-item > textarea,
+.store-product .delete-modal .modal-content .modal-body .form-area .form-item > textarea {
   width: 100%;
   text-align: initial;
   font-size: 1rem;
