@@ -33,7 +33,7 @@
                 <td>{{ $alert->body }}</td>
                 <td style="text-align: center" class="text-nowrap">{{ $alert->posted_date }}</td>
                 <td style="text-align: center">
-                  <div class="flex" style="text-align: center; gap:10px">
+                  <div class="flex-center" style="text-align: center; gap:10px">
                     <div class="link-btn2 ">
                       <a href={{ route('admin/alert/edit', $alert->id) }}>編集＞</a>
                     </div>

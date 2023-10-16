@@ -1,135 +1,134 @@
 .hidden {
-  display: none !important;
+    display: none !important;
 }
 
 .content {
-  width: 100%;
-  padding: 2rem 0 5rem 0;
+    width: 100%;
+    padding: 2rem 0 5rem 0;
 }
 
 .content .pages {
-  width: 100%;
-  margin: auto;
-  box-shadow: 5px 5px 5px #ccc;
-  border-radius: 10px;
-  background-color: #fff;
+    width: 100%;
+    margin: auto;
+    box-shadow: 5px 5px 5px #ccc;
+    border-radius: 10px;
+    background-color: #fff;
 }
 
 .content .pages .pages-inner {
-  padding: 2rem;
+    padding: 2rem;
 }
-
 
 /* btn各種 */
 .link-btn1 {
-  width: 120px;
-  text-align: center;
-  background-color: #ff1717;
-  border-radius: 10px;
+    width: 120px;
+    text-align: center;
+    background-color: #ff1717;
+    border-radius: 10px;
 }
 
 .link-btn1:hover {
-  opacity: .5;
+    opacity: 0.5;
 }
 
 .link-btn1 a {
-  padding: .8rem;
-  color: #fff;
-  font-size: 1.3rem;
-  font-family: 'Noto Sans JP', 'serif';
+    padding: 0.8rem;
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: "Noto Sans JP", "serif";
 }
 
 .link-btn2 {
-  width: 120px;
-  text-align: center;
-  background-color: #00a608;
-  border-radius: 10px;
+    width: 120px;
+    text-align: center;
+    background-color: #00a608;
+    border-radius: 10px;
 }
 
 .link-btn2:hover {
-  opacity: .5;
+    opacity: 0.5;
 }
 
 .link-btn2 a {
-  padding: .8rem;
-  color: #fff;
-  font-size: 1.3rem;
-  font-family: 'Noto Sans JP', 'serif';
+    padding: 0.8rem;
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: "Noto Sans JP", "serif";
 }
 
 .link-btn3 {
-  width: 120px;
-  text-align: center;
-  background-color: #3949ff;
-  border-radius: 10px;
+    width: 120px;
+    text-align: center;
+    background-color: #3949ff;
+    border-radius: 10px;
 }
 
 .link-btn3:hover {
-  opacity: .5;
+    opacity: 0.5;
 }
 
 .link-btn3 a {
-  padding: .8rem;
-  color: #fff;
-  font-size: 1.3rem;
-  font-family: 'Noto Sans JP', 'serif';
+    padding: 0.8rem;
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: "Noto Sans JP", "serif";
 }
 
 .link-btn4 {
-  width: 120px;
-  text-align: center;
-  background-color: #fdb900;
-  border-radius: 10px;
+    width: 120px;
+    text-align: center;
+    background-color: #fdb900;
+    border-radius: 10px;
 }
 
 .link-btn4:hover {
-  opacity: .5;
+    opacity: 0.5;
 }
 
 .link-btn4 a {
-  padding: .8rem;
-  color: #fff;
-  font-size: 1.3rem;
-  font-family: 'Noto Sans JP', 'serif';
+    padding: 0.8rem;
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: "Noto Sans JP", "serif";
 }
 
 /* flex 設定*/
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: .5rem 0;
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
 }
 
 .flex-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: .5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
 }
 
 .flex-around {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: .5rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 0;
 }
 
 .flex-start {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: .5rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem 0;
 }
 
 .flex-end {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: .5rem 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.5rem 0;
 }
 
 /* text関連 */
 .text-nowrap {
-  white-space: nowrap;
+    white-space: nowrap;
 }

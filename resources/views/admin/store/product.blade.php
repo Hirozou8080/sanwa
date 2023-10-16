@@ -31,7 +31,7 @@
                 <td>{{ $product['name'] }}</td>
                 <td>{{ $product['price'] }}円</td>
                 <td style="text-align: center">
-                  <div class="flex" style="text-align: center; gap:10px">
+                  <div class="flex-center" style="text-align: center; gap:10px">
                     <div class="link-btn2 edit">
                       <button id="modalOpen" value="{{ $product['id'] }}" data-name="{{ $product['name'] }}"
                         data-price="{{ $product['price'] }}" data-detail="{{ $product['detail'] }}">編集＞</button>
