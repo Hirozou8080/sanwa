@@ -24,24 +24,24 @@
             <th>求人状況</th>
             <th>操作</th>
           </tr>
-          @if (!empty($stores->all()))
+          @if (!empty($stores))
             <!-- 店舗が存在した場合 -->
             @foreach ($stores as $store)
               <tr>
-                <td style="text-align: center">{{ $store->id }}</td>
-                <td>{{ $store->name }}</td>
-                <td>{{ $store->city . $store->address }}</td>
-                <td style="text-align: center">{{ $store->recruit_flg == 1 ? '募集中' : '募集なし' }}</td>
+                <td style="text-align: center">{{ $store['id'] }}</td>
+                <td>{{ $store['name'] }}</td>
+                <td>{{ $store['city'] . $store['address'] }}</td>
+                <td style="text-align: center">{{ $store['recruit_flg'] == 1 ? '募集中' : '募集なし' }}</td>
                 <td style="text-align: center">
                   <div class="flex-center" style="text-align: center; gap:10px">
                     <div class="link-btn2 ">
-                      <a href={{ route('admin/store/edit', $store->id) }}>編集＞</a>
+                      <a href={{ route('admin/store/edit', $store['id']) }}>編集＞</a>
                     </div>
                     <div class="link-btn3">
-                      <a href={{ route('admin/store/detail', $store->id) }}>詳細＞</a>
+                      <a href={{ route('admin/store/detail', $store['id']) }}>詳細＞</a>
                     </div>
                     <div class="link-btn4">
-                      <a href={{ route('admin/store/product', $store->id) }}>商品設定＞</a>
+                      <a href={{ route('admin/store/product', $store['id']) }}>商品設定＞</a>
                     </div>
                   </div>
                 </td>

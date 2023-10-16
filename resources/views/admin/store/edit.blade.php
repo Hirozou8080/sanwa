@@ -25,13 +25,13 @@
           </div>
         @endif
         <div class="form-block">
-          {{ Form::open(['url' => route('admin/store/edit', $store->id), 'files' => true]) }}
+          {{ Form::open(['url' => route('admin/store/edit', $store['id']), 'files' => true]) }}
           <div class="form-item">
             <div class="form-title">
               {{ Form::label($for = 'storeName', '店舗名') }}
             </div>
             <div class="form-content">
-              {{ Form::text('storeName', $store->name, [
+              {{ Form::text('storeName', $store['name'], [
                   'class' => 'form-control',
                   'id' => 'storeName',
                   'placeholder' => 'マリンピア店',
@@ -44,7 +44,7 @@
             </div>
             <div class=" flex-items">
               <div class="form-content">
-                {{ Form::text('postNumPrev', $store->postNumPrev, [
+                {{ Form::text('postNumPrev', $store['postNumPrev'], [
                     'class' => 'form-control',
                     'id' => 'postNumPrev',
                     'placeholder' => '123',
@@ -52,7 +52,7 @@
               </div>
               ー
               <div class="form-content">
-                {{ Form::text('postNumNext', $store->postNumNext, [
+                {{ Form::text('postNumNext', $store['postNumNext'], [
                     'class' => 'form-control',
                     'id' => 'postNumNext',
                     'placeholder' => '4567',
@@ -68,7 +68,7 @@
               <select name="prefecture" id="prefecture">
                 @foreach ($prefectures as $prefecture)
                   <option class="form-control" value="{{ $prefecture['id'] }}"
-                    {{ $prefecture['id'] == $store->prefecture_id ? 'selected' : '' }}>
+                    {{ $prefecture['id'] == $store['prefecture_id'] ? 'selected' : '' }}>
                     {{ $prefecture['name'] }}</option>
                 @endforeach
               </select>
@@ -79,7 +79,7 @@
               {{ Form::label($for = 'city', '市区町村') }}
             </div>
             <div class="form-content">
-              {{ Form::text('city', $store->city, ['class' => 'form-control', 'id' => 'city', 'placeholder' => '千葉市中央区']) }}
+              {{ Form::text('city', $store['city'], ['class' => 'form-control', 'id' => 'city', 'placeholder' => '千葉市中央区']) }}
             </div>
           </div>
           <div class="form-item">
@@ -87,7 +87,7 @@
               {{ Form::label($for = 'address', '住所') }}
             </div>
             <div class="form-content">
-              {{ Form::text('address', $store->address, [
+              {{ Form::text('address', $store['address'], [
                   'class' => 'form-control',
                   'id' => 'address',
                   'placeholder' => '栄町1-1-1',
@@ -103,13 +103,13 @@
               <div class="form-content">
                 <div class=" flex-items">
                   {{ Form::label($for = 'recruit', '募集', ['class' => 'recruit']) }}
-                  {{ Form::radio('recruit', 1, $store->recruit_flg == 1 ? true : false, ['id' => 'recruit', 'class' => 'circle']) }}
+                  {{ Form::radio('recruit', 1, $store['recruit_flg'] == 1 ? true : false, ['id' => 'recruit', 'class' => 'circle']) }}
                 </div>
               </div>
               <div class="form-content">
                 <div class="flex-items">
                   {{ Form::label($for = 'noRecruit', '募集なし', ['class' => 'noRecruit']) }}
-                  {{ Form::radio('recruit', 2, $store->recruit_flg == 2 ? true : false, [
+                  {{ Form::radio('recruit', 2, $store['recruit_flg'] == 2 ? true : false, [
                       'id' => 'noRecruit',
                       'class' => 'circle',
                   ]) }}

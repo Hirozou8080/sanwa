@@ -20,7 +20,7 @@
               <div>店舗名</div>
             </div>
             <div class="item-content">
-              {{ $store->name }}
+              {{ $store['name'] }}
             </div>
           </div>
           <div class="item">
@@ -28,9 +28,9 @@
               郵便番号
             </div>
             <div class="item-content">
-              {{ $store->postNumPrev }}
+              {{ $store['postNumPrev'] }}
               -
-              {{ $store->postNumNext }}
+              {{ $store['postNumNext'] }}
             </div>
           </div>
           <div class="item">
@@ -38,7 +38,7 @@
               都道府県
             </div>
             <div class="item-content">
-              {{ $prefecture->name }}
+              {{ $prefecture['name'] }}
               </select>
             </div>
           </div>
@@ -47,7 +47,7 @@
               市区町村
             </div>
             <div class="item-content">
-              {{ $store->city }}
+              {{ $store['city'] }}
             </div>
           </div>
           <div class="item">
@@ -55,7 +55,7 @@
               住所
             </div>
             <div class="item-content">
-              {{ $store->address }}
+              {{ $store['address'] }}
             </div>
           </div>
           <div class="item">
@@ -63,14 +63,14 @@
               求人情報
             </div>
             <div class="item-content">
-              @if ($store->recruit_flg == 1)
+              @if ($store['recruit_flg'] == 1)
                 募集中
               @else
                 募集なし
               @endif
             </div>
           </div>
-          {{ Form::open(['url' => route('admin/store/delete', $store->id), 'method' => 'post']) }}
+          {{ Form::open(['url' => route('admin/store/delete', $store['id']), 'method' => 'post']) }}
           <div class="item" style="justify-content:center; padding:3rem 1rem">
             <div class="flex-items">
               <button type="button" onclick="location.href=`{{ route('admin/store') }}`">戻る＞</button>

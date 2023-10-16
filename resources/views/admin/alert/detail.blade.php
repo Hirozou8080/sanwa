@@ -20,7 +20,7 @@
             <div>カテゴリ</div>
           </div>
           <div class="item-content">
-            {{ $alert?->category?->name }}
+            {{ $alert['category']['name'] }}
           </div>
         </div>
         <div class="item">
@@ -28,7 +28,7 @@
             <div>タイトル</div>
           </div>
           <div class="item-content">
-            {{ $alert->title }}
+            {{ $alert['title'] }}
           </div>
         </div>
         <div class="item">
@@ -36,7 +36,7 @@
             通知内容
           </div>
           <div class="item-content">
-            {{ $alert->body }}
+            {{ $alert['body'] }}
           </div>
         </div>
         <div class="item">
@@ -44,7 +44,7 @@
             投稿日
           </div>
           <div class="item-content">
-            {{ $alert->posted_date }}
+            {{ $alert['posted_date'] }}
           </div>
         </div>
         <div class="item">
@@ -52,11 +52,11 @@
             通知画像
           </div>
           <div class="item-content">
-            <img src="{{ url('storage', [$alert->file_path]) }}" alt="{{ $alert->file_name }}"
+            <img src="{{ url('storage', [$alert['file_path']]) }}" alt="{{ $alert['file_name'] }}"
               style="max-width:200px; max-height:300px">
           </div>
         </div>
-        <!-- {{ Form::open(['url' => route('admin/alert/delete', $alert->id), 'method' => 'post']) }} -->
+        <!-- {{ Form::open(['url' => route('admin/alert/delete', $alert['id']), 'method' => 'post']) }} -->
         {{ Form::open(['url' => route('admin/alert/delete', 1), 'method' => 'post']) }}
         <div class="item" style="justify-content:center; padding:3rem 1rem">
           <div class="flex-items">

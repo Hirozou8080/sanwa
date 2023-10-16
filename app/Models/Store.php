@@ -25,7 +25,7 @@ class Store extends Model
    */
   public static function getAllStore()
   {
-    return Store::all();
+    return Store::all()->toArray();
   }
 
   /**

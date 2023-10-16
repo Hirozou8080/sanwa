@@ -25,7 +25,7 @@ class Alert extends Model
 	 */
 	public static function getAllAlert()
 	{
-		return Alert::all();
+		return Alert::all()->toArray();
 	}
 
 	/**
@@ -43,7 +43,8 @@ class Alert extends Model
 	 */
 	public static function getAlertId($id)
 	{
-		return Alert::where('id', $id)->with('category')->first();
+		$alert = Alert::where('id', $id)->with('category')->first();
+		return json_decode(json_encode($alert), true);
 	}
 
 	public function category()

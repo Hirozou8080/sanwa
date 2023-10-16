@@ -13,7 +13,7 @@
         <i class="fas fa-user-circle user-circle"></i>
       </div>
       <div class="user-name">
-        {{ $user->name }}
+        {{ $user['name'] }}
       </div>
     </div>
   </div>

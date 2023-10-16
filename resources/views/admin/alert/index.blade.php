@@ -25,20 +25,20 @@
             <th>投稿日</th>
             <th>操作</th>
           </tr>
-          @if (!empty($alerts->all()))
+          @if (!empty($alerts))
             @foreach ($alerts as $alert)
               <tr>
-                <td style="text-align: center">{{ $alert->id }}</td>
-                <td>{{ $alert->title }}</td>
-                <td>{{ $alert->body }}</td>
-                <td style="text-align: center" class="text-nowrap">{{ $alert->posted_date }}</td>
+                <td style="text-align: center">{{ $alert['id'] }}</td>
+                <td>{{ $alert['title'] }}</td>
+                <td>{{ $alert['body'] }}</td>
+                <td style="text-align: center" class="text-nowrap">{{ $alert['posted_date'] }}</td>
                 <td style="text-align: center">
-                  <div class="flex-center" style="text-align: center; gap:10px">
+                  <div class="flex-center" style="text-align: center">
                     <div class="link-btn2 ">
-                      <a href={{ route('admin/alert/edit', $alert->id) }}>編集＞</a>
+                      <a href={{ route('admin/alert/edit', $alert['id']) }}>編集＞</a>
                     </div>
                     <div class="link-btn3">
-                      <a href={{ route('admin/alert/detail', $alert->id) }}>詳細＞</a>
+                      <a href={{ route('admin/alert/detail', $alert['id']) }}>詳細＞</a>
                     </div>
                   </div>
                 </td>

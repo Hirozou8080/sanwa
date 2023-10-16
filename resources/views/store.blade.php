@@ -27,7 +27,7 @@
                 <th>住所</th>
                 <th>求人案内</th>
               </tr>
-              @if (!empty($stores->all()))
+              @if (!empty($stores))
                 @foreach ($stores as $store)
                   <tr>
                     <td><a href="#">{{ $store['name'] }}</a> </td>
@@ -51,7 +51,7 @@
 
           {{-- sp用 --}}
           <div class="sp">
-            @if (!empty($stores->all()))
+            @if (!empty($stores))
               @foreach ($stores as $store)
                 <table>
                   <tr>

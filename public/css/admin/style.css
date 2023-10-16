@@ -92,42 +92,6 @@
   font-family: 'Noto Sans JP', 'serif';
 }
 
-/* flex 設定*/
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem 0;
-}
-
-.flex-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 0;
-}
-
-.flex-around {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0.5rem 0;
-}
-
-.flex-start {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0.5rem 0;
-}
-
-.flex-end {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0.5rem 0;
-}
-
 /* text関連 */
 .text-nowrap {
   white-space: nowrap;

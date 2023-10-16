@@ -119,7 +119,7 @@ class StoreController extends CommonController
     $store = $this->getStore($store_id);
     $store['postNumPrev'] = substr($store['post_num'], 0, 3);
     $store['postNumNext'] = substr($store['post_num'], 3, 7);
-    $prefecture = $this->getPrefecture($store->prefecture_id);
+    $prefecture = $this->getPrefecture($store['prefecture_id']);
 
     return view('admin.store.detail', ['store' => $store, 'prefecture' => $prefecture]);
   }

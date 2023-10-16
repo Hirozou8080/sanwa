@@ -24,10 +24,10 @@
           </div>
         @endif
         <div class="form-block">
-          {{ Form::open(['url' => route('admin/alert/edit', $alert->id), 'files' => true]) }}
+          {{ Form::open(['url' => route('admin/alert/edit', $alert['id']), 'files' => true]) }}
           <div class="form-item">
             <div class="form-title">
-              {{ Form::hidden('id', $alert->id) }}
+              {{ Form::hidden('id', $alert['id']) }}
               {{ Form::label('カテゴリー') }}
             </div>
             <div class="flex-items" style="justify-content:flex-start; gap:50px ;  padding:.5rem;font-size:1rem;">
@@ -44,7 +44,7 @@
               {{ Form::label($for = 'title', 'タイトル') }}
             </div>
             <div class="form-content">
-              {{ Form::text('title', $alert->title, [
+              {{ Form::text('title', $alert['title'], [
                   'class' => 'form-control',
                   'id' => 'title',
                   'placeholder' => '〇〇について',
@@ -56,7 +56,7 @@
               {{ Form::label($for = 'body', '本文') }}
             </div>
             <div class="form-content">
-              {{ Form::textarea('body', $alert->body, [
+              {{ Form::textarea('body', $alert['body'], [
                   'class' => 'form-control',
                   'id' => 'body',
                   'placeholder' => '本文を入力してください',
@@ -144,9 +144,9 @@
 
     // [初期読み込み] 登録済みの画像があれば表示
     $(function() {
-      var img = '{{ $alert->file_name }}'
-      if ('{{ $alert->file_path }}') {
-        $('#preview').attr('src', `{{ url('storage', [$alert->file_path]) }}`);
+      var img = '{{ $alert['file_name'] }}'
+      if ('{{ $alert['file_path'] }}') {
+        $('#preview').attr('src', `{{ url('storage', [$alert['file_path']]) }}`);
       } else {
         $("#delete").hide();
       }
