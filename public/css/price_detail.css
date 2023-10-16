@@ -1,6 +1,7 @@
 /* price_detail ページ */
 .price-detail .container {
   width: 100%;
+  min-height: 60vh;
   padding: 4rem 0 6rem;
   text-align: center;
   background-color: #ffffff;
