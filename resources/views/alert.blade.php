@@ -19,20 +19,22 @@
           @if (!empty($alerts))
             @foreach ($alerts as $alert)
               <div class="block">
-                <div class="flex-start flex-wrap-nowrap flex-align-items-start flex-gap-30">
-                  <img src="{{ url('storage', [$alert['file_path']]) }}" alt="{{ $alert['file_name'] }}"
+                <div class="flex-start flex-wrap-nowrap flex-align-items-start flex-gap-20 flex-gap-10-sp">
+                  <img src="{{ url('storage', [$alert['file_path']]) }}" alt="{{ $alert['file_name'] }}" class="ml-1"
                     style="max-width:120px; max-height:180px">
                   <div class="alert-area">
-                    <div class="date-cate flex-between-tab-pc">
-                      <div class="date">{{ $alert['posted_date'] }}</div>
-                      <div class="cate flex-start-tab-pc flex">
-                        @foreach ($alert['category'] as $category)
-                          {{ $category['name'] }}
-                        @endforeach
+                    <div class="px-1-tab-pc">
+                      <div class="date-cate flex-between-tab-pc">
+                        <div class="date">{{ $alert['posted_date'] }}</div>
+                        <div class="cate flex-start-tab-pc flex">
+                          @foreach ($alert['category'] as $category)
+                            {{ $category['name'] }}
+                          @endforeach
+                        </div>
                       </div>
-                    </div>
-                    <div class="title-area">
-                      {{ $alert['title'] }}
+                      <div class="title-area">
+                        <a href="/">{{ $alert['title'] }}</a>
+                      </div>
                     </div>
                   </div>
                 </div>

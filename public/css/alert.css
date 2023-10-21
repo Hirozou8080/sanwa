@@ -50,7 +50,15 @@
 }
 
 .alert .container .content .block .alert-area .date-cate .cate {
+  display: block;
   padding: 1rem 0;
+}
+
+.alert .container .content .block .alert-area .date-cate .cate::before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f02b';
+  font-size: 1.2rem;
+  font-weight: 900;
 }
 
 .alert .container .content .block .alert-area .title-area {
@@ -58,10 +66,17 @@
   font-size: 1.4rem;
   text-align: left;
   font-family: 'Noto Sans JP', 'serif';
-  color: #5a5758;
   font-weight: 500;
 }
 
+.alert .container .content .block .alert-area .title-area a {
+  color: #5a5758;
+  width: fit-content;
+}
+
+.alert .container .content .block .alert-area .title-area a:hover {
+  border-bottom: 1px solid #5a5758;
+}
 
 /* 1024px以上の場合 */
 @media screen and (min-width: 768px) {
