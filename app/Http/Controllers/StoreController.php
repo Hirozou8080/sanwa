@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
-class StoreController extends Controller
+// common
+use App\Http\Controllers\CommonController;
+
+class StoreController extends CommonController
 {
   public function index()
   {
-    $commonController = new CommonController();
     // 全店舗取得
-    $stores = $commonController->getAllStore();
+    $stores = $this->getAllStore();
     // 都道府県取得
-    $prefectures = $commonController->getAllPrefecture();
+    $prefectures = $this->getAllPrefecture();
 
     return view("store")->with(['stores' => $stores, 'prefectures' => $prefectures]);
   }

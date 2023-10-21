@@ -71,7 +71,7 @@
           </a>
         </div>
         <div class="navi_item">
-          <a href="#">
+          <a href="{{ route('alert') }}">
             お知らせ<br><small>INFORMATION</small>
           </a>
         </div>

@@ -4,22 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-// controller
+// common
 use App\Http\Controllers\CommonController;
 
-class PriceController extends Controller
+class PriceController extends CommonController
 {
-  private $commonController;
-  public function __construct()
-  {
-    $this->commonController = new CommonController();
-  }
   /**
    * 店舗料金案内表示
    */
-  public function index(Request $request)
+  public function index()
   {
-    $stores = $this->commonController->getAllStore();
+    $stores = $this->getAllStore();
 
     return view("price")->with('stores', $stores);
   }
@@ -29,10 +24,10 @@ class PriceController extends Controller
    * @param store_id : 店舗ID
    *  
    */
-  public function detail(Request $request, $store_id)
+  public function detail($store_id)
   {
     // 店舗情報取得
-    $store = $this->commonController->getStore($store_id);
+    $store = $this->getStore($store_id);
     $res = [];
     $res['name'] = $store['name'];
     $res['product_left'] = [];

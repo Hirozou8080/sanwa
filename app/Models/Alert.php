@@ -25,7 +25,7 @@ class Alert extends Model
 	 */
 	public static function getAllAlert()
 	{
-		return Alert::all()->toArray();
+		return Alert::with('category')->get()->toArray();
 	}
 
 	/**

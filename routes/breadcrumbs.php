@@ -22,3 +22,9 @@ Breadcrumbs::for('price-detail', function (BreadcrumbTrail $trail, $store_name) 
     $trail->parent('price');
     $trail->push($store_name . 'の料金詳細', route('price'));
 });
+
+// Home > Alert
+Breadcrumbs::for('alert', function (BreadcrumbTrail $trail) {
+    $trail->parent('home');
+    $trail->push('通知一覧', route('alert'));
+});
