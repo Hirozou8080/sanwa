@@ -26,8 +26,9 @@ class AlertController extends CommonController
 	 */
 	public function detail($alert_id): View
 	{
-		// 全通知取得
-		$alert = $this->getAllAlert(sort: true);
+		// 通知取得
+		$alert = $this->getAlert($alert_id);
+		dd($alert);
 		return view("alert_detail")->with('alert', $alert);
 	}
 }
