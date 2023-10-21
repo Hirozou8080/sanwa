@@ -15,8 +15,7 @@ class AlertController extends CommonController
 	public function index()
 	{
 		// 全通知取得
-		$alerts = $this->getAllAlert();
-
+		$alerts = $this->getAllAlert(sort: true);
 		return view("alert")->with('alerts', $alerts);
 	}
 }

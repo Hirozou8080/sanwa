@@ -22,10 +22,17 @@ class Alert extends Model
 
 	/**
 	 * 全通知取得
+	 * @param boolean $sort : [true:投稿昇順, false:投稿日降順]
 	 */
-	public static function getAllAlert()
+	public static function getAllAlert($sort = false)
 	{
-		return Alert::with('category')->get()->toArray();
+		$query = Alert::query();
+		if ($sort) {
+			$query->orderBy('posted_date', 'desc');
+		}
+		return $query->with('category')
+			->get()
+			->toArray();
 	}
 
 	/**
@@ -49,6 +56,6 @@ class Alert extends Model
 
 	public function category()
 	{
-		return $this->belongsTo(Alert_category::class, 'category_id', 'id');
+		return $this->hasMany(Alert_category::class, 'id', 'category_id');
 	}
 }

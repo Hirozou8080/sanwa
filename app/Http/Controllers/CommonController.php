@@ -64,9 +64,9 @@ class CommonController extends Controller
   /**
    * 全通知の取得
    */
-  public function getAllAlert()
+  public function getAllAlert($sort = false)
   {
-    $alerts = Alert::getAllAlert();
+    $alerts = Alert::getAllAlert(sort: $sort);
     return $alerts;
   }
   /**

@@ -13,3 +13,54 @@
   font-family: 'Noto Sans JP', 'serif';
   color: #5a5758;
 }
+
+.alert .container .content {
+  padding: 1.5rem 0;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.alert .container .content .block {
+  padding: 1.5rem 0;
+  border-bottom: 1px dotted #ccc
+}
+
+.alert .container .content .block .alert-area {
+  width: 100%;
+}
+
+.alert .container .content .block .alert-area .date-cate {
+  padding: 1rem 0;
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+.alert .container .content .block .alert-area .title-area {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  text-align: left;
+  font-family: 'Noto Sans JP', 'serif';
+  color: #5a5758;
+  font-weight: 500;
+}
+
+
+/* 1024px以上の場合 */
+@media screen and (min-width: 768px) {
+
+  .alert .container .head {
+    padding: 2rem 0;
+    font-size: 2rem;
+  }
+
+  .alert .container .content {
+    padding: 2rem 0;
+  }
+
+  .alert .container .content .block .alert-area .title-area {
+    padding: 1.5rem 0;
+    font-size: 1.7rem;
+  }
+
+}
