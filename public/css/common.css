@@ -294,7 +294,16 @@ header .navi .navi_item:hover::before {
   padding: 2.5rem;
   font-size: 1.5rem;
   border-bottom: 1px dotted #ffffff;
+}
+
+.header .menu-content .menu-content-inner .menu-block a {
   color: #fff;
+  display: block;
+  width: fit-content;
+}
+
+.header .menu-content .menu-content-inner .menu-block a:hover {
+  border-bottom: 1px solid #ffffff;
 }
 
 .header .menu-content .menu-content-inner .menu-footer {
@@ -576,33 +585,43 @@ footer .wrapper .author {
 .flex-nogap {
   gap: 0;
 }
+
 .flex-gap-10 {
   gap: 10px;
 }
+
 .flex-gap-20 {
   gap: 20px;
 }
+
 .flex-gap-30 {
   gap: 30px;
 }
+
 .flex-gap-40 {
   gap: 40px;
 }
+
 .flex-gap-50 {
   gap: 50px;
 }
+
 .flex-gap-60 {
   gap: 60px;
 }
+
 .flex-gap-70 {
   gap: 70px;
 }
+
 .flex-gap-80 {
   gap: 80px;
 }
+
 .flex-gap-90 {
   gap: 90px;
 }
+
 .flex-gap-100 {
   gap: 100px;
 }
@@ -625,6 +644,7 @@ footer .wrapper .author {
 
 /* 768px以下の場合 [SP のみ]*/
 @media screen and (max-width: 768px) {
+
   /* flexアイテム */
   .flex-start-sp {
     display: flex;
@@ -685,6 +705,7 @@ footer .wrapper .author {
   .flex-nogap-sp {
     gap: 0;
   }
+
   .flex-nogap-sp {
     gap: 0;
   }
@@ -692,30 +713,39 @@ footer .wrapper .author {
   .flex-gap-10-sp {
     gap: 10px;
   }
+
   .flex-gap-20-sp {
     gap: 20px;
   }
+
   .flex-gap-30-sp {
     gap: 30px;
   }
+
   .flex-gap-40-sp {
     gap: 40px;
   }
+
   .flex-gap-50-sp {
     gap: 50px;
   }
+
   .flex-gap-60-sp {
     gap: 60px;
   }
+
   .flex-gap-70-sp {
     gap: 70px;
   }
+
   .flex-gap-80-sp {
     gap: 80px;
   }
+
   .flex-gap-90-sp {
     gap: 90px;
   }
+
   .flex-gap-100-sp {
     gap: 100px;
   }
@@ -808,30 +838,39 @@ footer .wrapper .author {
   .flex-gap-10-tab-pc {
     gap: 10px;
   }
+
   .flex-gap-20-tab-pc {
     gap: 20px;
   }
+
   .flex-gap-30-tab-pc {
     gap: 30px;
   }
+
   .flex-gap-40-tab-pc {
     gap: 40px;
   }
+
   .flex-gap-50-tab-pc {
     gap: 50px;
   }
+
   .flex-gap-60-tab-pc {
     gap: 60px;
   }
+
   .flex-gap-70-tab-pc {
     gap: 70px;
   }
+
   .flex-gap-80-tab-pc {
     gap: 80px;
   }
+
   .flex-gap-90-tab-pc {
     gap: 90px;
   }
+
   .flex-gap-100-tab-pc {
     gap: 100px;
   }
@@ -855,6 +894,7 @@ footer .wrapper .author {
 
 /* 1200px以上の場合 [PC のみ]*/
 @media screen and (min-width: 1200px) {
+
   /* flex */
   .flex-start-pc {
     display: flex;
@@ -895,6 +935,7 @@ footer .wrapper .author {
     flex-wrap: wrap;
     gap: 10px;
   }
+
   .flex-align-items-stretch-pc {
     align-items: stretch;
   }
@@ -914,36 +955,47 @@ footer .wrapper .author {
   .flex-nogap-pc {
     gap: 0;
   }
+
   .flex-gap-10-pc {
     gap: 10px;
   }
+
   .flex-gap-20-pc {
     gap: 20px;
   }
+
   .flex-gap-30-pc {
     gap: 30px;
   }
+
   .flex-gap-40-pc {
     gap: 40px;
   }
+
   .flex-gap-50-pc {
     gap: 50px;
   }
+
   .flex-gap-60-pc {
     gap: 60px;
   }
+
   .flex-gap-70-pc {
     gap: 70px;
   }
+
   .flex-gap-80-pc {
     gap: 80px;
   }
+
   .flex-gap-90-pc {
     gap: 90px;
   }
+
   .flex-gap-100-pc {
     gap: 100px;
   }
+
   .flex-wrap-wrap-pc {
     flex-wrap: wrap;
   }

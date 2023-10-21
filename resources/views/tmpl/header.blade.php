@@ -26,16 +26,24 @@
       <div class="menu-content-inner">
         <div class="menu-title">menu</div>
         <div class="menu-block">
-          >ホーム
+          <a href="{{ route('home') }}">
+            >ホーム
+          </a>
         </div>
         <div class="menu-block">
-          >サービス紹介
+          <a href="{{ route('store') }}">
+            >店舗一覧
+          </a>
         </div>
         <div class="menu-block">
-          >会社案内
+          <a href="{{ route('price') }}">
+            >料金案内
+          </a>
         </div>
         <div class="menu-block">
-          >お問合せ
+          <a href="{{ route('alert') }}">
+            >お知らせ
+          </a>
         </div>
         <div class="menu-footer">
           <div class="contact">お問い合わせ</div>

@@ -4,16 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\CommonController;
 
-class HomeController extends Controller
+class HomeController extends CommonController
 {
-  private $commonController;
-  public function __construct()
-  {
-    $this->commonController = new CommonController();
-  }
   public function home()
   {
-    $alerts = $this->commonController->getTopAlert();
+    $alerts = $this->getTopAlert();
     return view("home")->with('alerts', $alerts);
   }
 }

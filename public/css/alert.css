@@ -26,14 +26,31 @@
   border-bottom: 1px dotted #ccc
 }
 
+.alert .container .content .block:nth-child(odd) {
+  background-color: #fcfcfc;
+}
+
 .alert .container .content .block .alert-area {
   width: 100%;
 }
 
 .alert .container .content .block .alert-area .date-cate {
-  padding: 1rem 0;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: left;
+}
+
+.alert .container .content .block .alert-area .date-cate .date {
+  width: 100px;
+  padding: .5rem 1rem;
+  background-color: #4e83f2;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 5px;
+
+}
+
+.alert .container .content .block .alert-area .date-cate .cate {
+  padding: 1rem 0;
 }
 
 .alert .container .content .block .alert-area .title-area {
@@ -56,6 +73,10 @@
 
   .alert .container .content {
     padding: 2rem 0;
+  }
+
+  .alert .container .content .block .alert-area .date-cate .cate {
+    padding: 0;
   }
 
   .alert .container .content .block .alert-area .title-area {
