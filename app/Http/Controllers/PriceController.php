@@ -43,7 +43,7 @@ class PriceController extends CommonController
         $res['product_right'][$key]['price'] = $product['price'];
       }
     }
-    // dd($res);
+
     return view("price_detail")->with('store', $res);
   }
 }

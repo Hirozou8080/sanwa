@@ -30,7 +30,7 @@ Route::controller(PriceController::class)->group(function () {
 // 通知画面
 Route::controller(AlertController::class)->group(function () {
   Route::get('/alert', 'index')->name('alert');
-  // Route::get('/price/{price_id}', 'detail')->name('price/detail');
+  Route::get('/alert/{alert_id}', 'detail')->name('alert/detail');
 });
 
 

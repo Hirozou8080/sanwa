@@ -33,7 +33,7 @@
                         </div>
                       </div>
                       <div class="title-area">
-                        <a href="/">{{ $alert['title'] }}</a>
+                        <a href="'alert/{{ $alert['id'] }}'">{{ $alert['title'] }}</a>
                       </div>
                     </div>
                   </div>
