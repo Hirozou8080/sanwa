@@ -134,6 +134,7 @@
 .price-detail .container .content .table td {
   height: 45px;
   max-width: 50%;
+  white-space: nowrap;
   padding: 0 2rem;
   border: 1px solid #ccc;
   font-size: 1.3rem;
