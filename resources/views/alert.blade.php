@@ -6,7 +6,7 @@
   <main class="main">
     <section class="page-title">
       <div class="wrapper">
-        <div class="title">お知らせ一覧<br><small>ALERT</small></div>
+        <div class="title">お知らせ<br><small>NEWS</small></div>
       </div>
     </section>
     {{ Breadcrumbs::render('alert') }}
@@ -33,7 +33,7 @@
                         </div>
                       </div>
                       <div class="title-area">
-                        <a href="'alert/{{ $alert['id'] }}'">{{ $alert['title'] }}</a>
+                        <a href="alert/{{ $alert['id'] }}">{{ $alert['title'] }}</a>
                       </div>
                     </div>
                   </div>
@@ -41,6 +41,9 @@
               </div>
             @endforeach
           @else
+            <div class="block">
+
+            </div>
           @endif
         </div>
       </div>
