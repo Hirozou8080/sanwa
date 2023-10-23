@@ -1,1 +1,13 @@
 /* 通知詳細画面 */
+.alert_detail .container {
+  width: 100%;
+  min-height: 60vh;
+  padding: 4rem 0 6rem;
+}
+
+.alert_detail .container .content {
+  padding: 1.5rem 0;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
