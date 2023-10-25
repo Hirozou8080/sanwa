@@ -1,3 +1,8 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 a {
   text-decoration: none;
   display: block;
@@ -11,6 +16,14 @@ html {
 body {
   font-family: 'メイリオ', 'Meiryo', 'ＭＳ ゴシック', 'Hiragino Kaku Gothic ProN',
     'ヒラギノ角ゴ ProN W3', sans-serif;
+}
+
+.font-sans {
+  font-family: 'Noto Sans JP', 'serif' !important;
+}
+
+.font-serif {
+  font-family: 'Noto Serif JP', 'serif' !important;
 }
 
 .wrapper {

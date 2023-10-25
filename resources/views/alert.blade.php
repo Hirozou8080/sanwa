@@ -25,7 +25,7 @@
                   <div class="alert-area">
                     <div class="px-1-tab-pc">
                       <div class="date-cate flex-between-tab-pc">
-                        <div class="date">{{ $alert['posted_date'] }}</div>
+                        <div class="date font-serif">{{ $alert['posted_date'] }}</div>
                         <div class="cate flex-start-tab-pc flex">
                           @foreach ($alert['category'] as $category)
                             {{ $category['name'] }}

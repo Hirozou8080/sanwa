@@ -47,7 +47,8 @@
   color: #fff;
   font-weight: 700;
   border-radius: 5px;
-
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 .alert .container .content .block .alert-area .date-cate .cate {

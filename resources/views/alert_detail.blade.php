@@ -12,8 +12,17 @@
     {{ Breadcrumbs::render('alert_detail', $alert['title']) }}
     <section class="container">
       <div class="wrapper">
+        <div class="title-area flex-start flex-wrap-nowrap flex-gap-30 flex-gap-10-sp">
+          <img class="img" src="/images/logo.png" alt="logo.png">
+          <div class="title">
+            {{ $alert['title'] }}
+          </div>
+          <div class="posted-date">
+            <p class="date">{{ $alert['posted_date'] }}</p>
+          </div>
+        </div>
         <div class="content">
-          aaaa
+
         </div>
       </div>
       {{-- ./wrapper --}}

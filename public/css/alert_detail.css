@@ -5,9 +5,92 @@
   padding: 4rem 0 6rem;
 }
 
+.alert_detail .container .wrapper {
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 3.96px 0.04px rgb(2 6 52 / 10%);
+}
+
+/* タイトルエリア */
+.alert_detail .container .title-area {
+  padding: 2rem 1rem;
+  position: relative;
+  border-bottom: 2px solid #c8c8c8;
+  background-color: #fff;
+  background-image: repeating-linear-gradient(-45deg,
+      transparent,
+      transparent 10px,
+      rgba(25, 129, 247, 0.2) 8px,
+      rgba(25, 129, 247, 0.2) 15px),
+    repeating-linear-gradient(45deg,
+      transparent,
+      transparent 10px,
+      rgba(25, 129, 247, 0.2) 8px,
+      rgba(25, 129, 247, 0.2) 15px);
+}
+
+/* ロゴ */
+.alert_detail .container .title-area .img {
+  width: 50px;
+  height: 55px;
+}
+
+/* タイトル */
+.alert_detail .container .title-area .title {
+  font-family: 'Noto Sans JP', 'serif';
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* 公開日 */
+.alert_detail .container .title-area .posted-date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100px;
+  border-radius: 5px;
+  background-color: #4e83f2;
+}
+
+.alert_detail .container .title-area .posted-date .date {
+  font-size: 1.2rem;
+  font-family: 'Noto Serif JP', 'serif';
+  color: #fff;
+  text-align: center;
+  padding: 0.3rem 0;
+}
+
 .alert_detail .container .content {
   padding: 1.5rem 0;
   width: 100%;
   max-width: 800px;
   margin: auto;
+}
+
+
+/* 1024px以上の場合 */
+@media screen and (min-width: 1024px) {
+
+  /* タイトルエリア */
+  .alert_detail .container .title-area {
+    padding: 2rem 3rem;
+  }
+
+  /* タイトル */
+  .alert_detail .container .title-area .title {
+    font-size: 2.8rem;
+  }
+
+  /* ロゴ */
+  .alert_detail .container .title-area .img {
+    width: 70px;
+    height: 80px;
+  }
+
+  /* 公開日 */
+  .alert_detail .container .title-area .posted-date .date {
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+  }
 }
