@@ -22,7 +22,11 @@
           </div>
         </div>
         <div class="content">
-
+          <div class="cate flex-start-tab-pc ">
+            @foreach ($alert['category'] as $category)
+              {{ $category['name'] }}
+            @endforeach
+          </div>
         </div>
       </div>
       {{-- ./wrapper --}}

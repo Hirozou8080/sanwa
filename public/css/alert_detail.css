@@ -62,10 +62,23 @@
 }
 
 .alert_detail .container .content {
-  padding: 1.5rem 0;
-  width: 100%;
+  padding: 1.5rem 3rem;
   max-width: 800px;
   margin: auto;
+}
+
+.alert_detail .container .content .cate {
+  display: block;
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  text-align: right;
+}
+
+.alert_detail .container .content .cate::before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f02b';
+  font-size: 1.4rem;
+  font-weight: 900;
 }
 
 
