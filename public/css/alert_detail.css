@@ -62,7 +62,7 @@
 }
 
 .alert_detail .container .content {
-  padding: 1.5rem 3rem;
+  padding: 1rem 2rem;
   max-width: 800px;
   margin: auto;
 }
@@ -70,17 +70,31 @@
 .alert_detail .container .content .cate {
   display: block;
   padding: 1rem 0;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   text-align: right;
+  color: #5a5758;
 }
 
 .alert_detail .container .content .cate::before {
+  color: #5a5758;
   font-family: 'Font Awesome 5 Free';
   content: '\f02b';
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 900;
 }
 
+/* ボディエリア */
+.alert_detail .container .content .body-area {
+  padding: 2rem 0;
+}
+
+.alert_detail .container .content .body-area p {
+  font-size: 1.4rem;
+  color: #5a5758;
+  font-weight: 400;
+  line-height: 2;
+  white-space: break-spaces;
+}
 
 /* 1024px以上の場合 */
 @media screen and (min-width: 1024px) {
@@ -105,5 +119,21 @@
   .alert_detail .container .title-area .posted-date .date {
     font-size: 1.5rem;
     padding: 0.5rem 0;
+  }
+
+  /* コンテンツ */
+  .alert_detail .container .content {
+    padding: 1.5rem 3rem;
+  }
+
+  /* カテゴリ */
+  .alert_detail .container .content .cate {
+    font-size: 1.4rem;
+  }
+
+  /* ボディエリア */
+  .alert_detail .container .content .body-area {
+    font-size: 1.6rem;
+    line-height: 2;
   }
 }

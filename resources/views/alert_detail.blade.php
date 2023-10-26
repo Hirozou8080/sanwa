@@ -27,7 +27,11 @@
               {{ $category['name'] }}
             @endforeach
           </div>
+          <div class="body-area">
+            <p>{{ $alert['body'] }}</p>
+          </div>
         </div>
+      </div>
       </div>
       {{-- ./wrapper --}}
     </section>
