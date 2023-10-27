@@ -21,8 +21,10 @@
   max-width: 800px;
   margin: auto;
 }
+
 .contact .container .content .comming-soon {
   padding: 5rem 0;
   font-size: 3rem;
   font-weight: 800;
+  border: 1.5px solid #5a5758;
 }
