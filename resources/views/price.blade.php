@@ -20,25 +20,25 @@
           </div>
         </div>
         <div class="content">
-          @if(!empty($stores))
+          @if (!empty($stores))
             @foreach ($stores as $store)
               <div class="block">
                 <div class="block-head">
-                    {{ $store['name'] }}
-                  </div>
-                  <div class="block-body">
-                    <div class="price-link">
-                      <a href='price/{{ $store['id'] }}'>料金表を見る</a>
-                    </div>
+                  {{ $store['name'] }}
+                </div>
+                <div class="block-body">
+                  <div class="price-link">
+                    <a href='price/{{ $store['id'] }}'>料金表を見る</a>
                   </div>
                 </div>
               </div>
-            @endforeach    
+            @endforeach
           @else
             <div class="non-store font-sans">
               店舗がありません。
             </div>
           @endif
+        </div>
       </div>
       {{-- ./wrapper --}}
     </section>
