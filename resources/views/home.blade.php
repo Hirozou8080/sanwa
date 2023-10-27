@@ -25,7 +25,7 @@
             </div>
             <div class="notice-body">
               @foreach ($alerts as $alert)
-                <a class="notice-item" href="#">
+                <a class="notice-item" href="alert/{{ $alert['id'] }}">
                   <div class="notice-date">{{ $alert['posted_date'] }}</div>
                   <div class="notice-title">{{ $alert['title'] }}</div>
                   <div class="notice-list-link">一覧はこちら</div>
