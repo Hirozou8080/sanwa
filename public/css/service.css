@@ -1,0 +1,28 @@
+/* サービス紹介画面 */
+.service .container {
+  width: 100%;
+  min-height: 60vh;
+  padding: 4rem 0 6rem;
+  text-align: center;
+}
+
+.service .container .head {
+  padding: 2rem 0;
+  width: 100%;
+  font-size: 1.8rem;
+  text-align: left;
+  font-family: 'Noto Sans JP', 'serif';
+  color: #5a5758;
+}
+
+.service .container .content {
+  padding: 10.5rem 0;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+.service .container .content .comming-soon {
+  padding: 5rem 0;
+  font-size: 3rem;
+  font-weight: 800;
+}

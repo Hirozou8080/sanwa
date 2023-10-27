@@ -40,3 +40,9 @@ Breadcrumbs::for('contact', function (BreadcrumbTrail $trail) {
     $trail->parent('home');
     $trail->push('お問い合わせ', route('contact'));
 });
+
+// Home > Service
+Breadcrumbs::for('service', function (BreadcrumbTrail $trail) {
+    $trail->parent('home');
+    $trail->push('サービス紹介', route('service'));
+});

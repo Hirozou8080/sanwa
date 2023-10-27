@@ -7,12 +7,12 @@ use App\Http\Controllers\PriceController;
 use App\Http\Controllers\AlertController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ServiceController;
 // Admin
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\StoreController as AdminStoreController;
 use App\Http\Controllers\Admin\AlertController as AdminAlertController;
 use App\Http\Controllers\Admin\SettingController as AdminSettingController;
-
 
 //HPのTOP画面
 Route::controller(HomeController::class)->group(function () {
@@ -36,6 +36,10 @@ Route::controller(AlertController::class)->group(function () {
 // お問い合わせ画面
 Route::controller(ContactController::class)->group(function () {
   Route::get('/contact', 'index')->name('contact');
+});
+// サービス紹介画面
+Route::controller(ServiceController::class)->group(function () {
+  Route::get('/service', 'index')->name('service');
 });
 
 

@@ -74,7 +74,7 @@
           </a>
         </div>
         <div class="navi_item">
-          <a href="#">
+          <a href="{{ route('service') }}">
             サービス内容<br><small>SERVICE</small>
           </a>
         </div>
