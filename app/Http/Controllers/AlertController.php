@@ -28,7 +28,10 @@ class AlertController extends CommonController
 	{
 		// 通知取得
 		$alert = $this->getAlert($alert_id);
-		// dd($alert);
+
+
+		if (empty($alert)) abort(404);
+
 		return view("alert_detail")->with('alert', $alert);
 	}
 }

@@ -28,6 +28,9 @@ class PriceController extends CommonController
   {
     // 店舗情報取得
     $store = $this->getStore($store_id);
+
+    if (empty($store)) abort(404);
+
     $res = [];
     $res['name'] = $store['name'];
     $res['product_left'] = [];
