@@ -41,7 +41,7 @@
               @else
                 <tr>
                   <td class="non-store" colspan="4">
-                    店舗がありません
+                    店舗がありません。
                   </td>
                 </tr>
               @endif

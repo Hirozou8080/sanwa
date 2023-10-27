@@ -24,7 +24,7 @@
 
 .alert .container .content .block {
   padding: 1.5rem 0;
-  border-bottom: 1px dotted #ccc
+  border-bottom: 1px dotted #ccc;
 }
 
 .alert .container .content .block:nth-child(odd) {
@@ -42,7 +42,7 @@
 
 .alert .container .content .block .alert-area .date-cate .date {
   width: 100px;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   background-color: #4e83f2;
   color: #fff;
   font-weight: 700;
@@ -80,9 +80,17 @@
   border-bottom: 1px solid #5a5758;
 }
 
+.alert .container .content .block.non-alert {
+  /* background-color: #827d7f; */
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 2rem;
+  color: #827d7f;
+  border-bottom: none;
+}
+
 /* 1024px以上の場合 */
 @media screen and (min-width: 768px) {
-
   .alert .container .head {
     padding: 2rem 0;
     font-size: 2rem;
@@ -100,5 +108,4 @@
     padding: 1.5rem 0;
     font-size: 1.7rem;
   }
-
 }

@@ -102,6 +102,11 @@
   margin-right: 0.8rem;
   margin-top: 0;
 }
+.price .container .content .non-store {
+  padding: 2rem;
+  font-size: 2rem;
+  color: #5a5758;
+}
 
 /* 1024px以上の場合 */
 @media screen and (min-width: 1024px) {

@@ -16,12 +16,12 @@
           <div class="head-title">お知らせ一覧（{{ count($alerts) }}件）</div>
         </div>
         <div class="content">
-          @if (!empty($alerts))
+          @if (empty($alerts))
             @foreach ($alerts as $alert)
               <div class="block">
                 <div class="flex-start flex-wrap-nowrap flex-align-items-start flex-gap-20 flex-gap-10-sp">
                   <img src="{{ url('storage', [$alert['file_path']]) }}" alt="{{ $alert['file_name'] }}" class="ml-1"
-                    style="max-width:120px; max-height:180px">
+                    style="maxwidth:120px; max-height:180px">
                   <div class="alert-area">
                     <div class="px-1-tab-pc">
                       <div class="date-cate flex-between-tab-pc">
@@ -41,8 +41,8 @@
               </div>
             @endforeach
           @else
-            <div class="block">
-
+            <div class="block non-alert">
+              お知らせがありません。
             </div>
           @endif
         </div>
