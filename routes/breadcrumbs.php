@@ -34,3 +34,9 @@ Breadcrumbs::for('alert_detail', function (BreadcrumbTrail $trail, $alert_title)
     $trail->parent('alert');
     $trail->push($alert_title, route('alert'));
 });
+
+// Home > Contact
+Breadcrumbs::for('contact', function (BreadcrumbTrail $trail) {
+    $trail->parent('home');
+    $trail->push('お問い合わせ', route('contact'));
+});

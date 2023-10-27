@@ -6,7 +6,7 @@
       </div>
       <div class="pc">
         <div class="contact-area">
-          <div class="contact"><a href="conract">お問い合わせ</a></div>
+          <div class="contact"><a href="{{ route('contact') }}">お問い合わせ</a></div>
         </div>
       </div>
       <div class="hamburger">
@@ -46,7 +46,7 @@
           </a>
         </div>
         <div class="menu-footer">
-          <div class="contact">お問い合わせ</div>
+          <a href="{{ route('contact') }}" style="display:contents"><div class="contact">お問い合わせ</div></a>
           <div class="tel-area">
             <a href="tel:0432370277">TEL : 043-237-0277</a>
           </div>
@@ -84,7 +84,7 @@
           </a>
         </div>
         <div class="navi_item">
-          <a href="#">
+          <a href="{{ route('contact') }}">
             お問い合わせ<br><small>CONTACT</small>
           </a>
         </div>

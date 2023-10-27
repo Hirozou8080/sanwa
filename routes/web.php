@@ -6,6 +6,7 @@ use App\Http\Controllers\StoreController;
 use App\Http\Controllers\PriceController;
 use App\Http\Controllers\AlertController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ContactController;
 // Admin
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\StoreController as AdminStoreController;
@@ -31,6 +32,10 @@ Route::controller(PriceController::class)->group(function () {
 Route::controller(AlertController::class)->group(function () {
   Route::get('/alert', 'index')->name('alert');
   Route::get('/alert/{alert_id}', 'detail')->name('alert/detail');
+});
+// お問い合わせ画面
+Route::controller(ContactController::class)->group(function () {
+  Route::get('/contact', 'index')->name('contact');
 });
 
 
