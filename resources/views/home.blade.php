@@ -71,7 +71,7 @@
       arrows: true, //左右の矢印
       infinite: true, //スライドのループ
       pauseOnHover: false, //ホバーしたときにスライドを一時停止しない　
-      centerPadding: '20%',
+      centerPadding: '25%',
       slidesToShow: 1,
       responsive: [{
         breakpoint: 400, // 399px以下のサイズに適用
