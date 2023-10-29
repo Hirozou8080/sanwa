@@ -10,7 +10,7 @@
       <div class="img-area">
         <div class="slider-top">
           <img src="/images/top/sanwa19.jpg" />
-          <img src="/images/top/sanwa5.jpg" />
+          <img src="/images/top/sanwa20.jpg" />
           <img src="/images/top/sanwa10.jpg" />
           <img src="/images/top/sanwa15.jpg" />
         </div>
@@ -74,7 +74,7 @@
       centerPadding: '25%',
       slidesToShow: 1,
       responsive: [{
-        breakpoint: 400, // 399px以下のサイズに適用
+        breakpoint: 700, // 399px以下のサイズに適用
         settings: {
           slidesToShow: 1,
           centerPadding: '0%',
