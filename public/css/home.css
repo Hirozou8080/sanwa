@@ -9,7 +9,7 @@
   /* margin: 0 .5rem; */
   object-fit: cover;
   border-radius: 10px;
-  max-height: 400px;
+  max-height: 200px;
   min-height: 200px;
   max-width: 850px;
   opacity: 0.9;
@@ -162,6 +162,7 @@
   }
 
   .home .top .img-area img {
+    min-height: 400px;
     padding: 0 0.5rem;
     margin: 0 0.5rem;
   }
