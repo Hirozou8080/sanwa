@@ -12,7 +12,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-language" content="ja">
   <meta name="format-detection" content="email=no,telephone=no,address=no">
-  <meta name="robots" content="noindex,follow" />
   <meta name="msapplication-TileImage" content="/images/icon.png">
   <meta name="msapplication-TileColor" content="#ffffff" />
   <link rel="icon" type="image/png" href="/images/favicon.png">
